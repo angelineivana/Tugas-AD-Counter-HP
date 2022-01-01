@@ -541,6 +541,7 @@ namespace Tugas_AD_Counter_HP
             this.dgvPrintProduct2.RowTemplate.Height = 28;
             this.dgvPrintProduct2.Size = new System.Drawing.Size(811, 292);
             this.dgvPrintProduct2.TabIndex = 6;
+            this.dgvPrintProduct2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrintProduct2_CellContentClick);
             // 
             // textBoxIDEmp
             // 

@@ -58,6 +58,7 @@ namespace Tugas_AD_Counter_HP
        
         private void FormInput_Load(object sender, EventArgs e)
         {
+            MessageBox.Show("yes");
             dgvPrintProduct2.DataSource = dtShowProd2;
 
             sendtextform1 = FormLogin.sendtext;
@@ -131,6 +132,8 @@ namespace Tugas_AD_Counter_HP
             nudQuan.Enabled = false;
             textBoxBayar.Enabled = false;
             buttonPaid.Enabled = false;
+            buttonAddProd.Enabled = false;
+            buttonDelete.Enabled = false;
 
             dtCheckDatePromo.Clear();
             dtpInvDateClone.Value = dtpInvDate.Value;
@@ -237,6 +240,7 @@ namespace Tugas_AD_Counter_HP
         }
         private void comboBoxProdName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            buttonAddProd.Enabled = true;
             //dtDetailProd diclear setiap cbox nama produk diubah karena dibuat supaya berisi 1 row data saja (per nama produk)
             dtDetailProd.Clear();
 
@@ -248,6 +252,7 @@ namespace Tugas_AD_Counter_HP
 
             //row ke 0 karena dtDetailProd berisi 1 row saja dan kolom sesuai dengan query
             textBoxProdID.Text = dtDetailProd.Rows[0][0].ToString();
+
             //buat variable baru bernama currentPrice untuk mengambil value harga per product yang blm dikali qty
             currentPrice = dtDetailProd.Rows[0][1].ToString();
             textBoxProdPrice.Text = Decimal.Parse(currentPrice.ToString()).ToString("C", culture);
@@ -310,6 +315,7 @@ namespace Tugas_AD_Counter_HP
                 no++;
 
                 comboBoxProdName.Items.Remove(comboBoxProdName.SelectedItem);
+                comboBoxProdName.Text = "";
                 textBoxProdID.Text = "";
                 textBoxProdPrice.Text = "";
                 nudQuan.Value = 0;
@@ -385,6 +391,14 @@ namespace Tugas_AD_Counter_HP
             statusBtnPaid = 1;
             MessageBox.Show("Invoice Telah Lunas");
             buttonPaid.Enabled = false;
+            textBoxCustNama.Enabled = false;
+            textBoxCustHP.Enabled = false;
+            textBoxCustEmail.Enabled = false;
+            comboBoxProdName.Enabled = false;
+            nudQuan.Enabled = false;
+            buttonAddProd.Enabled = false;
+            buttonDelete.Enabled = false;
+            textBoxBayar.Enabled = false;
         }
         private void buttonSave_Click(object sender, EventArgs e)
         {
@@ -517,6 +531,11 @@ namespace Tugas_AD_Counter_HP
             FormMenu formMenu = new FormMenu();
             this.Hide();
             formMenu.Show();
+        }
+
+        private void dgvPrintProduct2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            buttonDelete.Enabled = true;
         }
     }
 }
