@@ -350,7 +350,7 @@ namespace Tugas_AD_Counter_HP
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(33, 712);
+            this.labelTotal.Location = new System.Drawing.Point(35, 712);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(125, 20);
             this.labelTotal.TabIndex = 36;
@@ -359,7 +359,7 @@ namespace Tugas_AD_Counter_HP
             // labelBayar
             // 
             this.labelBayar.AutoSize = true;
-            this.labelBayar.Location = new System.Drawing.Point(559, 601);
+            this.labelBayar.Location = new System.Drawing.Point(559, 606);
             this.labelBayar.Name = "labelBayar";
             this.labelBayar.Size = new System.Drawing.Size(99, 20);
             this.labelBayar.TabIndex = 38;
@@ -368,7 +368,7 @@ namespace Tugas_AD_Counter_HP
             // labelKembali
             // 
             this.labelKembali.AutoSize = true;
-            this.labelKembali.Location = new System.Drawing.Point(559, 637);
+            this.labelKembali.Location = new System.Drawing.Point(559, 640);
             this.labelKembali.Name = "labelKembali";
             this.labelKembali.Size = new System.Drawing.Size(114, 20);
             this.labelKembali.TabIndex = 39;
@@ -376,15 +376,16 @@ namespace Tugas_AD_Counter_HP
             // 
             // textBoxBayar
             // 
-            this.textBoxBayar.Location = new System.Drawing.Point(724, 598);
+            this.textBoxBayar.Location = new System.Drawing.Point(723, 603);
             this.textBoxBayar.Name = "textBoxBayar";
             this.textBoxBayar.Size = new System.Drawing.Size(100, 26);
             this.textBoxBayar.TabIndex = 40;
+            this.textBoxBayar.TextChanged += new System.EventHandler(this.textBoxBayar_TextChanged);
             // 
             // labelDisKembali
             // 
             this.labelDisKembali.AutoSize = true;
-            this.labelDisKembali.Location = new System.Drawing.Point(720, 637);
+            this.labelDisKembali.Location = new System.Drawing.Point(719, 643);
             this.labelDisKembali.Name = "labelDisKembali";
             this.labelDisKembali.Size = new System.Drawing.Size(18, 20);
             this.labelDisKembali.TabIndex = 41;
@@ -457,14 +458,15 @@ namespace Tugas_AD_Counter_HP
             // 
             // dgvPrintProduct2
             // 
+            this.dgvPrintProduct2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPrintProduct2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrintProduct2.Location = new System.Drawing.Point(34, 423);
             this.dgvPrintProduct2.Name = "dgvPrintProduct2";
+            this.dgvPrintProduct2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvPrintProduct2.RowHeadersWidth = 62;
             this.dgvPrintProduct2.RowTemplate.Height = 28;
             this.dgvPrintProduct2.Size = new System.Drawing.Size(983, 150);
             this.dgvPrintProduct2.TabIndex = 48;
-            this.dgvPrintProduct2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrintProduct2_CellContentClick);
             // 
             // textBoxIDEmp
             // 

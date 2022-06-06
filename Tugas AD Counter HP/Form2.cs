@@ -37,17 +37,6 @@ namespace Tugas_AD_Counter_HP
             dtShowProd2.Columns.Add("Jumlah");
             dgvPrintProduct2.DataSource = dtShowProd2;
         }
-        private void nudQuan_ValueChanged(object sender, EventArgs e)
-        {
-            price = Convert.ToInt32(currentPrice);
-            subtotal = Convert.ToInt32(nudQuan.Value) * price;
-            labelDisSubTotal.Text = subtotal.ToString();
-        }
-
-        private void comboBoxPromoID_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
         string currentPrice;
         private void comboBoxProdName_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -61,12 +50,66 @@ namespace Tugas_AD_Counter_HP
             currentPrice = dtDetailProd.Rows[0][1].ToString();
             textBoxProdPrice.Text = "Rp " + dtDetailProd.Rows[0][1].ToString();
         }
+        private void nudQuan_ValueChanged(object sender, EventArgs e)
+        {
+            price = Convert.ToInt32(currentPrice);
+            subtotal = Convert.ToInt32(nudQuan.Value) * price;
+            labelDisSubTotal.Text = subtotal.ToString();
+        }
+        int no = 0;
+        int subtotalAll = 0;
+        DataTable dtShowProd2 = new DataTable();
+
+        private void buttonAddProd_Click(object sender, EventArgs e)
+        {
+            currentPrice = "0";
+            if (nudQuan.Value == 0)
+            {
+                MessageBox.Show("Kuantitas Harus Lebih Dari 0");
+            }
+            else if (comboBoxProdName.Text == "")
+            {
+                MessageBox.Show("Produk Belum Dipilih!");
+            }
+            else
+            {
+                dtShowProd2.Rows.Add((no + 1).ToString(), comboBoxProdName.SelectedItem.ToString(), nudQuan.Value.ToString(), textBoxProdPrice.Text, labelDisSubTotal.Text);
+                no++;
+                comboBoxProdName.Text = "";
+                textBoxProdID.Text = "";
+                textBoxProdPrice.Text = "";
+                nudQuan.Value = 0;
+                labelDisSubTotal.Text = "0";
+            }
+        }
+
+        private void buttonFinish_Click(object sender, EventArgs e)
+        {
+            labelDisTotal.Text = "0";
+            for (int i = 0; i < dtShowProd2.Rows.Count; i++)
+            {
+                /*                subtotalAll += Convert.ToInt32(dgvPrintProduct2.Rows[i].Cells[4].Value.ToString());
+                */
+                /* subtotalAll = Convert.ToInt32(dtShowProd2.Rows[i][4].ToString());
+                 MessageBox.Show(subtotalAll.ToString());*/
+                subtotalAll = subtotalAll + Convert.ToInt32(dtShowProd2.Rows[i][4].ToString());
+            }
+            if (comboBoxPromoName.SelectedIndex != null)
+            {
+                total = subtotalAll - (subtotalAll * disc / 100);
+                labelDisTotal.Text = total.ToString();
+            }
+            subtotalAll = 0;
+        }
+
         DateTimePicker dtpInvDateClone = new DateTimePicker();
         int total = 0;
         int disc = 0;
         private void comboBoxPromoName_SelectedIndexChanged(object sender, EventArgs e)
         {
             dtPromo.Clear();
+            textBoxPromoID.Text = "";
+            textBoxDisc.Text = "";
             dtpInvDateClone.Value = dtpInvDate.Value;
             dtpInvDateClone.Format = DateTimePickerFormat.Custom;
             dtpInvDateClone.CustomFormat = "yyyy-MM-dd";
@@ -89,45 +132,11 @@ namespace Tugas_AD_Counter_HP
                 textBoxDisc.Text = dtPromo.Rows[0][1].ToString() + " %";
             }
         }
-        int no = 0;
-        int subtotalAll = 0;
-        DataTable dtShowProd2 = new DataTable();
-
-        private void buttonAddProd_Click(object sender, EventArgs e)
+        int kembalian = 0;
+        private void textBoxBayar_TextChanged(object sender, EventArgs e)
         {
-            /*            object[] o = { no.ToString(), comboBoxProdName.SelectedItem.ToString(), nudQuan.Value.ToString(), textBoxProdPrice.Text, labelDisSubTotal.Text};
-                        dtShowProd2.Rows.Add(o);*/
-            dtShowProd2.Rows.Add((no + 1).ToString(), comboBoxProdName.SelectedItem.ToString(), nudQuan.Value.ToString(), textBoxProdPrice.Text, "Rp " + labelDisSubTotal.Text);
-            no++;
-            comboBoxProdName.Text = "";
-            textBoxProdID.Text = "";
-            textBoxProdPrice.Text = "";
-            nudQuan.Value = 0;
-            labelDisSubTotal.Text = "0";
-        }
-
-        private void buttonFinish_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < dtShowProd2.Rows.Count; i++)
-            {
-                /*                subtotalAll += Convert.ToInt32(dgvPrintProduct2.Rows[i].Cells[4].Value.ToString());
-                */
-                subtotalAll = Convert.ToInt32(dtShowProd2.Rows[i][4].ToString());
-                MessageBox.Show(subtotalAll.ToString());
-/*                subtotalAll = subtotalAll + Convert.ToInt32(dtShowProd2.Rows[i][4].ToString());
-*/            
-            }
-           
-            if (textBoxDisc.Text != null)
-            {
-                total = subtotalAll - (subtotalAll * disc / 100);
-                labelDisTotal.Text = total.ToString();
-            }
-        }
-
-        private void dgvPrintProduct2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            kembalian = Convert.ToInt32(textBoxBayar.Text) - Convert.ToInt32(labelDisTotal.Text);
+            labelDisKembali.Text = kembalian.ToString();
         }
     }
 }
