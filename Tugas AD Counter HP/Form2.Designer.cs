@@ -42,21 +42,18 @@ namespace Tugas_AD_Counter_HP
             this.textBoxCustID = new System.Windows.Forms.TextBox();
             this.textBoxInvNo = new System.Windows.Forms.TextBox();
             this.labelStoreID = new System.Windows.Forms.Label();
-            this.comboBoxStoreID = new System.Windows.Forms.ComboBox();
             this.labelPromoID = new System.Windows.Forms.Label();
-            this.comboBoxPromoID = new System.Windows.Forms.ComboBox();
             this.labelEmpID = new System.Windows.Forms.Label();
             this.labelInvDate = new System.Windows.Forms.Label();
             this.labelDisc = new System.Windows.Forms.Label();
             this.labelSubTotal = new System.Windows.Forms.Label();
             this.labelProdID = new System.Windows.Forms.Label();
-            this.comboBoxEmpID = new System.Windows.Forms.ComboBox();
             this.dtpInvDate = new System.Windows.Forms.DateTimePicker();
             this.textBoxDisc = new System.Windows.Forms.TextBox();
             this.labelDisSubTotal = new System.Windows.Forms.Label();
             this.comboBoxProdName = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.labelDataProd = new System.Windows.Forms.Label();
+            this.labelInputProd = new System.Windows.Forms.Label();
             this.textBoxProdID = new System.Windows.Forms.TextBox();
             this.textBoxProdPrice = new System.Windows.Forms.TextBox();
             this.labelProdPrice = new System.Windows.Forms.Label();
@@ -67,14 +64,22 @@ namespace Tugas_AD_Counter_HP
             this.labelKembali = new System.Windows.Forms.Label();
             this.textBoxBayar = new System.Windows.Forms.TextBox();
             this.labelDisKembali = new System.Windows.Forms.Label();
-            this.buttonSubmit = new System.Windows.Forms.Button();
+            this.buttonAddProd = new System.Windows.Forms.Button();
             this.nudQuan = new System.Windows.Forms.NumericUpDown();
+            this.labelPromoName = new System.Windows.Forms.Label();
+            this.comboBoxPromoName = new System.Windows.Forms.ComboBox();
+            this.textBoxPromoID = new System.Windows.Forms.TextBox();
+            this.buttonFinish = new System.Windows.Forms.Button();
+            this.dgvPrintProduct2 = new System.Windows.Forms.DataGridView();
+            this.textBoxIDEmp = new System.Windows.Forms.TextBox();
+            this.textBoxDisIDStore = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrintProduct2)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCatalog
             // 
-            this.buttonCatalog.Location = new System.Drawing.Point(500, 591);
+            this.buttonCatalog.Location = new System.Drawing.Point(52, 805);
             this.buttonCatalog.Name = "buttonCatalog";
             this.buttonCatalog.Size = new System.Drawing.Size(78, 42);
             this.buttonCatalog.TabIndex = 0;
@@ -84,7 +89,7 @@ namespace Tugas_AD_Counter_HP
             // labelNoInv
             // 
             this.labelNoInv.AutoSize = true;
-            this.labelNoInv.Location = new System.Drawing.Point(26, 19);
+            this.labelNoInv.Location = new System.Drawing.Point(30, 113);
             this.labelNoInv.Name = "labelNoInv";
             this.labelNoInv.Size = new System.Drawing.Size(95, 20);
             this.labelNoInv.TabIndex = 1;
@@ -93,7 +98,7 @@ namespace Tugas_AD_Counter_HP
             // labelCustName
             // 
             this.labelCustName.AutoSize = true;
-            this.labelCustName.Location = new System.Drawing.Point(28, 194);
+            this.labelCustName.Location = new System.Drawing.Point(612, 110);
             this.labelCustName.Name = "labelCustName";
             this.labelCustName.Size = new System.Drawing.Size(59, 20);
             this.labelCustName.TabIndex = 2;
@@ -102,7 +107,7 @@ namespace Tugas_AD_Counter_HP
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 156);
+            this.label2.Location = new System.Drawing.Point(612, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 20);
             this.label2.TabIndex = 3;
@@ -111,7 +116,7 @@ namespace Tugas_AD_Counter_HP
             // labelDataCust
             // 
             this.labelDataCust.AutoSize = true;
-            this.labelDataCust.Location = new System.Drawing.Point(28, 120);
+            this.labelDataCust.Location = new System.Drawing.Point(610, 28);
             this.labelDataCust.Name = "labelDataCust";
             this.labelDataCust.Size = new System.Drawing.Size(117, 20);
             this.labelDataCust.TabIndex = 4;
@@ -120,7 +125,7 @@ namespace Tugas_AD_Counter_HP
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(375, 156);
+            this.label1.Location = new System.Drawing.Point(612, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 5;
@@ -129,7 +134,7 @@ namespace Tugas_AD_Counter_HP
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(375, 194);
+            this.label3.Location = new System.Drawing.Point(611, 196);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 20);
             this.label3.TabIndex = 6;
@@ -137,100 +142,63 @@ namespace Tugas_AD_Counter_HP
             // 
             // textBoxCustNama
             // 
-            this.textBoxCustNama.Location = new System.Drawing.Point(93, 188);
+            this.textBoxCustNama.Location = new System.Drawing.Point(686, 107);
             this.textBoxCustNama.Name = "textBoxCustNama";
             this.textBoxCustNama.Size = new System.Drawing.Size(243, 26);
             this.textBoxCustNama.TabIndex = 7;
             // 
             // textBoxCustHP
             // 
-            this.textBoxCustHP.Location = new System.Drawing.Point(449, 153);
+            this.textBoxCustHP.Location = new System.Drawing.Point(686, 150);
             this.textBoxCustHP.Name = "textBoxCustHP";
             this.textBoxCustHP.Size = new System.Drawing.Size(243, 26);
             this.textBoxCustHP.TabIndex = 8;
             // 
             // textBoxCustEmail
             // 
-            this.textBoxCustEmail.Location = new System.Drawing.Point(449, 191);
+            this.textBoxCustEmail.Location = new System.Drawing.Point(686, 193);
             this.textBoxCustEmail.Name = "textBoxCustEmail";
             this.textBoxCustEmail.Size = new System.Drawing.Size(243, 26);
             this.textBoxCustEmail.TabIndex = 9;
             // 
             // textBoxCustID
             // 
-            this.textBoxCustID.Location = new System.Drawing.Point(93, 153);
+            this.textBoxCustID.Location = new System.Drawing.Point(686, 65);
             this.textBoxCustID.Name = "textBoxCustID";
+            this.textBoxCustID.ReadOnly = true;
             this.textBoxCustID.Size = new System.Drawing.Size(243, 26);
             this.textBoxCustID.TabIndex = 10;
             // 
             // textBoxInvNo
             // 
-            this.textBoxInvNo.Location = new System.Drawing.Point(163, 16);
+            this.textBoxInvNo.Location = new System.Drawing.Point(168, 107);
             this.textBoxInvNo.Name = "textBoxInvNo";
-            this.textBoxInvNo.Size = new System.Drawing.Size(243, 26);
+            this.textBoxInvNo.ReadOnly = true;
+            this.textBoxInvNo.Size = new System.Drawing.Size(200, 26);
             this.textBoxInvNo.TabIndex = 11;
             // 
             // labelStoreID
             // 
             this.labelStoreID.AutoSize = true;
-            this.labelStoreID.Location = new System.Drawing.Point(483, 20);
+            this.labelStoreID.Location = new System.Drawing.Point(30, 28);
             this.labelStoreID.Name = "labelStoreID";
             this.labelStoreID.Size = new System.Drawing.Size(81, 20);
             this.labelStoreID.TabIndex = 12;
             this.labelStoreID.Text = "ID Store : ";
             // 
-            // comboBoxStoreID
-            // 
-            this.comboBoxStoreID.FormattingEnabled = true;
-            this.comboBoxStoreID.Items.AddRange(new object[] {
-            "sby_01",
-            "sby_02",
-            "sby_03",
-            "sby_04",
-            "sby_05",
-            "sby_06",
-            "sby_07",
-            "sby_08",
-            "sby_09",
-            "sby_10"});
-            this.comboBoxStoreID.Location = new System.Drawing.Point(621, 16);
-            this.comboBoxStoreID.Name = "comboBoxStoreID";
-            this.comboBoxStoreID.Size = new System.Drawing.Size(141, 28);
-            this.comboBoxStoreID.TabIndex = 13;
-            // 
             // labelPromoID
             // 
             this.labelPromoID.AutoSize = true;
-            this.labelPromoID.Location = new System.Drawing.Point(28, 496);
+            this.labelPromoID.Location = new System.Drawing.Point(35, 640);
             this.labelPromoID.Name = "labelPromoID";
             this.labelPromoID.Size = new System.Drawing.Size(84, 20);
             this.labelPromoID.TabIndex = 14;
             this.labelPromoID.Text = "ID Promo :";
             // 
-            // comboBoxPromoID
-            // 
-            this.comboBoxPromoID.FormattingEnabled = true;
-            this.comboBoxPromoID.Items.AddRange(new object[] {
-            "PRM_01",
-            "PRM_02",
-            "PRM_03",
-            "PRM_04",
-            "PRM_05",
-            "PRM_06",
-            "PRM_07",
-            "PRM_08",
-            "PRM_09",
-            "PRM_10"});
-            this.comboBoxPromoID.Location = new System.Drawing.Point(163, 493);
-            this.comboBoxPromoID.Name = "comboBoxPromoID";
-            this.comboBoxPromoID.Size = new System.Drawing.Size(141, 28);
-            this.comboBoxPromoID.TabIndex = 15;
-            this.comboBoxPromoID.SelectedIndexChanged += new System.EventHandler(this.comboBoxPromoID_SelectedIndexChanged);
-            // 
             // labelEmpID
             // 
             this.labelEmpID.AutoSize = true;
-            this.labelEmpID.Location = new System.Drawing.Point(483, 63);
+            this.labelEmpID.Location = new System.Drawing.Point(30, 71);
             this.labelEmpID.Name = "labelEmpID";
             this.labelEmpID.Size = new System.Drawing.Size(112, 20);
             this.labelEmpID.TabIndex = 16;
@@ -239,7 +207,7 @@ namespace Tugas_AD_Counter_HP
             // labelInvDate
             // 
             this.labelInvDate.AutoSize = true;
-            this.labelInvDate.Location = new System.Drawing.Point(24, 60);
+            this.labelInvDate.Location = new System.Drawing.Point(30, 153);
             this.labelInvDate.Name = "labelInvDate";
             this.labelInvDate.Size = new System.Drawing.Size(132, 20);
             this.labelInvDate.TabIndex = 18;
@@ -248,7 +216,7 @@ namespace Tugas_AD_Counter_HP
             // labelDisc
             // 
             this.labelDisc.AutoSize = true;
-            this.labelDisc.Location = new System.Drawing.Point(28, 538);
+            this.labelDisc.Location = new System.Drawing.Point(35, 677);
             this.labelDisc.Name = "labelDisc";
             this.labelDisc.Size = new System.Drawing.Size(48, 20);
             this.labelDisc.TabIndex = 20;
@@ -257,7 +225,7 @@ namespace Tugas_AD_Counter_HP
             // labelSubTotal
             // 
             this.labelSubTotal.AutoSize = true;
-            this.labelSubTotal.Location = new System.Drawing.Point(28, 456);
+            this.labelSubTotal.Location = new System.Drawing.Point(587, 325);
             this.labelSubTotal.Name = "labelSubTotal";
             this.labelSubTotal.Size = new System.Drawing.Size(126, 20);
             this.labelSubTotal.TabIndex = 21;
@@ -266,42 +234,23 @@ namespace Tugas_AD_Counter_HP
             // labelProdID
             // 
             this.labelProdID.AutoSize = true;
-            this.labelProdID.Location = new System.Drawing.Point(28, 343);
+            this.labelProdID.Location = new System.Drawing.Point(35, 325);
             this.labelProdID.Name = "labelProdID";
             this.labelProdID.Size = new System.Drawing.Size(97, 20);
             this.labelProdID.TabIndex = 22;
             this.labelProdID.Text = "ID Product : ";
             // 
-            // comboBoxEmpID
-            // 
-            this.comboBoxEmpID.FormattingEnabled = true;
-            this.comboBoxEmpID.Items.AddRange(new object[] {
-            "E00001",
-            "E00002",
-            "E00003",
-            "E00004",
-            "E00005",
-            "E00006",
-            "E00007",
-            "E00008",
-            "E00009",
-            "E00010"});
-            this.comboBoxEmpID.Location = new System.Drawing.Point(621, 57);
-            this.comboBoxEmpID.Name = "comboBoxEmpID";
-            this.comboBoxEmpID.Size = new System.Drawing.Size(141, 28);
-            this.comboBoxEmpID.TabIndex = 23;
-            // 
             // dtpInvDate
             // 
-            this.dtpInvDate.Location = new System.Drawing.Point(163, 57);
+            this.dtpInvDate.Location = new System.Drawing.Point(168, 153);
             this.dtpInvDate.Name = "dtpInvDate";
             this.dtpInvDate.Size = new System.Drawing.Size(200, 26);
             this.dtpInvDate.TabIndex = 24;
-            this.dtpInvDate.Value = new System.DateTime(2022, 6, 6, 8, 42, 28, 0);
+            this.dtpInvDate.Value = new System.DateTime(2022, 6, 6, 0, 0, 0, 0);
             // 
             // textBoxDisc
             // 
-            this.textBoxDisc.Location = new System.Drawing.Point(163, 535);
+            this.textBoxDisc.Location = new System.Drawing.Point(173, 674);
             this.textBoxDisc.Name = "textBoxDisc";
             this.textBoxDisc.ReadOnly = true;
             this.textBoxDisc.Size = new System.Drawing.Size(100, 26);
@@ -310,7 +259,7 @@ namespace Tugas_AD_Counter_HP
             // labelDisSubTotal
             // 
             this.labelDisSubTotal.AutoSize = true;
-            this.labelDisSubTotal.Location = new System.Drawing.Point(164, 456);
+            this.labelDisSubTotal.Location = new System.Drawing.Point(719, 325);
             this.labelDisSubTotal.Name = "labelDisSubTotal";
             this.labelDisSubTotal.Size = new System.Drawing.Size(18, 20);
             this.labelDisSubTotal.TabIndex = 27;
@@ -326,55 +275,55 @@ namespace Tugas_AD_Counter_HP
             "Galaxy Tab A8 Wifi LTE",
             "iPad Pro Gen 5",
             "Xiaomi 12 Pro",
-            "Baseus Powerbank Magnetic Wireless Magsafe ",
+            "Baseus Powerbank Magnetic Wireless Magsafe",
             "AirPods gen 3",
             "Oppo Enco W31",
             "Oppo Reno 6 5G",
             "Onyx Studio 6"});
-            this.comboBoxProdName.Location = new System.Drawing.Point(163, 308);
+            this.comboBoxProdName.Location = new System.Drawing.Point(173, 282);
             this.comboBoxProdName.Name = "comboBoxProdName";
-            this.comboBoxProdName.Size = new System.Drawing.Size(141, 28);
+            this.comboBoxProdName.Size = new System.Drawing.Size(243, 28);
             this.comboBoxProdName.TabIndex = 28;
             this.comboBoxProdName.SelectedIndexChanged += new System.EventHandler(this.comboBoxProdName_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 311);
+            this.label4.Location = new System.Drawing.Point(35, 286);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 20);
             this.label4.TabIndex = 29;
             this.label4.Text = "Nama Product : ";
             // 
-            // labelDataProd
+            // labelInputProd
             // 
-            this.labelDataProd.AutoSize = true;
-            this.labelDataProd.Location = new System.Drawing.Point(28, 263);
-            this.labelDataProd.Name = "labelDataProd";
-            this.labelDataProd.Size = new System.Drawing.Size(103, 20);
-            this.labelDataProd.TabIndex = 30;
-            this.labelDataProd.Text = "Data Product";
+            this.labelInputProd.AutoSize = true;
+            this.labelInputProd.Location = new System.Drawing.Point(35, 246);
+            this.labelInputProd.Name = "labelInputProd";
+            this.labelInputProd.Size = new System.Drawing.Size(100, 20);
+            this.labelInputProd.TabIndex = 30;
+            this.labelInputProd.Text = "Input Produk";
             // 
             // textBoxProdID
             // 
-            this.textBoxProdID.Location = new System.Drawing.Point(163, 342);
+            this.textBoxProdID.Location = new System.Drawing.Point(173, 319);
             this.textBoxProdID.Name = "textBoxProdID";
             this.textBoxProdID.ReadOnly = true;
-            this.textBoxProdID.Size = new System.Drawing.Size(243, 26);
+            this.textBoxProdID.Size = new System.Drawing.Size(80, 26);
             this.textBoxProdID.TabIndex = 31;
             // 
             // textBoxProdPrice
             // 
-            this.textBoxProdPrice.Location = new System.Drawing.Point(165, 374);
+            this.textBoxProdPrice.Location = new System.Drawing.Point(173, 359);
             this.textBoxProdPrice.Name = "textBoxProdPrice";
             this.textBoxProdPrice.ReadOnly = true;
-            this.textBoxProdPrice.Size = new System.Drawing.Size(243, 26);
+            this.textBoxProdPrice.Size = new System.Drawing.Size(118, 26);
             this.textBoxProdPrice.TabIndex = 33;
             // 
             // labelProdPrice
             // 
             this.labelProdPrice.AutoSize = true;
-            this.labelProdPrice.Location = new System.Drawing.Point(28, 377);
+            this.labelProdPrice.Location = new System.Drawing.Point(35, 362);
             this.labelProdPrice.Name = "labelProdPrice";
             this.labelProdPrice.Size = new System.Drawing.Size(120, 20);
             this.labelProdPrice.TabIndex = 32;
@@ -383,7 +332,7 @@ namespace Tugas_AD_Counter_HP
             // labelQuan
             // 
             this.labelQuan.AutoSize = true;
-            this.labelQuan.Location = new System.Drawing.Point(28, 418);
+            this.labelQuan.Location = new System.Drawing.Point(587, 286);
             this.labelQuan.Name = "labelQuan";
             this.labelQuan.Size = new System.Drawing.Size(84, 20);
             this.labelQuan.TabIndex = 34;
@@ -392,7 +341,7 @@ namespace Tugas_AD_Counter_HP
             // labelDisTotal
             // 
             this.labelDisTotal.AutoSize = true;
-            this.labelDisTotal.Location = new System.Drawing.Point(164, 580);
+            this.labelDisTotal.Location = new System.Drawing.Point(169, 712);
             this.labelDisTotal.Name = "labelDisTotal";
             this.labelDisTotal.Size = new System.Drawing.Size(18, 20);
             this.labelDisTotal.TabIndex = 37;
@@ -401,7 +350,7 @@ namespace Tugas_AD_Counter_HP
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(28, 580);
+            this.labelTotal.Location = new System.Drawing.Point(33, 712);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(125, 20);
             this.labelTotal.TabIndex = 36;
@@ -410,7 +359,7 @@ namespace Tugas_AD_Counter_HP
             // labelBayar
             // 
             this.labelBayar.AutoSize = true;
-            this.labelBayar.Location = new System.Drawing.Point(496, 297);
+            this.labelBayar.Location = new System.Drawing.Point(559, 601);
             this.labelBayar.Name = "labelBayar";
             this.labelBayar.Size = new System.Drawing.Size(99, 20);
             this.labelBayar.TabIndex = 38;
@@ -419,7 +368,7 @@ namespace Tugas_AD_Counter_HP
             // labelKembali
             // 
             this.labelKembali.AutoSize = true;
-            this.labelKembali.Location = new System.Drawing.Point(496, 339);
+            this.labelKembali.Location = new System.Drawing.Point(559, 637);
             this.labelKembali.Name = "labelKembali";
             this.labelKembali.Size = new System.Drawing.Size(114, 20);
             this.labelKembali.TabIndex = 39;
@@ -427,7 +376,7 @@ namespace Tugas_AD_Counter_HP
             // 
             // textBoxBayar
             // 
-            this.textBoxBayar.Location = new System.Drawing.Point(635, 294);
+            this.textBoxBayar.Location = new System.Drawing.Point(724, 598);
             this.textBoxBayar.Name = "textBoxBayar";
             this.textBoxBayar.Size = new System.Drawing.Size(100, 26);
             this.textBoxBayar.TabIndex = 40;
@@ -435,36 +384,118 @@ namespace Tugas_AD_Counter_HP
             // labelDisKembali
             // 
             this.labelDisKembali.AutoSize = true;
-            this.labelDisKembali.Location = new System.Drawing.Point(640, 339);
+            this.labelDisKembali.Location = new System.Drawing.Point(720, 637);
             this.labelDisKembali.Name = "labelDisKembali";
             this.labelDisKembali.Size = new System.Drawing.Size(18, 20);
             this.labelDisKembali.TabIndex = 41;
             this.labelDisKembali.Text = "0";
             // 
-            // buttonSubmit
+            // buttonAddProd
             // 
-            this.buttonSubmit.Location = new System.Drawing.Point(500, 396);
-            this.buttonSubmit.Name = "buttonSubmit";
-            this.buttonSubmit.Size = new System.Drawing.Size(78, 42);
-            this.buttonSubmit.TabIndex = 42;
-            this.buttonSubmit.Text = "Submit";
-            this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonAddProd.Location = new System.Drawing.Point(589, 359);
+            this.buttonAddProd.Name = "buttonAddProd";
+            this.buttonAddProd.Size = new System.Drawing.Size(78, 42);
+            this.buttonAddProd.TabIndex = 42;
+            this.buttonAddProd.Text = "Add";
+            this.buttonAddProd.UseVisualStyleBackColor = true;
+            this.buttonAddProd.Click += new System.EventHandler(this.buttonAddProd_Click);
             // 
             // nudQuan
             // 
-            this.nudQuan.Location = new System.Drawing.Point(163, 416);
+            this.nudQuan.Location = new System.Drawing.Point(686, 284);
             this.nudQuan.Name = "nudQuan";
             this.nudQuan.Size = new System.Drawing.Size(120, 26);
             this.nudQuan.TabIndex = 43;
             this.nudQuan.ValueChanged += new System.EventHandler(this.nudQuan_ValueChanged);
             // 
+            // labelPromoName
+            // 
+            this.labelPromoName.AutoSize = true;
+            this.labelPromoName.Location = new System.Drawing.Point(35, 601);
+            this.labelPromoName.Name = "labelPromoName";
+            this.labelPromoName.Size = new System.Drawing.Size(63, 20);
+            this.labelPromoName.TabIndex = 45;
+            this.labelPromoName.Text = "Promo :";
+            // 
+            // comboBoxPromoName
+            // 
+            this.comboBoxPromoName.FormattingEnabled = true;
+            this.comboBoxPromoName.Items.AddRange(new object[] {
+            "Independence Day Sale",
+            "Ramadhan Sale",
+            "Anniversary Sale",
+            "Black Friday Sale",
+            "Christmas Sale",
+            "Clearance Sale",
+            "Easter Sale",
+            "New Year Sale",
+            "CNY Sale",
+            "Summer Sale"});
+            this.comboBoxPromoName.Location = new System.Drawing.Point(173, 598);
+            this.comboBoxPromoName.Name = "comboBoxPromoName";
+            this.comboBoxPromoName.Size = new System.Drawing.Size(243, 28);
+            this.comboBoxPromoName.TabIndex = 44;
+            this.comboBoxPromoName.SelectedIndexChanged += new System.EventHandler(this.comboBoxPromoName_SelectedIndexChanged);
+            // 
+            // textBoxPromoID
+            // 
+            this.textBoxPromoID.Location = new System.Drawing.Point(173, 637);
+            this.textBoxPromoID.Name = "textBoxPromoID";
+            this.textBoxPromoID.ReadOnly = true;
+            this.textBoxPromoID.Size = new System.Drawing.Size(100, 26);
+            this.textBoxPromoID.TabIndex = 46;
+            // 
+            // buttonFinish
+            // 
+            this.buttonFinish.Location = new System.Drawing.Point(686, 359);
+            this.buttonFinish.Name = "buttonFinish";
+            this.buttonFinish.Size = new System.Drawing.Size(78, 42);
+            this.buttonFinish.TabIndex = 47;
+            this.buttonFinish.Text = "Finish";
+            this.buttonFinish.UseVisualStyleBackColor = true;
+            this.buttonFinish.Click += new System.EventHandler(this.buttonFinish_Click);
+            // 
+            // dgvPrintProduct2
+            // 
+            this.dgvPrintProduct2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPrintProduct2.Location = new System.Drawing.Point(34, 423);
+            this.dgvPrintProduct2.Name = "dgvPrintProduct2";
+            this.dgvPrintProduct2.RowHeadersWidth = 62;
+            this.dgvPrintProduct2.RowTemplate.Height = 28;
+            this.dgvPrintProduct2.Size = new System.Drawing.Size(983, 150);
+            this.dgvPrintProduct2.TabIndex = 48;
+            this.dgvPrintProduct2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPrintProduct2_CellContentClick);
+            // 
+            // textBoxIDEmp
+            // 
+            this.textBoxIDEmp.Location = new System.Drawing.Point(168, 65);
+            this.textBoxIDEmp.Name = "textBoxIDEmp";
+            this.textBoxIDEmp.ReadOnly = true;
+            this.textBoxIDEmp.Size = new System.Drawing.Size(200, 26);
+            this.textBoxIDEmp.TabIndex = 49;
+            // 
+            // textBoxDisIDStore
+            // 
+            this.textBoxDisIDStore.Location = new System.Drawing.Point(168, 28);
+            this.textBoxDisIDStore.Name = "textBoxDisIDStore";
+            this.textBoxDisIDStore.ReadOnly = true;
+            this.textBoxDisIDStore.Size = new System.Drawing.Size(200, 26);
+            this.textBoxDisIDStore.TabIndex = 50;
+            // 
             // FormInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 681);
+            this.ClientSize = new System.Drawing.Size(1062, 924);
+            this.Controls.Add(this.textBoxDisIDStore);
+            this.Controls.Add(this.textBoxIDEmp);
+            this.Controls.Add(this.dgvPrintProduct2);
+            this.Controls.Add(this.buttonFinish);
+            this.Controls.Add(this.textBoxPromoID);
+            this.Controls.Add(this.labelPromoName);
+            this.Controls.Add(this.comboBoxPromoName);
             this.Controls.Add(this.nudQuan);
-            this.Controls.Add(this.buttonSubmit);
+            this.Controls.Add(this.buttonAddProd);
             this.Controls.Add(this.labelDisKembali);
             this.Controls.Add(this.textBoxBayar);
             this.Controls.Add(this.labelKembali);
@@ -475,21 +506,18 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.textBoxProdPrice);
             this.Controls.Add(this.labelProdPrice);
             this.Controls.Add(this.textBoxProdID);
-            this.Controls.Add(this.labelDataProd);
+            this.Controls.Add(this.labelInputProd);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBoxProdName);
             this.Controls.Add(this.labelDisSubTotal);
             this.Controls.Add(this.textBoxDisc);
             this.Controls.Add(this.dtpInvDate);
-            this.Controls.Add(this.comboBoxEmpID);
             this.Controls.Add(this.labelProdID);
             this.Controls.Add(this.labelSubTotal);
             this.Controls.Add(this.labelDisc);
             this.Controls.Add(this.labelInvDate);
             this.Controls.Add(this.labelEmpID);
-            this.Controls.Add(this.comboBoxPromoID);
             this.Controls.Add(this.labelPromoID);
-            this.Controls.Add(this.comboBoxStoreID);
             this.Controls.Add(this.labelStoreID);
             this.Controls.Add(this.textBoxInvNo);
             this.Controls.Add(this.textBoxCustID);
@@ -505,7 +533,9 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.buttonCatalog);
             this.Name = "FormInput";
             this.Text = "Form Input";
+            this.Load += new System.EventHandler(this.FormInput_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudQuan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPrintProduct2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -526,21 +556,18 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.TextBox textBoxCustID;
         private System.Windows.Forms.TextBox textBoxInvNo;
         private System.Windows.Forms.Label labelStoreID;
-        private System.Windows.Forms.ComboBox comboBoxStoreID;
         private System.Windows.Forms.Label labelPromoID;
-        private System.Windows.Forms.ComboBox comboBoxPromoID;
         private System.Windows.Forms.Label labelEmpID;
         private System.Windows.Forms.Label labelInvDate;
         private System.Windows.Forms.Label labelDisc;
         private System.Windows.Forms.Label labelSubTotal;
         private System.Windows.Forms.Label labelProdID;
-        private System.Windows.Forms.ComboBox comboBoxEmpID;
         private System.Windows.Forms.DateTimePicker dtpInvDate;
         private System.Windows.Forms.TextBox textBoxDisc;
         private System.Windows.Forms.Label labelDisSubTotal;
         private System.Windows.Forms.ComboBox comboBoxProdName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labelDataProd;
+        private System.Windows.Forms.Label labelInputProd;
         private System.Windows.Forms.TextBox textBoxProdID;
         private System.Windows.Forms.TextBox textBoxProdPrice;
         private System.Windows.Forms.Label labelProdPrice;
@@ -551,7 +578,14 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.Label labelKembali;
         private System.Windows.Forms.TextBox textBoxBayar;
         private System.Windows.Forms.Label labelDisKembali;
-        private System.Windows.Forms.Button buttonSubmit;
+        private System.Windows.Forms.Button buttonAddProd;
         private System.Windows.Forms.NumericUpDown nudQuan;
+        private System.Windows.Forms.Label labelPromoName;
+        private System.Windows.Forms.ComboBox comboBoxPromoName;
+        private System.Windows.Forms.TextBox textBoxPromoID;
+        private System.Windows.Forms.Button buttonFinish;
+        private System.Windows.Forms.DataGridView dgvPrintProduct2;
+        private System.Windows.Forms.TextBox textBoxIDEmp;
+        private System.Windows.Forms.TextBox textBoxDisIDStore;
     }
 }

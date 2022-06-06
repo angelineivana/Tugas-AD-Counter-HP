@@ -24,7 +24,7 @@ namespace Tugas_AD_Counter_HP
         string sqlQuery;
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            sqlQuery = "SELECT * FROM EMPLOYEE WHERE EMP_USERNAME =  '" + textBoxUsername.Text.Trim() + "' and EMP_PASS = '" + textBoxPassword.Text.Trim() + "'";
+            /*sqlQuery = "SELECT * FROM EMPLOYEE WHERE EMP_USERNAME =  '" + textBoxUsername.Text.Trim() + "' and EMP_PASS = '" + textBoxPassword.Text.Trim() + "'";
             DataTable dtLogin = new DataTable();
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
@@ -38,7 +38,11 @@ namespace Tugas_AD_Counter_HP
             else
             {
                 MessageBox.Show("Username / Password Salah!");
-            }
+            }*/
+
+            FormInput form2 = new FormInput();
+            this.Hide();
+            form2.Show();
         }
     }
 }
