@@ -92,7 +92,7 @@ namespace Tugas_AD_Counter_HP
             // labelCustName
             // 
             this.labelCustName.AutoSize = true;
-            this.labelCustName.Location = new System.Drawing.Point(33, 194);
+            this.labelCustName.Location = new System.Drawing.Point(28, 194);
             this.labelCustName.Name = "labelCustName";
             this.labelCustName.Size = new System.Drawing.Size(59, 20);
             this.labelCustName.TabIndex = 2;
@@ -101,7 +101,7 @@ namespace Tugas_AD_Counter_HP
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 156);
+            this.label2.Location = new System.Drawing.Point(28, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 20);
             this.label2.TabIndex = 3;
@@ -110,7 +110,7 @@ namespace Tugas_AD_Counter_HP
             // labelDataCust
             // 
             this.labelDataCust.AutoSize = true;
-            this.labelDataCust.Location = new System.Drawing.Point(33, 120);
+            this.labelDataCust.Location = new System.Drawing.Point(28, 120);
             this.labelDataCust.Name = "labelDataCust";
             this.labelDataCust.Size = new System.Drawing.Size(117, 20);
             this.labelDataCust.TabIndex = 4;
@@ -119,7 +119,7 @@ namespace Tugas_AD_Counter_HP
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(380, 156);
+            this.label1.Location = new System.Drawing.Point(375, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 5;
@@ -128,7 +128,7 @@ namespace Tugas_AD_Counter_HP
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(380, 194);
+            this.label3.Location = new System.Drawing.Point(375, 194);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 20);
             this.label3.TabIndex = 6;
@@ -136,28 +136,28 @@ namespace Tugas_AD_Counter_HP
             // 
             // textBoxCustNama
             // 
-            this.textBoxCustNama.Location = new System.Drawing.Point(98, 188);
+            this.textBoxCustNama.Location = new System.Drawing.Point(93, 188);
             this.textBoxCustNama.Name = "textBoxCustNama";
             this.textBoxCustNama.Size = new System.Drawing.Size(243, 26);
             this.textBoxCustNama.TabIndex = 7;
             // 
             // textBoxCustHP
             // 
-            this.textBoxCustHP.Location = new System.Drawing.Point(454, 153);
+            this.textBoxCustHP.Location = new System.Drawing.Point(449, 153);
             this.textBoxCustHP.Name = "textBoxCustHP";
             this.textBoxCustHP.Size = new System.Drawing.Size(243, 26);
             this.textBoxCustHP.TabIndex = 8;
             // 
             // textBoxCustEmail
             // 
-            this.textBoxCustEmail.Location = new System.Drawing.Point(454, 191);
+            this.textBoxCustEmail.Location = new System.Drawing.Point(449, 191);
             this.textBoxCustEmail.Name = "textBoxCustEmail";
             this.textBoxCustEmail.Size = new System.Drawing.Size(243, 26);
             this.textBoxCustEmail.TabIndex = 9;
             // 
             // textBoxCustID
             // 
-            this.textBoxCustID.Location = new System.Drawing.Point(98, 153);
+            this.textBoxCustID.Location = new System.Drawing.Point(93, 153);
             this.textBoxCustID.Name = "textBoxCustID";
             this.textBoxCustID.Size = new System.Drawing.Size(243, 26);
             this.textBoxCustID.TabIndex = 10;
@@ -200,7 +200,7 @@ namespace Tugas_AD_Counter_HP
             // labelPromoID
             // 
             this.labelPromoID.AutoSize = true;
-            this.labelPromoID.Location = new System.Drawing.Point(30, 478);
+            this.labelPromoID.Location = new System.Drawing.Point(28, 496);
             this.labelPromoID.Name = "labelPromoID";
             this.labelPromoID.Size = new System.Drawing.Size(84, 20);
             this.labelPromoID.TabIndex = 14;
@@ -220,7 +220,7 @@ namespace Tugas_AD_Counter_HP
             "PRM_08",
             "PRM_09",
             "PRM_10"});
-            this.comboBoxPromoID.Location = new System.Drawing.Point(145, 470);
+            this.comboBoxPromoID.Location = new System.Drawing.Point(143, 488);
             this.comboBoxPromoID.Name = "comboBoxPromoID";
             this.comboBoxPromoID.Size = new System.Drawing.Size(141, 28);
             this.comboBoxPromoID.TabIndex = 15;
@@ -246,7 +246,7 @@ namespace Tugas_AD_Counter_HP
             // labelDisc
             // 
             this.labelDisc.AutoSize = true;
-            this.labelDisc.Location = new System.Drawing.Point(30, 523);
+            this.labelDisc.Location = new System.Drawing.Point(28, 541);
             this.labelDisc.Name = "labelDisc";
             this.labelDisc.Size = new System.Drawing.Size(48, 20);
             this.labelDisc.TabIndex = 20;
@@ -255,7 +255,7 @@ namespace Tugas_AD_Counter_HP
             // labelSubTotal
             // 
             this.labelSubTotal.AutoSize = true;
-            this.labelSubTotal.Location = new System.Drawing.Point(30, 438);
+            this.labelSubTotal.Location = new System.Drawing.Point(28, 456);
             this.labelSubTotal.Name = "labelSubTotal";
             this.labelSubTotal.Size = new System.Drawing.Size(126, 20);
             this.labelSubTotal.TabIndex = 21;
@@ -264,7 +264,7 @@ namespace Tugas_AD_Counter_HP
             // labelProdID
             // 
             this.labelProdID.AutoSize = true;
-            this.labelProdID.Location = new System.Drawing.Point(30, 279);
+            this.labelProdID.Location = new System.Drawing.Point(28, 297);
             this.labelProdID.Name = "labelProdID";
             this.labelProdID.Size = new System.Drawing.Size(97, 20);
             this.labelProdID.TabIndex = 22;
@@ -288,7 +288,6 @@ namespace Tugas_AD_Counter_HP
             this.comboBoxEmpID.Name = "comboBoxEmpID";
             this.comboBoxEmpID.Size = new System.Drawing.Size(141, 28);
             this.comboBoxEmpID.TabIndex = 23;
-            this.comboBoxEmpID.SelectedIndexChanged += new System.EventHandler(this.comboBoxEmpID_SelectedIndexChanged);
             // 
             // dtpInvDate
             // 
@@ -300,7 +299,7 @@ namespace Tugas_AD_Counter_HP
             // 
             // textBoxDisc
             // 
-            this.textBoxDisc.Location = new System.Drawing.Point(145, 516);
+            this.textBoxDisc.Location = new System.Drawing.Point(143, 534);
             this.textBoxDisc.Name = "textBoxDisc";
             this.textBoxDisc.ReadOnly = true;
             this.textBoxDisc.Size = new System.Drawing.Size(100, 26);
@@ -309,7 +308,7 @@ namespace Tugas_AD_Counter_HP
             // labelDisSubTotal
             // 
             this.labelDisSubTotal.AutoSize = true;
-            this.labelDisSubTotal.Location = new System.Drawing.Point(166, 438);
+            this.labelDisSubTotal.Location = new System.Drawing.Point(164, 456);
             this.labelDisSubTotal.Name = "labelDisSubTotal";
             this.labelDisSubTotal.Size = new System.Drawing.Size(18, 20);
             this.labelDisSubTotal.TabIndex = 27;
@@ -329,15 +328,16 @@ namespace Tugas_AD_Counter_HP
             "P08",
             "P09",
             "P10"});
-            this.comboBoxProdID.Location = new System.Drawing.Point(167, 276);
+            this.comboBoxProdID.Location = new System.Drawing.Point(165, 294);
             this.comboBoxProdID.Name = "comboBoxProdID";
             this.comboBoxProdID.Size = new System.Drawing.Size(141, 28);
             this.comboBoxProdID.TabIndex = 28;
+            this.comboBoxProdID.SelectedIndexChanged += new System.EventHandler(this.comboBoxProdID_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 318);
+            this.label4.Location = new System.Drawing.Point(28, 336);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 20);
             this.label4.TabIndex = 29;
@@ -346,7 +346,7 @@ namespace Tugas_AD_Counter_HP
             // labelDataProd
             // 
             this.labelDataProd.AutoSize = true;
-            this.labelDataProd.Location = new System.Drawing.Point(30, 245);
+            this.labelDataProd.Location = new System.Drawing.Point(28, 263);
             this.labelDataProd.Name = "labelDataProd";
             this.labelDataProd.Size = new System.Drawing.Size(103, 20);
             this.labelDataProd.TabIndex = 30;
@@ -354,7 +354,7 @@ namespace Tugas_AD_Counter_HP
             // 
             // textBoxProdName
             // 
-            this.textBoxProdName.Location = new System.Drawing.Point(167, 315);
+            this.textBoxProdName.Location = new System.Drawing.Point(165, 333);
             this.textBoxProdName.Name = "textBoxProdName";
             this.textBoxProdName.ReadOnly = true;
             this.textBoxProdName.Size = new System.Drawing.Size(243, 26);
@@ -362,7 +362,7 @@ namespace Tugas_AD_Counter_HP
             // 
             // textBoxProdPrice
             // 
-            this.textBoxProdPrice.Location = new System.Drawing.Point(167, 356);
+            this.textBoxProdPrice.Location = new System.Drawing.Point(165, 374);
             this.textBoxProdPrice.Name = "textBoxProdPrice";
             this.textBoxProdPrice.ReadOnly = true;
             this.textBoxProdPrice.Size = new System.Drawing.Size(243, 26);
@@ -371,7 +371,7 @@ namespace Tugas_AD_Counter_HP
             // labelProdPrice
             // 
             this.labelProdPrice.AutoSize = true;
-            this.labelProdPrice.Location = new System.Drawing.Point(30, 359);
+            this.labelProdPrice.Location = new System.Drawing.Point(28, 377);
             this.labelProdPrice.Name = "labelProdPrice";
             this.labelProdPrice.Size = new System.Drawing.Size(120, 20);
             this.labelProdPrice.TabIndex = 32;
@@ -379,15 +379,16 @@ namespace Tugas_AD_Counter_HP
             // 
             // textBoxQuan
             // 
-            this.textBoxQuan.Location = new System.Drawing.Point(167, 397);
+            this.textBoxQuan.Location = new System.Drawing.Point(165, 415);
             this.textBoxQuan.Name = "textBoxQuan";
             this.textBoxQuan.Size = new System.Drawing.Size(100, 26);
             this.textBoxQuan.TabIndex = 35;
+            this.textBoxQuan.TextChanged += new System.EventHandler(this.textBoxQuan_TextChanged);
             // 
             // labelQuan
             // 
             this.labelQuan.AutoSize = true;
-            this.labelQuan.Location = new System.Drawing.Point(30, 400);
+            this.labelQuan.Location = new System.Drawing.Point(28, 418);
             this.labelQuan.Name = "labelQuan";
             this.labelQuan.Size = new System.Drawing.Size(84, 20);
             this.labelQuan.TabIndex = 34;
@@ -396,7 +397,7 @@ namespace Tugas_AD_Counter_HP
             // labelDisTotal
             // 
             this.labelDisTotal.AutoSize = true;
-            this.labelDisTotal.Location = new System.Drawing.Point(166, 565);
+            this.labelDisTotal.Location = new System.Drawing.Point(164, 583);
             this.labelDisTotal.Name = "labelDisTotal";
             this.labelDisTotal.Size = new System.Drawing.Size(18, 20);
             this.labelDisTotal.TabIndex = 37;
@@ -405,7 +406,7 @@ namespace Tugas_AD_Counter_HP
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(30, 565);
+            this.labelTotal.Location = new System.Drawing.Point(28, 583);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(125, 20);
             this.labelTotal.TabIndex = 36;
@@ -414,7 +415,7 @@ namespace Tugas_AD_Counter_HP
             // labelBayar
             // 
             this.labelBayar.AutoSize = true;
-            this.labelBayar.Location = new System.Drawing.Point(498, 279);
+            this.labelBayar.Location = new System.Drawing.Point(496, 297);
             this.labelBayar.Name = "labelBayar";
             this.labelBayar.Size = new System.Drawing.Size(99, 20);
             this.labelBayar.TabIndex = 38;
@@ -423,7 +424,7 @@ namespace Tugas_AD_Counter_HP
             // labelKembali
             // 
             this.labelKembali.AutoSize = true;
-            this.labelKembali.Location = new System.Drawing.Point(498, 321);
+            this.labelKembali.Location = new System.Drawing.Point(496, 339);
             this.labelKembali.Name = "labelKembali";
             this.labelKembali.Size = new System.Drawing.Size(114, 20);
             this.labelKembali.TabIndex = 39;
@@ -431,7 +432,7 @@ namespace Tugas_AD_Counter_HP
             // 
             // textBoxBayar
             // 
-            this.textBoxBayar.Location = new System.Drawing.Point(637, 276);
+            this.textBoxBayar.Location = new System.Drawing.Point(635, 294);
             this.textBoxBayar.Name = "textBoxBayar";
             this.textBoxBayar.Size = new System.Drawing.Size(100, 26);
             this.textBoxBayar.TabIndex = 40;
@@ -439,7 +440,7 @@ namespace Tugas_AD_Counter_HP
             // labelDisKembali
             // 
             this.labelDisKembali.AutoSize = true;
-            this.labelDisKembali.Location = new System.Drawing.Point(642, 321);
+            this.labelDisKembali.Location = new System.Drawing.Point(640, 339);
             this.labelDisKembali.Name = "labelDisKembali";
             this.labelDisKembali.Size = new System.Drawing.Size(18, 20);
             this.labelDisKembali.TabIndex = 41;
@@ -447,7 +448,7 @@ namespace Tugas_AD_Counter_HP
             // 
             // buttonSubmit
             // 
-            this.buttonSubmit.Location = new System.Drawing.Point(502, 467);
+            this.buttonSubmit.Location = new System.Drawing.Point(500, 485);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(78, 42);
             this.buttonSubmit.TabIndex = 42;
