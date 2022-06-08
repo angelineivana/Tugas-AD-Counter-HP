@@ -40,15 +40,18 @@ namespace Tugas_AD_Counter_HP
             // labelLogin
             // 
             this.labelLogin.AutoSize = true;
-            this.labelLogin.Location = new System.Drawing.Point(49, 40);
+            this.labelLogin.BackColor = System.Drawing.Color.Transparent;
+            this.labelLogin.ForeColor = System.Drawing.Color.White;
+            this.labelLogin.Location = new System.Drawing.Point(170, 30);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(317, 20);
+            this.labelLogin.Size = new System.Drawing.Size(59, 20);
             this.labelLogin.TabIndex = 0;
-            this.labelLogin.Text = "Enter Your Username And Password Below";
+            this.labelLogin.Text = "LOGIN";
             // 
             // labelUsername
             // 
             this.labelUsername.AutoSize = true;
+            this.labelUsername.ForeColor = System.Drawing.Color.White;
             this.labelUsername.Location = new System.Drawing.Point(37, 94);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(95, 20);
@@ -58,6 +61,7 @@ namespace Tugas_AD_Counter_HP
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
+            this.labelPassword.ForeColor = System.Drawing.Color.White;
             this.labelPassword.Location = new System.Drawing.Point(37, 145);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(86, 20);
@@ -92,6 +96,7 @@ namespace Tugas_AD_Counter_HP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(424, 292);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPassword);
@@ -99,6 +104,8 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.labelLogin);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLogin";
             this.Text = "Log In";
             this.ResumeLayout(false);
