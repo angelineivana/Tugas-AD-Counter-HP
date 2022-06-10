@@ -33,9 +33,9 @@ namespace Tugas_AD_Counter_HP
             if (dtLogin.Rows.Count == 1)
             {
                 sendtext = textBoxUsername.Text;
-                FormInput form2 = new FormInput();
+                FormMenu formMenu = new FormMenu();
                 this.Hide();
-                form2.Show();
+                formMenu.Show();
             }
             else
             {

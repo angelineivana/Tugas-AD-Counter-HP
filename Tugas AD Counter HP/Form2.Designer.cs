@@ -29,7 +29,7 @@ namespace Tugas_AD_Counter_HP
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonCatalog = new System.Windows.Forms.Button();
+            this.buttonMenu = new System.Windows.Forms.Button();
             this.labelNoInv = new System.Windows.Forms.Label();
             this.labelCustName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -79,14 +79,15 @@ namespace Tugas_AD_Counter_HP
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrintProduct2)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonCatalog
+            // buttonMenu
             // 
-            this.buttonCatalog.Location = new System.Drawing.Point(54, 820);
-            this.buttonCatalog.Name = "buttonCatalog";
-            this.buttonCatalog.Size = new System.Drawing.Size(78, 42);
-            this.buttonCatalog.TabIndex = 0;
-            this.buttonCatalog.Text = "Catalog";
-            this.buttonCatalog.UseVisualStyleBackColor = true;
+            this.buttonMenu.Location = new System.Drawing.Point(34, 724);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(145, 50);
+            this.buttonMenu.TabIndex = 0;
+            this.buttonMenu.Text = "Back To Menu";
+            this.buttonMenu.UseVisualStyleBackColor = true;
+            this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
             // 
             // labelNoInv
             // 
@@ -557,7 +558,7 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelCustName);
             this.Controls.Add(this.labelNoInv);
-            this.Controls.Add(this.buttonCatalog);
+            this.Controls.Add(this.buttonMenu);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "FormInput";
             this.Text = "Form Input";
@@ -571,7 +572,7 @@ namespace Tugas_AD_Counter_HP
 
         #endregion
 
-        private System.Windows.Forms.Button buttonCatalog;
+        private System.Windows.Forms.Button buttonMenu;
         private System.Windows.Forms.Label labelNoInv;
         private System.Windows.Forms.Label labelCustName;
         private System.Windows.Forms.Label label2;

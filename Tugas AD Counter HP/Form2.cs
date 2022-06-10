@@ -279,14 +279,21 @@ namespace Tugas_AD_Counter_HP
             custPhone = textBoxCustHP.Text;
             custEmail = textBoxCustEmail.Text;
             empID = textBoxIDEmp.Text;
-            FormNota form3 = new FormNota();
+            FormNota formNota = new FormNota();
             this.Hide();
-            form3.Show();
+            formNota.Show();
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonMenu_Click(object sender, EventArgs e)
+        {
+            FormMenu formMenu = new FormMenu();
+            this.Hide();
+            formMenu.Show();
         }
     }
 }
