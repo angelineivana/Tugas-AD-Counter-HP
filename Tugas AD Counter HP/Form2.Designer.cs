@@ -510,6 +510,7 @@ namespace Tugas_AD_Counter_HP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1062, 924);
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.buttonFinish);
@@ -557,6 +558,7 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.labelCustName);
             this.Controls.Add(this.labelNoInv);
             this.Controls.Add(this.buttonCatalog);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "FormInput";
             this.Text = "Form Input";
             this.Load += new System.EventHandler(this.FormInput_Load);

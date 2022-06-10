@@ -45,16 +45,6 @@ namespace Tugas_AD_Counter_HP
             this.Kuantitas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Harga = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Jumlah = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.labelSubTotal = new System.Windows.Forms.Label();
-            this.labelPromo = new System.Windows.Forms.Label();
-            this.labelTotal = new System.Windows.Forms.Label();
-            this.labelKaryawan = new System.Windows.Forms.Label();
-            this.labelDisCustName = new System.Windows.Forms.Label();
-            this.labelDisCustPhone = new System.Windows.Forms.Label();
-            this.labelDisCustEmail = new System.Windows.Forms.Label();
-            this.labelDisTotal = new System.Windows.Forms.Label();
-            this.labelDisPromo = new System.Windows.Forms.Label();
-            this.labelDisSubTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrintProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +69,7 @@ namespace Tugas_AD_Counter_HP
             // labelInvoice
             // 
             this.labelInvoice.AutoSize = true;
-            this.labelInvoice.Location = new System.Drawing.Point(479, 94);
+            this.labelInvoice.Location = new System.Drawing.Point(488, 95);
             this.labelInvoice.Name = "labelInvoice";
             this.labelInvoice.Size = new System.Drawing.Size(75, 20);
             this.labelInvoice.TabIndex = 2;
@@ -89,7 +79,7 @@ namespace Tugas_AD_Counter_HP
             // labelInvNo
             // 
             this.labelInvNo.AutoSize = true;
-            this.labelInvNo.Location = new System.Drawing.Point(476, 124);
+            this.labelInvNo.Location = new System.Drawing.Point(488, 129);
             this.labelInvNo.Name = "labelInvNo";
             this.labelInvNo.Size = new System.Drawing.Size(87, 20);
             this.labelInvNo.TabIndex = 3;
@@ -229,60 +219,40 @@ namespace Tugas_AD_Counter_HP
             this.labelKaryawan.TabIndex = 15;
             this.labelKaryawan.Text = "Nama Karyawan";
             // 
-            // labelDisCustName
+            // No
             // 
-            this.labelDisCustName.AutoSize = true;
-            this.labelDisCustName.Location = new System.Drawing.Point(101, 223);
-            this.labelDisCustName.Name = "labelDisCustName";
-            this.labelDisCustName.Size = new System.Drawing.Size(21, 20);
-            this.labelDisCustName.TabIndex = 18;
-            this.labelDisCustName.Text = "...";
+            this.No.HeaderText = "No.";
+            this.No.MinimumWidth = 8;
+            this.No.Name = "No";
+            this.No.Width = 150;
             // 
-            // labelDisCustPhone
+            // NamaProduk
             // 
-            this.labelDisCustPhone.AutoSize = true;
-            this.labelDisCustPhone.Location = new System.Drawing.Point(101, 255);
-            this.labelDisCustPhone.Name = "labelDisCustPhone";
-            this.labelDisCustPhone.Size = new System.Drawing.Size(21, 20);
-            this.labelDisCustPhone.TabIndex = 17;
-            this.labelDisCustPhone.Text = "...";
+            this.NamaProduk.HeaderText = "Nama Produk";
+            this.NamaProduk.MinimumWidth = 8;
+            this.NamaProduk.Name = "NamaProduk";
+            this.NamaProduk.Width = 150;
             // 
-            // labelDisCustEmail
+            // Kuantitas
             // 
-            this.labelDisCustEmail.AutoSize = true;
-            this.labelDisCustEmail.Location = new System.Drawing.Point(101, 285);
-            this.labelDisCustEmail.Name = "labelDisCustEmail";
-            this.labelDisCustEmail.Size = new System.Drawing.Size(21, 20);
-            this.labelDisCustEmail.TabIndex = 16;
-            this.labelDisCustEmail.Text = "...";
+            this.Kuantitas.HeaderText = "Kuantitas";
+            this.Kuantitas.MinimumWidth = 8;
+            this.Kuantitas.Name = "Kuantitas";
+            this.Kuantitas.Width = 150;
             // 
-            // labelDisTotal
+            // Harga
             // 
-            this.labelDisTotal.AutoSize = true;
-            this.labelDisTotal.Location = new System.Drawing.Point(822, 670);
-            this.labelDisTotal.Name = "labelDisTotal";
-            this.labelDisTotal.Size = new System.Drawing.Size(21, 20);
-            this.labelDisTotal.TabIndex = 21;
-            this.labelDisTotal.Text = "...";
-            this.labelDisTotal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Harga.HeaderText = "Harga";
+            this.Harga.MinimumWidth = 8;
+            this.Harga.Name = "Harga";
+            this.Harga.Width = 150;
             // 
-            // labelDisPromo
+            // Jumlah
             // 
-            this.labelDisPromo.AutoSize = true;
-            this.labelDisPromo.Location = new System.Drawing.Point(822, 633);
-            this.labelDisPromo.Name = "labelDisPromo";
-            this.labelDisPromo.Size = new System.Drawing.Size(21, 20);
-            this.labelDisPromo.TabIndex = 20;
-            this.labelDisPromo.Text = "...";
-            // 
-            // labelDisSubTotal
-            // 
-            this.labelDisSubTotal.AutoSize = true;
-            this.labelDisSubTotal.Location = new System.Drawing.Point(822, 598);
-            this.labelDisSubTotal.Name = "labelDisSubTotal";
-            this.labelDisSubTotal.Size = new System.Drawing.Size(21, 20);
-            this.labelDisSubTotal.TabIndex = 19;
-            this.labelDisSubTotal.Text = "...";
+            this.Jumlah.HeaderText = "Jumlah";
+            this.Jumlah.MinimumWidth = 8;
+            this.Jumlah.Name = "Jumlah";
+            this.Jumlah.Width = 150;
             // 
             // FormNota
             // 
@@ -291,12 +261,6 @@ namespace Tugas_AD_Counter_HP
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1074, 881);
-            this.Controls.Add(this.labelDisTotal);
-            this.Controls.Add(this.labelDisPromo);
-            this.Controls.Add(this.labelDisSubTotal);
-            this.Controls.Add(this.labelDisCustName);
-            this.Controls.Add(this.labelDisCustPhone);
-            this.Controls.Add(this.labelDisCustEmail);
             this.Controls.Add(this.labelKaryawan);
             this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.labelPromo);
@@ -341,11 +305,5 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.DataGridViewTextBoxColumn Kuantitas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Harga;
         private System.Windows.Forms.DataGridViewTextBoxColumn Jumlah;
-        private System.Windows.Forms.Label labelDisCustName;
-        private System.Windows.Forms.Label labelDisCustPhone;
-        private System.Windows.Forms.Label labelDisCustEmail;
-        private System.Windows.Forms.Label labelDisTotal;
-        private System.Windows.Forms.Label labelDisPromo;
-        private System.Windows.Forms.Label labelDisSubTotal;
     }
 }
