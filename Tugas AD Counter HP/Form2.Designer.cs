@@ -69,19 +69,19 @@ namespace Tugas_AD_Counter_HP
             this.labelPromoName = new System.Windows.Forms.Label();
             this.comboBoxPromoName = new System.Windows.Forms.ComboBox();
             this.textBoxPromoID = new System.Windows.Forms.TextBox();
-            this.buttonCountTotal = new System.Windows.Forms.Button();
             this.dgvPrintProduct2 = new System.Windows.Forms.DataGridView();
             this.textBoxIDEmp = new System.Windows.Forms.TextBox();
             this.textBoxDisIDStore = new System.Windows.Forms.TextBox();
-            this.buttonFinish = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.buttonPrint = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrintProduct2)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonCatalog
             // 
-            this.buttonCatalog.Location = new System.Drawing.Point(898, 799);
+            this.buttonCatalog.Location = new System.Drawing.Point(54, 820);
             this.buttonCatalog.Name = "buttonCatalog";
             this.buttonCatalog.Size = new System.Drawing.Size(78, 42);
             this.buttonCatalog.TabIndex = 0;
@@ -343,7 +343,7 @@ namespace Tugas_AD_Counter_HP
             // labelDisTotal
             // 
             this.labelDisTotal.AutoSize = true;
-            this.labelDisTotal.Location = new System.Drawing.Point(169, 792);
+            this.labelDisTotal.Location = new System.Drawing.Point(729, 601);
             this.labelDisTotal.Name = "labelDisTotal";
             this.labelDisTotal.Size = new System.Drawing.Size(18, 20);
             this.labelDisTotal.TabIndex = 37;
@@ -352,7 +352,7 @@ namespace Tugas_AD_Counter_HP
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(35, 792);
+            this.labelTotal.Location = new System.Drawing.Point(568, 601);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(125, 20);
             this.labelTotal.TabIndex = 36;
@@ -361,7 +361,7 @@ namespace Tugas_AD_Counter_HP
             // labelBayar
             // 
             this.labelBayar.AutoSize = true;
-            this.labelBayar.Location = new System.Drawing.Point(559, 606);
+            this.labelBayar.Location = new System.Drawing.Point(569, 637);
             this.labelBayar.Name = "labelBayar";
             this.labelBayar.Size = new System.Drawing.Size(99, 20);
             this.labelBayar.TabIndex = 38;
@@ -370,7 +370,7 @@ namespace Tugas_AD_Counter_HP
             // labelKembali
             // 
             this.labelKembali.AutoSize = true;
-            this.labelKembali.Location = new System.Drawing.Point(559, 640);
+            this.labelKembali.Location = new System.Drawing.Point(569, 671);
             this.labelKembali.Name = "labelKembali";
             this.labelKembali.Size = new System.Drawing.Size(114, 20);
             this.labelKembali.TabIndex = 39;
@@ -378,7 +378,7 @@ namespace Tugas_AD_Counter_HP
             // 
             // textBoxBayar
             // 
-            this.textBoxBayar.Location = new System.Drawing.Point(723, 603);
+            this.textBoxBayar.Location = new System.Drawing.Point(733, 634);
             this.textBoxBayar.Name = "textBoxBayar";
             this.textBoxBayar.Size = new System.Drawing.Size(100, 26);
             this.textBoxBayar.TabIndex = 40;
@@ -387,7 +387,7 @@ namespace Tugas_AD_Counter_HP
             // labelDisKembali
             // 
             this.labelDisKembali.AutoSize = true;
-            this.labelDisKembali.Location = new System.Drawing.Point(719, 643);
+            this.labelDisKembali.Location = new System.Drawing.Point(729, 674);
             this.labelDisKembali.Name = "labelDisKembali";
             this.labelDisKembali.Size = new System.Drawing.Size(18, 20);
             this.labelDisKembali.TabIndex = 41;
@@ -448,16 +448,6 @@ namespace Tugas_AD_Counter_HP
             this.textBoxPromoID.Size = new System.Drawing.Size(100, 26);
             this.textBoxPromoID.TabIndex = 46;
             // 
-            // buttonCountTotal
-            // 
-            this.buttonCountTotal.Location = new System.Drawing.Point(34, 826);
-            this.buttonCountTotal.Name = "buttonCountTotal";
-            this.buttonCountTotal.Size = new System.Drawing.Size(128, 34);
-            this.buttonCountTotal.TabIndex = 47;
-            this.buttonCountTotal.Text = "Hitung Total";
-            this.buttonCountTotal.UseVisualStyleBackColor = true;
-            this.buttonCountTotal.Click += new System.EventHandler(this.buttonCountTotal_Click);
-            // 
             // dgvPrintProduct2
             // 
             this.dgvPrintProduct2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -486,19 +476,19 @@ namespace Tugas_AD_Counter_HP
             this.textBoxDisIDStore.Size = new System.Drawing.Size(200, 26);
             this.textBoxDisIDStore.TabIndex = 50;
             // 
-            // buttonFinish
+            // buttonSave
             // 
-            this.buttonFinish.Location = new System.Drawing.Point(664, 792);
-            this.buttonFinish.Name = "buttonFinish";
-            this.buttonFinish.Size = new System.Drawing.Size(95, 57);
-            this.buttonFinish.TabIndex = 51;
-            this.buttonFinish.Text = "Finish";
-            this.buttonFinish.UseVisualStyleBackColor = true;
-            this.buttonFinish.Click += new System.EventHandler(this.buttonFinish_Click);
+            this.buttonSave.Location = new System.Drawing.Point(573, 717);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(95, 57);
+            this.buttonSave.TabIndex = 51;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonPrint
             // 
-            this.buttonPrint.Location = new System.Drawing.Point(781, 792);
+            this.buttonPrint.Location = new System.Drawing.Point(686, 717);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(95, 57);
             this.buttonPrint.TabIndex = 52;
@@ -506,18 +496,28 @@ namespace Tugas_AD_Counter_HP
             this.buttonPrint.UseVisualStyleBackColor = true;
             this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
+            // buttonClose
+            // 
+            this.buttonClose.Location = new System.Drawing.Point(796, 717);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(95, 57);
+            this.buttonClose.TabIndex = 53;
+            this.buttonClose.Text = "Close";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
             // FormInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1062, 924);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonPrint);
-            this.Controls.Add(this.buttonFinish);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.textBoxDisIDStore);
             this.Controls.Add(this.textBoxIDEmp);
             this.Controls.Add(this.dgvPrintProduct2);
-            this.Controls.Add(this.buttonCountTotal);
             this.Controls.Add(this.textBoxPromoID);
             this.Controls.Add(this.labelPromoName);
             this.Controls.Add(this.comboBoxPromoName);
@@ -611,11 +611,11 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.Label labelPromoName;
         private System.Windows.Forms.ComboBox comboBoxPromoName;
         private System.Windows.Forms.TextBox textBoxPromoID;
-        private System.Windows.Forms.Button buttonCountTotal;
         private System.Windows.Forms.DataGridView dgvPrintProduct2;
         private System.Windows.Forms.TextBox textBoxIDEmp;
         private System.Windows.Forms.TextBox textBoxDisIDStore;
-        private System.Windows.Forms.Button buttonFinish;
+        private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonPrint;
+        private System.Windows.Forms.Button buttonClose;
     }
 }

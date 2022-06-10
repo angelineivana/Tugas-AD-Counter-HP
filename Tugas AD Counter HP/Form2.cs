@@ -140,8 +140,9 @@ namespace Tugas_AD_Counter_HP
         }
         int no = 0;
         int subtotalAll = 0;
-        DataTable dtShowProd2 = new DataTable();
+        public static DataTable dtShowProd2 = new DataTable();
         string[] arrayProdID = new string[100];
+        public static int hitungTotal = 0;
         private void buttonAddProd_Click(object sender, EventArgs e)
         {
             if (comboBoxProdName.Text == "")
@@ -160,6 +161,10 @@ namespace Tugas_AD_Counter_HP
                 no++;
                 comboBoxPromoName.Enabled = true;
 
+                //HITUNG TOTAL
+                hitungTotal += Convert.ToInt32(labelDisSubTotal.Text);
+                labelDisTotal.Text = "Rp " + hitungTotal.ToString();
+
                 comboBoxProdName.Text = "";
                 textBoxProdID.Text = "";
                 textBoxProdPrice.Text = "";
@@ -168,9 +173,10 @@ namespace Tugas_AD_Counter_HP
             }
         }
         DateTimePicker dtpInvDateClone = new DateTimePicker();
-        int total = 0;
+        public static int total = 0;
         public static int disc = 0;
         string currentInvDate;
+        string promo = " ";
         private void comboBoxPromoName_SelectedIndexChanged(object sender, EventArgs e)
         {
             dtPromo.Clear();
@@ -189,15 +195,25 @@ namespace Tugas_AD_Counter_HP
             sqlAdapter.Fill(dtPromo);
             if (dtPromo.Rows.Count == 0)
             {
+                comboBoxPromoName.Text = promo;
                 MessageBox.Show("Promo Tidak Berlaku");
-                comboBoxPromoName.ResetText();
-                comboBoxPromoName.SelectedItem = null;
             }
             else
             {
                 textBoxPromoID.Text = dtPromo.Rows[0][0].ToString();
                 disc = Convert.ToInt32(dtPromo.Rows[0][1]);
                 textBoxDisc.Text = dtPromo.Rows[0][1].ToString() + " %";
+
+                for (int i = 0; i < dtShowProd2.Rows.Count; i++)
+                {
+                    subtotalAll += Convert.ToInt32(dtShowProd2.Rows[i][4].ToString().Substring(3));
+                }
+                if (comboBoxPromoName.SelectedItem != null)
+                {
+                    total = subtotalAll - (subtotalAll * disc / 100);
+                    labelDisTotal.Text = total.ToString();
+                }
+                subtotalAll = 0;
             }
         }
         int kembalian = 0;
@@ -207,22 +223,8 @@ namespace Tugas_AD_Counter_HP
             labelDisKembali.Text = kembalian.ToString();
         }
 
-        private void buttonCountTotal_Click(object sender, EventArgs e)
-        {
-            labelDisTotal.Text = "0";
-            for (int i = 0; i < dtShowProd2.Rows.Count; i++)
-            {
-                subtotalAll = subtotalAll + Convert.ToInt32(dtShowProd2.Rows[i][4].ToString().Substring(3));
-            }
-            if (comboBoxPromoName.SelectedItem != null)
-            {
-                total = subtotalAll - (subtotalAll * disc / 100);
-                labelDisTotal.Text = total.ToString();
-            }
-            subtotalAll = 0;
-        }
         int itemCount = 0;
-        private void buttonFinish_Click(object sender, EventArgs e)
+        private void buttonSave_Click(object sender, EventArgs e)
         {
             //customer
             sqlQuery = "INSERT INTO CUSTOMER VALUES ('"+textBoxCustID.Text+"', '"+ textBoxCustNama.Text +"', '"+ textBoxCustHP.Text +"', '"+ textBoxCustEmail.Text +"', '0')";
@@ -258,6 +260,8 @@ namespace Tugas_AD_Counter_HP
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlCommand.ExecuteNonQuery();
             sqlConnect.Close();
+
+            MessageBox.Show("Invoice Telah Disimpan");
         }
         public static string idStore = "";
         public static string invNo = "";
@@ -265,6 +269,7 @@ namespace Tugas_AD_Counter_HP
         public static string custName = "";
         public static string custPhone = "";
         public static string custEmail = "";
+        public static string empID = "";
         private void buttonPrint_Click(object sender, EventArgs e)
         {
             idStore = textBoxDisIDStore.Text;
@@ -273,9 +278,15 @@ namespace Tugas_AD_Counter_HP
             custName = textBoxCustNama.Text;
             custPhone = textBoxCustHP.Text;
             custEmail = textBoxCustEmail.Text;
+            empID = textBoxIDEmp.Text;
             FormNota form3 = new FormNota();
             this.Hide();
             form3.Show();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

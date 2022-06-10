@@ -27,6 +27,7 @@ namespace Tugas_AD_Counter_HP
 
 
         DataTable dtStore = new DataTable();
+        DataTable dtEmpName = new DataTable();
         private void FormNota_Load(object sender, EventArgs e)
         {
             //STORE
@@ -50,14 +51,22 @@ namespace Tugas_AD_Counter_HP
             labelDisCustEmail.Text = FormInput.custEmail;
 
             //DGV PRODUCT
+            dgvPrintProduct.DataSource = FormInput.dtShowProd2;
 
 
-            //SUBTOTAL
 
-
-            //PROMO, TOTAL
+            //SUBTOTAL, PROMO, TOTAL
+            labelDisSubTotal.Text = "Rp " + FormInput.hitungTotal.ToString();
             labelDisPromo.Text = FormInput.disc.ToString() + " %";
+            labelDisTotal.Text = "Rp " + FormInput.total.ToString();
 
+            //EMPLOYEE NAME
+            sqlQuery = "SELECT emp_name FROM EMPLOYEE WHERE '"+ FormInput.empID +"' = emp_id";
+            sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
+            sqlAdapter = new MySqlDataAdapter(sqlCommand);
+            sqlAdapter.Fill(dtEmpName);
+
+            labelEmpName.Text = dtEmpName.Rows[0][0].ToString();
         }
     }
 }
