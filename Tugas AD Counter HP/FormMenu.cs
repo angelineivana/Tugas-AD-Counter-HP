@@ -26,7 +26,7 @@ namespace Tugas_AD_Counter_HP
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Windows.Forms.Application.Exit();
         }
 
         private void buttonCatalog_Click(object sender, EventArgs e)
