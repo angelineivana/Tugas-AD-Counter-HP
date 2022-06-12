@@ -75,7 +75,7 @@ namespace Tugas_AD_Counter_HP
             // labelInvoice
             // 
             this.labelInvoice.AutoSize = true;
-            this.labelInvoice.Location = new System.Drawing.Point(488, 95);
+            this.labelInvoice.Location = new System.Drawing.Point(497, 95);
             this.labelInvoice.Name = "labelInvoice";
             this.labelInvoice.Size = new System.Drawing.Size(75, 20);
             this.labelInvoice.TabIndex = 2;
@@ -85,7 +85,7 @@ namespace Tugas_AD_Counter_HP
             // labelInvNo
             // 
             this.labelInvNo.AutoSize = true;
-            this.labelInvNo.Location = new System.Drawing.Point(488, 129);
+            this.labelInvNo.Location = new System.Drawing.Point(488, 128);
             this.labelInvNo.Name = "labelInvNo";
             this.labelInvNo.Size = new System.Drawing.Size(87, 20);
             this.labelInvNo.TabIndex = 3;
@@ -95,7 +95,7 @@ namespace Tugas_AD_Counter_HP
             // labelDate
             // 
             this.labelDate.AutoSize = true;
-            this.labelDate.Location = new System.Drawing.Point(479, 155);
+            this.labelDate.Location = new System.Drawing.Point(497, 160);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(66, 20);
             this.labelDate.TabIndex = 4;
@@ -141,7 +141,7 @@ namespace Tugas_AD_Counter_HP
             // labelSubTotal
             // 
             this.labelSubTotal.AutoSize = true;
-            this.labelSubTotal.Location = new System.Drawing.Point(728, 598);
+            this.labelSubTotal.Location = new System.Drawing.Point(720, 562);
             this.labelSubTotal.Name = "labelSubTotal";
             this.labelSubTotal.Size = new System.Drawing.Size(85, 20);
             this.labelSubTotal.TabIndex = 11;
@@ -150,7 +150,7 @@ namespace Tugas_AD_Counter_HP
             // labelPromo
             // 
             this.labelPromo.AutoSize = true;
-            this.labelPromo.Location = new System.Drawing.Point(728, 633);
+            this.labelPromo.Location = new System.Drawing.Point(720, 597);
             this.labelPromo.Name = "labelPromo";
             this.labelPromo.Size = new System.Drawing.Size(63, 20);
             this.labelPromo.TabIndex = 12;
@@ -159,7 +159,7 @@ namespace Tugas_AD_Counter_HP
             // labelLine
             // 
             this.labelLine.AutoSize = true;
-            this.labelLine.Location = new System.Drawing.Point(806, 799);
+            this.labelLine.Location = new System.Drawing.Point(798, 763);
             this.labelLine.Name = "labelLine";
             this.labelLine.Size = new System.Drawing.Size(171, 20);
             this.labelLine.TabIndex = 15;
@@ -168,7 +168,7 @@ namespace Tugas_AD_Counter_HP
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(728, 670);
+            this.labelTotal.Location = new System.Drawing.Point(720, 634);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(52, 20);
             this.labelTotal.TabIndex = 13;
@@ -176,12 +176,17 @@ namespace Tugas_AD_Counter_HP
             // 
             // dgvPrintProduct
             // 
+            this.dgvPrintProduct.AllowUserToAddRows = false;
+            this.dgvPrintProduct.AllowUserToDeleteRows = false;
+            this.dgvPrintProduct.AllowUserToResizeColumns = false;
+            this.dgvPrintProduct.AllowUserToResizeRows = false;
+            this.dgvPrintProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPrintProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrintProduct.Location = new System.Drawing.Point(40, 332);
             this.dgvPrintProduct.Name = "dgvPrintProduct";
             this.dgvPrintProduct.RowHeadersWidth = 62;
             this.dgvPrintProduct.RowTemplate.Height = 28;
-            this.dgvPrintProduct.Size = new System.Drawing.Size(1003, 230);
+            this.dgvPrintProduct.Size = new System.Drawing.Size(1003, 209);
             this.dgvPrintProduct.TabIndex = 10;
             // 
             // labelDisCustName
@@ -215,7 +220,7 @@ namespace Tugas_AD_Counter_HP
             // labelDisTotal
             // 
             this.labelDisTotal.AutoSize = true;
-            this.labelDisTotal.Location = new System.Drawing.Point(819, 670);
+            this.labelDisTotal.Location = new System.Drawing.Point(811, 634);
             this.labelDisTotal.Name = "labelDisTotal";
             this.labelDisTotal.Size = new System.Drawing.Size(21, 20);
             this.labelDisTotal.TabIndex = 21;
@@ -224,7 +229,7 @@ namespace Tugas_AD_Counter_HP
             // labelDisPromo
             // 
             this.labelDisPromo.AutoSize = true;
-            this.labelDisPromo.Location = new System.Drawing.Point(819, 633);
+            this.labelDisPromo.Location = new System.Drawing.Point(811, 597);
             this.labelDisPromo.Name = "labelDisPromo";
             this.labelDisPromo.Size = new System.Drawing.Size(21, 20);
             this.labelDisPromo.TabIndex = 20;
@@ -233,7 +238,7 @@ namespace Tugas_AD_Counter_HP
             // labelDisSubTotal
             // 
             this.labelDisSubTotal.AutoSize = true;
-            this.labelDisSubTotal.Location = new System.Drawing.Point(819, 598);
+            this.labelDisSubTotal.Location = new System.Drawing.Point(811, 562);
             this.labelDisSubTotal.Name = "labelDisSubTotal";
             this.labelDisSubTotal.Size = new System.Drawing.Size(21, 20);
             this.labelDisSubTotal.TabIndex = 19;
@@ -242,7 +247,7 @@ namespace Tugas_AD_Counter_HP
             // labelEmpName
             // 
             this.labelEmpName.AutoSize = true;
-            this.labelEmpName.Location = new System.Drawing.Point(872, 828);
+            this.labelEmpName.Location = new System.Drawing.Point(798, 795);
             this.labelEmpName.Name = "labelEmpName";
             this.labelEmpName.Size = new System.Drawing.Size(39, 20);
             this.labelEmpName.TabIndex = 22;

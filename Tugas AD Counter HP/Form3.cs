@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Globalization;
 
 namespace Tugas_AD_Counter_HP
 {
@@ -56,9 +57,10 @@ namespace Tugas_AD_Counter_HP
 
 
             //SUBTOTAL, PROMO, TOTAL
-            labelDisSubTotal.Text = "Rp " + FormInput.hitungTotal.ToString();
+            labelDisSubTotal.Text = Decimal.Parse(FormInput.hitungTotal.ToString()).ToString("C", FormInput.culture);
             labelDisPromo.Text = FormInput.disc.ToString() + " %";
-            labelDisTotal.Text = "Rp " + FormInput.total.ToString();
+            int total = FormInput.hitungTotal - (FormInput.hitungTotal * FormInput.disc / 100);
+            labelDisTotal.Text = Decimal.Parse(total.ToString()).ToString("C", FormInput.culture);
 
             //EMPLOYEE NAME
             sqlQuery = "SELECT emp_name FROM EMPLOYEE WHERE '"+ FormInput.empID +"' = emp_id";

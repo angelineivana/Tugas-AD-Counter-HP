@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,18 +23,40 @@ namespace Tugas_AD_Counter_HP
         public MySqlCommand sqlCommand;
         public MySqlDataAdapter sqlAdapter;
         string sqlQuery;
+        public static CultureInfo culture = new CultureInfo("id-ID");
         DataTable dtDetailProd = new DataTable();
         DataTable dtPromo = new DataTable();
-        
+        DataTable dtStoreEmpID = new DataTable();
+        DataTable dtNoInv = new DataTable();
+        DataTable dtIDCust = new DataTable();
+        DataTable dtCheckDatePromo = new DataTable();
         int subtotal = 0;
-        int quantity = 0;
         int price = 0;
         string sendtextform1 = "";
+        int no = 0;
+        public static DataTable dtShowProd2 = new DataTable();
+        string[] arrayProdID = new string[100];
+        public static int hitungTotal = 0;
+        string currentPrice;
+        DateTimePicker dtpInvDateClone = new DateTimePicker();
+        public static int total = 0;
+        public static int disc = 0;
+        string currentInvDate;
+        int kembalian = 0;
+        int itemCount = 0;
+        int statusBtnSave = 0;
+
+        public static string idStore = "";
+        public static string invNo = "";
+        public static string invDate = "";
+        public static string custName = "";
+        public static string custPhone = "";
+        public static string custEmail = "";
+        public static string empID = "";
         private void FormInput_Load(object sender, EventArgs e)
         {
             sendtextform1 = FormLogin.sendtext;
-            DataTable dtStoreEmpID = new DataTable();
-            sqlQuery = "SELECT emp_id, store_id FROM EMPLOYEE where emp_username = '"+ sendtextform1 +"'";
+            sqlQuery = "SELECT emp_id, store_id FROM EMPLOYEE WHERE emp_username = '"+ sendtextform1 +"'";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtStoreEmpID);
@@ -49,8 +72,7 @@ namespace Tugas_AD_Counter_HP
             dtShowProd2.Columns.Add("Jumlah");
             dgvPrintProduct2.DataSource = dtShowProd2;
 
-            DataTable dtNoInv = new DataTable();
-            sqlQuery = "SELECT INV_NO FROM INVOICE";
+            sqlQuery = "SELECT inv_no FROM INVOICE";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtNoInv);
@@ -77,7 +99,6 @@ namespace Tugas_AD_Counter_HP
             }
             textBoxInvNo.Text = angkaJalan;
 
-            DataTable dtIDCust = new DataTable();
             sqlQuery = "SELECT cust_id FROM CUSTOMER";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
@@ -99,31 +120,48 @@ namespace Tugas_AD_Counter_HP
                 angkaJalanCust = "c_";
                 angkaJalanCust += dtNoInv.Rows.Count + 1;
             }
-            textBoxCustID.Text = angkaJalanCust;
 
+            textBoxCustID.Text = angkaJalanCust;
+            comboBoxProdName.Enabled = false;
             nudQuan.Enabled = false;
             comboBoxPromoName.Enabled = false;
+            textBoxBayar.Enabled = false;
         }
-        string currentPrice;
+
+        private void textBoxCustEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "")
+            {
+                comboBoxProdName.Enabled = true;
+            }
+            else
+            {
+                comboBoxProdName.Enabled = false;
+            }
+        }
+        int stock = 0;
         private void comboBoxProdName_SelectedIndexChanged(object sender, EventArgs e)
         {
             //dtDetailProd diclear setiap cbox nama produk diubah karena dibuat supaya berisi 1 row data saja (per nama produk)
             dtDetailProd.Clear();
 
             //product id buat textboxProdID, product price buat textboxProdPrice, select ketika namanya sama dengan cboxprodname
-            sqlQuery = "SELECT product_id as 'Product ID', product_price as 'Product Price' from PRODUCT where product_name = '" + comboBoxProdName.SelectedItem.ToString() + "'";
+            sqlQuery = "SELECT product_id as 'Product ID', product_price as 'Product Price', product_stock as 'Product Stock' FROM PRODUCT WHERE product_name = '" + comboBoxProdName.SelectedItem.ToString() + "'";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtDetailProd);
 
             //row ke 0 karena dtDetailProd berisi 1 row saja dan kolom sesuai dengan query
             textBoxProdID.Text = dtDetailProd.Rows[0][0].ToString();
-            textBoxProdPrice.Text = "Rp " + dtDetailProd.Rows[0][1].ToString();
-
-            //buat variable baru bernama currentPrice untuk mengambil value harga per product yang blm dihitung
+            //buat variable baru bernama currentPrice untuk mengambil value harga per product yang blm dikali qty
             currentPrice = dtDetailProd.Rows[0][1].ToString();
+            textBoxProdPrice.Text = Decimal.Parse(currentPrice.ToString()).ToString("C", culture);
+            stock = Convert.ToInt32(dtDetailProd.Rows[0][2].ToString());
+            labelStock.Text = "Stok : " + stock.ToString();
 
             nudQuan.Enabled = true;
+            labelDisSubTotal.Text = "Rp0,00";
+            nudQuan.Value = 0;
         }
         private void nudQuan_ValueChanged(object sender, EventArgs e)
         {
@@ -135,16 +173,29 @@ namespace Tugas_AD_Counter_HP
             {
                 price = Convert.ToInt32(currentPrice);
                 subtotal = Convert.ToInt32(nudQuan.Value) * price;
-                labelDisSubTotal.Text = subtotal.ToString();
+                labelDisSubTotal.Text = Decimal.Parse(subtotal.ToString()).ToString("C", culture);
             }
         }
-        int no = 0;
-        int subtotalAll = 0;
-        public static DataTable dtShowProd2 = new DataTable();
-        string[] arrayProdID = new string[100];
-        public static int hitungTotal = 0;
         private void buttonAddProd_Click(object sender, EventArgs e)
         {
+/*
+            dtpInvDateClone.Value = dtpInvDate.Value;
+            dtpInvDateClone.Format = DateTimePickerFormat.Custom;
+            dtpInvDateClone.CustomFormat = "yyyy-MM-dd";
+            currentInvDate = dtpInvDateClone.Value.ToString("yyyy-MM-dd");
+
+            sqlQuery = "SELECT promo_id as 'Promo ID', promo_disc as 'Promo Disc' from PROMO where '" + currentInvDate + "' between PROMO_START_DATE and PROMO_END_DATE";
+            sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
+            sqlAdapter = new MySqlDataAdapter(sqlCommand);
+            sqlAdapter.Fill(dtCheckDatePromo);
+            //check ada promo pada tgl itu
+            if (dtCheckDatePromo.Rows.Count == 0)
+            {
+                MessageBox.Show("Tidak Ada Promo Yang Berlaku Pada Tanggal Ini");
+                comboBoxPromoName.Enabled = false;
+            }
+*/
+
             if (comboBoxProdName.Text == "")
             {
                 MessageBox.Show("Produk Belum Dipilih");
@@ -155,15 +206,17 @@ namespace Tugas_AD_Counter_HP
             }
             else
             {
-                dtShowProd2.Rows.Add((no + 1).ToString(), comboBoxProdName.SelectedItem.ToString(), nudQuan.Value.ToString(), textBoxProdPrice.Text, "Rp " + labelDisSubTotal.Text);
-              
+                comboBoxPromoName.Enabled = true;
+                textBoxBayar.Enabled = true;
+                this.dgvPrintProduct2.Columns["Harga"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                this.dgvPrintProduct2.Columns["Jumlah"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                dtShowProd2.Rows.Add((no + 1).ToString(), comboBoxProdName.SelectedItem.ToString(), nudQuan.Value.ToString(), textBoxProdPrice.Text.Substring(2), labelDisSubTotal.Text.Substring(2));
+                
                 arrayProdID[no] = textBoxProdID.Text;
                 no++;
-                comboBoxPromoName.Enabled = true;
-
                 //HITUNG TOTAL
-                hitungTotal += Convert.ToInt32(labelDisSubTotal.Text);
-                labelDisTotal.Text = "Rp " + hitungTotal.ToString();
+                hitungTotal += subtotal;
+                labelDisTotal.Text = Decimal.Parse(hitungTotal.ToString()).ToString("C", culture);
 
                 comboBoxProdName.Text = "";
                 textBoxProdID.Text = "";
@@ -172,31 +225,25 @@ namespace Tugas_AD_Counter_HP
                 labelDisSubTotal.Text = "0";
             }
         }
-        DateTimePicker dtpInvDateClone = new DateTimePicker();
-        public static int total = 0;
-        public static int disc = 0;
-        string currentInvDate;
-        string promo = " ";
         private void comboBoxPromoName_SelectedIndexChanged(object sender, EventArgs e)
         {
             dtPromo.Clear();
-            comboBoxPromoName.ResetText();
             textBoxPromoID.Text = "";
             textBoxDisc.Text = "";
             dtpInvDateClone.Value = dtpInvDate.Value;
             dtpInvDateClone.Format = DateTimePickerFormat.Custom;
             dtpInvDateClone.CustomFormat = "yyyy-MM-dd";
-            dtpInvDateClone.ShowUpDown = true;
             currentInvDate = dtpInvDateClone.Value.ToString("yyyy-MM-dd");
 
             sqlQuery = "SELECT promo_id as 'Promo ID', promo_disc as 'Promo Disc' from PROMO where PROMO_DESC = '" + comboBoxPromoName.SelectedItem.ToString() + "' and '" + currentInvDate + "' between PROMO_START_DATE and PROMO_END_DATE";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtPromo);
+
             if (dtPromo.Rows.Count == 0)
             {
-                comboBoxPromoName.Text = promo;
                 MessageBox.Show("Promo Tidak Berlaku");
+                comboBoxPromoName.Items.Remove(comboBoxPromoName.SelectedItem);
             }
             else
             {
@@ -204,84 +251,122 @@ namespace Tugas_AD_Counter_HP
                 disc = Convert.ToInt32(dtPromo.Rows[0][1]);
                 textBoxDisc.Text = dtPromo.Rows[0][1].ToString() + " %";
 
-                for (int i = 0; i < dtShowProd2.Rows.Count; i++)
-                {
-                    subtotalAll += Convert.ToInt32(dtShowProd2.Rows[i][4].ToString().Substring(3));
-                }
-                if (comboBoxPromoName.SelectedItem != null)
-                {
-                    total = subtotalAll - (subtotalAll * disc / 100);
-                    labelDisTotal.Text = total.ToString();
-                }
-                subtotalAll = 0;
+                total = hitungTotal - (hitungTotal * disc / 100);
+                labelDisTotal.Text = Decimal.Parse(total.ToString()).ToString("C", culture);
             }
         }
-        int kembalian = 0;
         private void textBoxBayar_TextChanged(object sender, EventArgs e)
         {
-            kembalian = Convert.ToInt32(textBoxBayar.Text) - Convert.ToInt32(labelDisTotal.Text);
-            labelDisKembali.Text = kembalian.ToString();
+            if (total == 0)
+            {
+                if (Convert.ToInt32(textBoxBayar.Text) <= hitungTotal)
+                {
+                    kembalian = 0;
+                }
+                else if (Convert.ToInt32(textBoxBayar.Text) > hitungTotal)
+                {
+                    kembalian = Convert.ToInt32(textBoxBayar.Text) - hitungTotal;
+                }
+            }
+            else
+            {
+                if (Convert.ToInt32(textBoxBayar.Text) <= total)
+                {
+                    kembalian = 0;
+                }
+                else if (Convert.ToInt32(textBoxBayar.Text) > total)
+                {
+                    kembalian = Convert.ToInt32(textBoxBayar.Text) - total;
+                }
+            }
+            labelDisKembali.Text = Decimal.Parse(kembalian.ToString()).ToString("C", culture);
         }
-
-        int itemCount = 0;
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            //customer
-            sqlQuery = "INSERT INTO CUSTOMER VALUES ('"+textBoxCustID.Text+"', '"+ textBoxCustNama.Text +"', '"+ textBoxCustHP.Text +"', '"+ textBoxCustEmail.Text +"', '0')";
-            sqlConnect.Open();
-            sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
-            sqlCommand.ExecuteNonQuery();
-            sqlConnect.Close();
-
-            //product stock
-            for (int i = 0; i < dtShowProd2.Rows.Count; i++)
+            itemCount = 0;
+            if (textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "" && dtShowProd2.Rows.Count != 0 && labelDisTotal.Text != "0" && textBoxBayar.Text != "")
             {
-                sqlQuery = "UPDATE PRODUCT SET product_stock = product_stock - " + Convert.ToInt32(dtShowProd2.Rows[i][2]) +" WHERE product_name = '"+ dtShowProd2.Rows[i][1].ToString() + "'";
-                sqlConnect.Open();
-                sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
-                sqlCommand.ExecuteNonQuery();
-                sqlConnect.Close();
-            }
-            //product_invoice
-            for (int a = 0; a < dtShowProd2.Rows.Count; a++)
-            {
-                sqlQuery = $"INSERT INTO PRODUCT_INVOICE VALUES ('" + arrayProdID[a].ToString() + "', '" + textBoxInvNo.Text + "', '"+ dtShowProd2.Rows[a][2].ToString() +"','"+ dtShowProd2.Rows[a][4].ToString().Substring(3) + "')";
+                //customer
+                sqlQuery = "INSERT INTO CUSTOMER VALUES ('" + textBoxCustID.Text + "', '" + textBoxCustNama.Text + "', '" + textBoxCustHP.Text + "', '" + textBoxCustEmail.Text + "', '0')";
                 sqlConnect.Open();
                 sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
                 sqlCommand.ExecuteNonQuery();
                 sqlConnect.Close();
 
-                itemCount += Convert.ToInt32(dtShowProd2.Rows[a][2]);
+                //product stock
+                for (int i = 0; i < dtShowProd2.Rows.Count; i++)
+                {
+                    sqlQuery = "UPDATE PRODUCT SET product_stock = product_stock - " + Convert.ToInt32(dtShowProd2.Rows[i][2]) + " WHERE product_name = '" + dtShowProd2.Rows[i][1].ToString() + "'";
+                    sqlConnect.Open();
+                    sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
+                    sqlCommand.ExecuteNonQuery();
+                    sqlConnect.Close();
+                }
+
+               /* //product_invoice
+                for (int a = 0; a < dtShowProd2.Rows.Count; a++)
+                {
+                    int hasilParse = int.Parse(dtShowProd2.Rows[a][4].ToString(), NumberStyles.Currency, culture);
+                    sqlQuery = $"INSERT INTO PRODUCT_INVOICE VALUES ('" + arrayProdID[a].ToString() + "', '" + textBoxInvNo.Text + "', '" + dtShowProd2.Rows[a][2].ToString() + "','" + hasilParse.ToString() + "')";
+                    sqlConnect.Open();
+                    sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
+                    sqlCommand.ExecuteNonQuery();
+                    sqlConnect.Close();
+          
+                    itemCount += Convert.ToInt32(dtShowProd2.Rows[a][2]);
+                }*/
+
+                dtpInvDateClone.Value = dtpInvDate.Value;
+                dtpInvDateClone.Format = DateTimePickerFormat.Custom;
+                dtpInvDateClone.CustomFormat = "yyyy-MM-dd";
+                currentInvDate = dtpInvDateClone.Value.ToString("yyyy-MM-dd");
+
+                //invoice
+                if (comboBoxPromoName.SelectedIndex != -1)
+                {
+                    sqlQuery = "INSERT INTO INVOICE VALUES ('" + textBoxInvNo.Text + "', '" + textBoxPromoID.Text + "', '" + textBoxDisIDStore.Text + "', '" + textBoxCustID.Text + "', '" + textBoxIDEmp.Text + "', '" + currentInvDate + "', " + itemCount + ", " + disc + ", " + total + ", '0')";
+                    sqlConnect.Open();
+                    sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
+                    sqlCommand.ExecuteNonQuery();
+                    sqlConnect.Close();
+                }
+                else
+                {
+                    sqlQuery = "INSERT INTO INVOICE VALUES ('" + textBoxInvNo.Text + "', '" + textBoxPromoID.Text + "', '" + textBoxDisIDStore.Text + "', '" + textBoxCustID.Text + "', '" + textBoxIDEmp.Text + "', '" + currentInvDate + "', " + itemCount + ", " + disc + ", " + hitungTotal + ", '0')";
+                    sqlConnect.Open();
+                    sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
+                    sqlCommand.ExecuteNonQuery();
+                    sqlConnect.Close();
+                }
+
+                MessageBox.Show("Invoice Telah Disimpan");
+                statusBtnSave++;
             }
-
-            //invoice
-            sqlQuery = "INSERT INTO INVOICE VALUES ('" + textBoxInvNo.Text + "', '" + textBoxPromoID.Text + "', '" + textBoxDisIDStore.Text + "', '" + textBoxCustID.Text + "', '" + textBoxIDEmp.Text + "', '" + currentInvDate + "', "+ itemCount +", "+ disc +", "+ total +", '0')";
-            sqlConnect.Open();
-            sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
-            sqlCommand.ExecuteNonQuery();
-            sqlConnect.Close();
-
-            MessageBox.Show("Invoice Telah Disimpan");
+            else
+            {
+                MessageBox.Show("Data Belum Lengkap!");
+            }
         }
-        public static string idStore = "";
-        public static string invNo = "";
-        public static string invDate = "";
-        public static string custName = "";
-        public static string custPhone = "";
-        public static string custEmail = "";
-        public static string empID = "";
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            idStore = textBoxDisIDStore.Text;
-            invNo = textBoxInvNo.Text;
-            invDate = dtpInvDate.Text;
-            custName = textBoxCustNama.Text;
-            custPhone = textBoxCustHP.Text;
-            custEmail = textBoxCustEmail.Text;
-            empID = textBoxIDEmp.Text;
-            FormNota formNota = new FormNota();
-            this.Hide();
-            formNota.Show();
+            if (statusBtnSave == 0)
+            {
+                MessageBox.Show("Data Belum Disimpan");
+            }
+            else
+            {
+                idStore = textBoxDisIDStore.Text;
+                invNo = textBoxInvNo.Text;
+                invDate = dtpInvDate.Text;
+                custName = textBoxCustNama.Text;
+                custPhone = textBoxCustHP.Text;
+                custEmail = textBoxCustEmail.Text;
+                empID = textBoxIDEmp.Text;
+
+                FormNota formNota = new FormNota();
+                this.Hide();
+                formNota.Show();
+            }
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -291,6 +376,11 @@ namespace Tugas_AD_Counter_HP
 
         private void buttonMenu_Click(object sender, EventArgs e)
         {
+            dtShowProd2.Reset();
+            total = 0;
+            hitungTotal = 0;
+            no = 0;
+
             FormMenu formMenu = new FormMenu();
             this.Hide();
             formMenu.Show();
