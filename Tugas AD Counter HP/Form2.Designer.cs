@@ -29,8 +29,8 @@ namespace Tugas_AD_Counter_HP
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonMenu = new System.Windows.Forms.Button();
             this.labelNoInv = new System.Windows.Forms.Label();
             this.labelCustName = new System.Windows.Forms.Label();
@@ -67,7 +67,6 @@ namespace Tugas_AD_Counter_HP
             this.buttonAddProd = new System.Windows.Forms.Button();
             this.nudQuan = new System.Windows.Forms.NumericUpDown();
             this.labelPromoName = new System.Windows.Forms.Label();
-            this.comboBoxPromoName = new System.Windows.Forms.ComboBox();
             this.textBoxPromoID = new System.Windows.Forms.TextBox();
             this.dgvPrintProduct2 = new System.Windows.Forms.DataGridView();
             this.textBoxIDEmp = new System.Windows.Forms.TextBox();
@@ -80,6 +79,8 @@ namespace Tugas_AD_Counter_HP
             this.labelLine = new System.Windows.Forms.Label();
             this.dtpInvDate = new System.Windows.Forms.DateTimePicker();
             this.labelStock = new System.Windows.Forms.Label();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.textBoxPromoName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrintProduct2)).BeginInit();
             this.SuspendLayout();
@@ -213,16 +214,16 @@ namespace Tugas_AD_Counter_HP
             this.labelStoreID.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.labelStoreID.Location = new System.Drawing.Point(35, 65);
             this.labelStoreID.Name = "labelStoreID";
-            this.labelStoreID.Size = new System.Drawing.Size(92, 22);
+            this.labelStoreID.Size = new System.Drawing.Size(90, 22);
             this.labelStoreID.TabIndex = 12;
-            this.labelStoreID.Text = "ID Store : ";
+            this.labelStoreID.Text = "ID Toko : ";
             // 
             // labelPromoID
             // 
             this.labelPromoID.AutoSize = true;
             this.labelPromoID.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPromoID.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelPromoID.Location = new System.Drawing.Point(33, 643);
+            this.labelPromoID.Location = new System.Drawing.Point(35, 643);
             this.labelPromoID.Name = "labelPromoID";
             this.labelPromoID.Size = new System.Drawing.Size(99, 22);
             this.labelPromoID.TabIndex = 14;
@@ -235,9 +236,9 @@ namespace Tugas_AD_Counter_HP
             this.labelEmpID.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.labelEmpID.Location = new System.Drawing.Point(35, 108);
             this.labelEmpID.Name = "labelEmpID";
-            this.labelEmpID.Size = new System.Drawing.Size(127, 22);
+            this.labelEmpID.Size = new System.Drawing.Size(126, 22);
             this.labelEmpID.TabIndex = 16;
-            this.labelEmpID.Text = "ID Employee : ";
+            this.labelEmpID.Text = "ID Karyawan : ";
             // 
             // labelInvDate
             // 
@@ -255,7 +256,7 @@ namespace Tugas_AD_Counter_HP
             this.labelDisc.AutoSize = true;
             this.labelDisc.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDisc.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelDisc.Location = new System.Drawing.Point(33, 683);
+            this.labelDisc.Location = new System.Drawing.Point(35, 683);
             this.labelDisc.Name = "labelDisc";
             this.labelDisc.Size = new System.Drawing.Size(54, 22);
             this.labelDisc.TabIndex = 20;
@@ -279,9 +280,9 @@ namespace Tugas_AD_Counter_HP
             this.labelProdID.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.labelProdID.Location = new System.Drawing.Point(33, 343);
             this.labelProdID.Name = "labelProdID";
-            this.labelProdID.Size = new System.Drawing.Size(113, 22);
+            this.labelProdID.Size = new System.Drawing.Size(43, 22);
             this.labelProdID.TabIndex = 22;
-            this.labelProdID.Text = "ID Product : ";
+            this.labelProdID.Text = "ID : ";
             // 
             // textBoxDisc
             // 
@@ -291,6 +292,7 @@ namespace Tugas_AD_Counter_HP
             this.textBoxDisc.ReadOnly = true;
             this.textBoxDisc.Size = new System.Drawing.Size(100, 29);
             this.textBoxDisc.TabIndex = 26;
+            this.textBoxDisc.TextChanged += new System.EventHandler(this.textBoxDisc_TextChanged);
             // 
             // labelDisSubTotal
             // 
@@ -332,9 +334,9 @@ namespace Tugas_AD_Counter_HP
             this.label4.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.label4.Location = new System.Drawing.Point(33, 301);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 22);
+            this.label4.Size = new System.Drawing.Size(73, 22);
             this.label4.TabIndex = 29;
-            this.label4.Text = "Nama Product : ";
+            this.label4.Text = "Nama : ";
             // 
             // textBoxProdID
             // 
@@ -361,9 +363,9 @@ namespace Tugas_AD_Counter_HP
             this.labelProdPrice.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.labelProdPrice.Location = new System.Drawing.Point(33, 387);
             this.labelProdPrice.Name = "labelProdPrice";
-            this.labelProdPrice.Size = new System.Drawing.Size(139, 22);
+            this.labelProdPrice.Size = new System.Drawing.Size(104, 22);
             this.labelProdPrice.TabIndex = 32;
-            this.labelProdPrice.Text = "Harga Product :";
+            this.labelProdPrice.Text = "Harga/Pcs :";
             // 
             // labelQuan
             // 
@@ -471,27 +473,6 @@ namespace Tugas_AD_Counter_HP
             this.labelPromoName.TabIndex = 45;
             this.labelPromoName.Text = "Promo :";
             // 
-            // comboBoxPromoName
-            // 
-            this.comboBoxPromoName.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxPromoName.FormattingEnabled = true;
-            this.comboBoxPromoName.Items.AddRange(new object[] {
-            "Independence Day Sale",
-            "Ramadhan Sale",
-            "Anniversary Sale",
-            "Black Friday Sale",
-            "Christmas Sale",
-            "Clearance Sale",
-            "Easter Sale",
-            "New Year Sale",
-            "CNY Sale",
-            "Summer Sale"});
-            this.comboBoxPromoName.Location = new System.Drawing.Point(190, 600);
-            this.comboBoxPromoName.Name = "comboBoxPromoName";
-            this.comboBoxPromoName.Size = new System.Drawing.Size(243, 29);
-            this.comboBoxPromoName.TabIndex = 44;
-            this.comboBoxPromoName.SelectedIndexChanged += new System.EventHandler(this.comboBoxPromoName_SelectedIndexChanged);
-            // 
             // textBoxPromoID
             // 
             this.textBoxPromoID.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -510,27 +491,28 @@ namespace Tugas_AD_Counter_HP
             this.dgvPrintProduct2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPrintProduct2.BackgroundColor = System.Drawing.SystemColors.GrayText;
             this.dgvPrintProduct2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrintProduct2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrintProduct2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPrintProduct2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPrintProduct2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPrintProduct2.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPrintProduct2.Location = new System.Drawing.Point(37, 433);
             this.dgvPrintProduct2.Name = "dgvPrintProduct2";
             this.dgvPrintProduct2.ReadOnly = true;
             this.dgvPrintProduct2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dgvPrintProduct2.RowHeadersVisible = false;
             this.dgvPrintProduct2.RowHeadersWidth = 62;
             this.dgvPrintProduct2.RowTemplate.Height = 28;
             this.dgvPrintProduct2.Size = new System.Drawing.Size(983, 149);
@@ -630,17 +612,39 @@ namespace Tugas_AD_Counter_HP
             this.dtpInvDate.Name = "dtpInvDate";
             this.dtpInvDate.Size = new System.Drawing.Size(298, 29);
             this.dtpInvDate.TabIndex = 57;
+            this.dtpInvDate.ValueChanged += new System.EventHandler(this.dtpInvDate_ValueChanged);
             // 
             // labelStock
             // 
             this.labelStock.AutoSize = true;
-            this.labelStock.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStock.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelStock.Font = new System.Drawing.Font("Yu Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStock.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelStock.Location = new System.Drawing.Point(276, 343);
+            this.labelStock.Location = new System.Drawing.Point(276, 344);
             this.labelStock.Name = "labelStock";
-            this.labelStock.Size = new System.Drawing.Size(58, 22);
+            this.labelStock.Size = new System.Drawing.Size(57, 23);
             this.labelStock.TabIndex = 58;
             this.labelStock.Text = "Stok :";
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.Location = new System.Drawing.Point(764, 379);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(78, 42);
+            this.buttonDelete.TabIndex = 59;
+            this.buttonDelete.Text = "Delete";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // textBoxPromoName
+            // 
+            this.textBoxPromoName.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPromoName.Location = new System.Drawing.Point(190, 606);
+            this.textBoxPromoName.Name = "textBoxPromoName";
+            this.textBoxPromoName.ReadOnly = true;
+            this.textBoxPromoName.Size = new System.Drawing.Size(298, 29);
+            this.textBoxPromoName.TabIndex = 60;
             // 
             // FormInput
             // 
@@ -649,6 +653,8 @@ namespace Tugas_AD_Counter_HP
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1062, 811);
+            this.Controls.Add(this.textBoxPromoName);
+            this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.labelStock);
             this.Controls.Add(this.dtpInvDate);
             this.Controls.Add(this.labelLine);
@@ -662,7 +668,6 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.dgvPrintProduct2);
             this.Controls.Add(this.textBoxPromoID);
             this.Controls.Add(this.labelPromoName);
-            this.Controls.Add(this.comboBoxPromoName);
             this.Controls.Add(this.nudQuan);
             this.Controls.Add(this.buttonAddProd);
             this.Controls.Add(this.labelDisKembali);
@@ -748,7 +753,6 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.Button buttonAddProd;
         private System.Windows.Forms.NumericUpDown nudQuan;
         private System.Windows.Forms.Label labelPromoName;
-        private System.Windows.Forms.ComboBox comboBoxPromoName;
         private System.Windows.Forms.TextBox textBoxPromoID;
         private System.Windows.Forms.DataGridView dgvPrintProduct2;
         private System.Windows.Forms.TextBox textBoxIDEmp;
@@ -761,5 +765,7 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.Label labelLine;
         private System.Windows.Forms.DateTimePicker dtpInvDate;
         private System.Windows.Forms.Label labelStock;
+        private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.TextBox textBoxPromoName;
     }
 }
