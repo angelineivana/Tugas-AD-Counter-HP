@@ -29,6 +29,7 @@ namespace Tugas_AD_Counter_HP
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.labelMenu = new System.Windows.Forms.Label();
             this.buttonCashier = new System.Windows.Forms.Button();
             this.buttonCatalog = new System.Windows.Forms.Button();
@@ -89,12 +90,13 @@ namespace Tugas_AD_Counter_HP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 354);
+            this.ClientSize = new System.Drawing.Size(561, 362);
             this.Controls.Add(this.buttonHistory);
             this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.buttonCatalog);
             this.Controls.Add(this.buttonCashier);
             this.Controls.Add(this.labelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMenu";
             this.Text = "Form Menu";
             this.ResumeLayout(false);

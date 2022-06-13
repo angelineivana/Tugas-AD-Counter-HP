@@ -19,7 +19,7 @@ namespace Tugas_AD_Counter_HP
 
         private void buttonCashier_Click(object sender, EventArgs e)
         {
-            FormInput formInput = new FormInput();
+            FormCashier formInput = new FormCashier();
             this.Hide();
             formInput.Show();
         }

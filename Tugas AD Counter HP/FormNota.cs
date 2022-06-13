@@ -32,7 +32,7 @@ namespace Tugas_AD_Counter_HP
         private void FormNota_Load(object sender, EventArgs e)
         {
             //STORE
-            idStore2 = FormInput.idStore;
+            idStore2 = FormCashier.idStore;
 
             sqlQuery = "SELECT store_name, store_address from RETAIL_STORE where '"+ idStore2 +"' = store_id";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
@@ -43,27 +43,27 @@ namespace Tugas_AD_Counter_HP
             labelAddress.Text = dtStore.Rows[0][1].ToString();
 
             //INVOICE
-            labelInvNo.Text = FormInput.invNo;
-            labelDate.Text = FormInput.invDate;
+            labelInvNo.Text = FormCashier.invNo;
+            labelDate.Text = FormCashier.invDate;
 
             //CUSTOMER
-            labelDisCustName.Text = FormInput.custName;
-            labelDisCustPhone.Text = FormInput.custPhone;
-            labelDisCustEmail.Text = FormInput.custEmail;
+            labelDisCustName.Text = FormCashier.custName;
+            labelDisCustPhone.Text = FormCashier.custPhone;
+            labelDisCustEmail.Text = FormCashier.custEmail;
 
             //DGV PRODUCT
-            dgvPrintProduct.DataSource = FormInput.dtShowProd2;
+            dgvPrintProduct.DataSource = FormCashier.dtShowProd2;
 
 
 
             //SUBTOTAL, PROMO, TOTAL
-            labelDisSubTotal.Text = Decimal.Parse(FormInput.hitungTotal.ToString()).ToString("C", FormInput.culture);
-            labelDisPromo.Text = FormInput.disc.ToString() + " %";
-            int total = FormInput.hitungTotal - (FormInput.hitungTotal * FormInput.disc / 100);
-            labelDisTotal.Text = Decimal.Parse(total.ToString()).ToString("C", FormInput.culture);
+            labelDisSubTotal.Text = Decimal.Parse(FormCashier.hitungTotal.ToString()).ToString("C", FormCashier.culture);
+            labelDisPromo.Text = FormCashier.disc.ToString() + " %";
+            int total = FormCashier.hitungTotal - (FormCashier.hitungTotal * FormCashier.disc / 100);
+            labelDisTotal.Text = Decimal.Parse(total.ToString()).ToString("C", FormCashier.culture);
 
             //EMPLOYEE NAME
-            sqlQuery = "SELECT emp_name FROM EMPLOYEE WHERE '"+ FormInput.empID +"' = emp_id";
+            sqlQuery = "SELECT emp_name FROM EMPLOYEE WHERE '"+ FormCashier.empID +"' = emp_id";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtEmpName);

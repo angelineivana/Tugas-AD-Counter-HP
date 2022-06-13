@@ -13,9 +13,9 @@ using System.Collections;
 
 namespace Tugas_AD_Counter_HP
 {
-    public partial class FormInput : Form
+    public partial class FormCashier : Form
     {
-        public FormInput()
+        public FormCashier()
         {
             InitializeComponent();
         }
@@ -160,11 +160,52 @@ namespace Tugas_AD_Counter_HP
             }
             total = hitungTotal - (hitungTotal * disc / 100);
             labelDisTotal.Text = Decimal.Parse(total.ToString()).ToString("C", culture);
+
+            if (dtpInvDate.Text != " " && textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "")
+            {
+                comboBoxProdName.Enabled = true;
+            }
+            else
+            {
+                comboBoxProdName.Enabled = false;
+            }
         }
         private void textBoxDisc_TextChanged(object sender, EventArgs e)
         {
+            if (textBoxDisc.Text == "")
+            {
+                disc = 0;
+            }
+            else
+            {
+                disc = Convert.ToInt32(textBoxDisc.Text.Substring(0, 2));
+
+            }
             total = hitungTotal - (hitungTotal * disc / 100);
             labelDisTotal.Text = Decimal.Parse(total.ToString()).ToString("C", culture);
+        }
+        private void textBoxCustNama_TextChanged(object sender, EventArgs e)
+        {
+            if (dtpInvDate.Text != " " && textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "")
+            {
+                comboBoxProdName.Enabled = true;
+            }
+            else
+            {
+                comboBoxProdName.Enabled = false;
+            }
+        }
+
+        private void textBoxCustHP_TextChanged(object sender, EventArgs e)
+        {
+            if (dtpInvDate.Text != " " && textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "")
+            {
+                comboBoxProdName.Enabled = true;
+            }
+            else
+            {
+                comboBoxProdName.Enabled = false;
+            }
         }
         private void textBoxCustEmail_TextChanged(object sender, EventArgs e)
         {
@@ -239,7 +280,17 @@ namespace Tugas_AD_Counter_HP
 
                 //HITUNG TOTAL
                 hitungTotal += sub[no];
-                labelDisTotal.Text = Decimal.Parse(hitungTotal.ToString()).ToString("C", culture);
+                if (textBoxDisc.Text == "")
+                {
+                    disc = 0;
+                }
+                else
+                {
+                    disc = Convert.ToInt32(textBoxDisc.Text.Substring(0, 2));
+
+                }
+                total = hitungTotal - (hitungTotal * disc / 100);
+                labelDisTotal.Text = Decimal.Parse(total.ToString()).ToString("C", culture);
                 no++;
 
                 comboBoxProdName.Items.Remove(comboBoxProdName.SelectedItem);
@@ -267,7 +318,17 @@ namespace Tugas_AD_Counter_HP
             {
                 sub[i] = sub[i + 1];
             }
-            labelDisTotal.Text = Decimal.Parse(hitungTotal.ToString()).ToString("C", culture);
+
+            if (textBoxDisc.Text == "")
+            {
+                disc = 0;
+            }
+            else
+            {
+                disc = Convert.ToInt32(textBoxDisc.Text.Substring(0, 2));
+            }
+            total = hitungTotal - (hitungTotal * disc / 100);
+            labelDisTotal.Text = Decimal.Parse(total.ToString()).ToString("C", culture);
             no--;
         }
         private void textBoxBayar_TextChanged(object sender, EventArgs e)

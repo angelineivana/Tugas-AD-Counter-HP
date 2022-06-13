@@ -1,7 +1,7 @@
 ﻿
 namespace Tugas_AD_Counter_HP
 {
-    partial class FormInput
+    partial class FormCashier
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,9 @@ namespace Tugas_AD_Counter_HP
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCashier));
             this.buttonMenu = new System.Windows.Forms.Button();
             this.labelNoInv = new System.Windows.Forms.Label();
             this.labelCustName = new System.Windows.Forms.Label();
@@ -171,6 +172,7 @@ namespace Tugas_AD_Counter_HP
             this.textBoxCustNama.Name = "textBoxCustNama";
             this.textBoxCustNama.Size = new System.Drawing.Size(243, 29);
             this.textBoxCustNama.TabIndex = 7;
+            this.textBoxCustNama.TextChanged += new System.EventHandler(this.textBoxCustNama_TextChanged);
             // 
             // textBoxCustHP
             // 
@@ -179,6 +181,7 @@ namespace Tugas_AD_Counter_HP
             this.textBoxCustHP.Name = "textBoxCustHP";
             this.textBoxCustHP.Size = new System.Drawing.Size(243, 29);
             this.textBoxCustHP.TabIndex = 8;
+            this.textBoxCustHP.TextChanged += new System.EventHandler(this.textBoxCustHP_TextChanged);
             // 
             // textBoxCustEmail
             // 
@@ -299,7 +302,7 @@ namespace Tugas_AD_Counter_HP
             this.labelDisSubTotal.AutoSize = true;
             this.labelDisSubTotal.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDisSubTotal.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelDisSubTotal.Location = new System.Drawing.Point(773, 346);
+            this.labelDisSubTotal.Location = new System.Drawing.Point(760, 346);
             this.labelDisSubTotal.Name = "labelDisSubTotal";
             this.labelDisSubTotal.Size = new System.Drawing.Size(72, 22);
             this.labelDisSubTotal.TabIndex = 27;
@@ -405,7 +408,7 @@ namespace Tugas_AD_Counter_HP
             this.labelBayar.AutoSize = true;
             this.labelBayar.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBayar.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelBayar.Location = new System.Drawing.Point(656, 643);
+            this.labelBayar.Location = new System.Drawing.Point(658, 663);
             this.labelBayar.Name = "labelBayar";
             this.labelBayar.Size = new System.Drawing.Size(157, 22);
             this.labelBayar.TabIndex = 38;
@@ -416,7 +419,7 @@ namespace Tugas_AD_Counter_HP
             this.labelKembali.AutoSize = true;
             this.labelKembali.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKembali.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelKembali.Location = new System.Drawing.Point(656, 683);
+            this.labelKembali.Location = new System.Drawing.Point(658, 703);
             this.labelKembali.Name = "labelKembali";
             this.labelKembali.Size = new System.Drawing.Size(86, 22);
             this.labelKembali.TabIndex = 39;
@@ -425,7 +428,7 @@ namespace Tugas_AD_Counter_HP
             // textBoxBayar
             // 
             this.textBoxBayar.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBayar.Location = new System.Drawing.Point(814, 640);
+            this.textBoxBayar.Location = new System.Drawing.Point(816, 660);
             this.textBoxBayar.Name = "textBoxBayar";
             this.textBoxBayar.Size = new System.Drawing.Size(100, 29);
             this.textBoxBayar.TabIndex = 40;
@@ -436,7 +439,7 @@ namespace Tugas_AD_Counter_HP
             this.labelDisKembali.AutoSize = true;
             this.labelDisKembali.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDisKembali.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelDisKembali.Location = new System.Drawing.Point(778, 683);
+            this.labelDisKembali.Location = new System.Drawing.Point(780, 703);
             this.labelDisKembali.Name = "labelDisKembali";
             this.labelDisKembali.Size = new System.Drawing.Size(67, 22);
             this.labelDisKembali.TabIndex = 41;
@@ -491,23 +494,23 @@ namespace Tugas_AD_Counter_HP
             this.dgvPrintProduct2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPrintProduct2.BackgroundColor = System.Drawing.SystemColors.GrayText;
             this.dgvPrintProduct2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrintProduct2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrintProduct2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPrintProduct2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPrintProduct2.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPrintProduct2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPrintProduct2.Location = new System.Drawing.Point(37, 433);
             this.dgvPrintProduct2.Name = "dgvPrintProduct2";
             this.dgvPrintProduct2.ReadOnly = true;
@@ -646,7 +649,7 @@ namespace Tugas_AD_Counter_HP
             this.textBoxPromoName.Size = new System.Drawing.Size(298, 29);
             this.textBoxPromoName.TabIndex = 60;
             // 
-            // FormInput
+            // FormCashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -705,7 +708,8 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.buttonMenu);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "FormInput";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormCashier";
             this.Text = "Cashier";
             this.Load += new System.EventHandler(this.FormInput_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudQuan)).EndInit();

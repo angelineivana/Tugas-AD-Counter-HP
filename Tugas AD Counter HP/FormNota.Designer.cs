@@ -57,7 +57,7 @@ namespace Tugas_AD_Counter_HP
             // labelStoreName
             // 
             this.labelStoreName.AutoSize = true;
-            this.labelStoreName.Location = new System.Drawing.Point(26, 23);
+            this.labelStoreName.Location = new System.Drawing.Point(51, 35);
             this.labelStoreName.Name = "labelStoreName";
             this.labelStoreName.Size = new System.Drawing.Size(90, 20);
             this.labelStoreName.TabIndex = 0;
@@ -66,7 +66,7 @@ namespace Tugas_AD_Counter_HP
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
-            this.labelAddress.Location = new System.Drawing.Point(26, 55);
+            this.labelAddress.Location = new System.Drawing.Point(51, 66);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(59, 20);
             this.labelAddress.TabIndex = 1;
@@ -282,6 +282,7 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.labelInvoice);
             this.Controls.Add(this.labelAddress);
             this.Controls.Add(this.labelStoreName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNota";
             this.Text = "Form Nota";
             this.Load += new System.EventHandler(this.FormNota_Load);

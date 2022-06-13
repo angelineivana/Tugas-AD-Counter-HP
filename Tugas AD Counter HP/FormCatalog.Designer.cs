@@ -29,6 +29,7 @@ namespace Tugas_AD_Counter_HP
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCatalog));
             this.buttonMenu = new System.Windows.Forms.Button();
             this.dataGridViewCatalog = new System.Windows.Forms.DataGridView();
             this.richTextBoxSpesifikasi = new System.Windows.Forms.RichTextBox();
@@ -38,10 +39,10 @@ namespace Tugas_AD_Counter_HP
             // 
             // buttonMenu
             // 
-            this.buttonMenu.Location = new System.Drawing.Point(939, 520);
+            this.buttonMenu.Location = new System.Drawing.Point(1056, 650);
             this.buttonMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonMenu.Name = "buttonMenu";
-            this.buttonMenu.Size = new System.Drawing.Size(105, 44);
+            this.buttonMenu.Size = new System.Drawing.Size(118, 55);
             this.buttonMenu.TabIndex = 1;
             this.buttonMenu.Text = "Back To Menu";
             this.buttonMenu.UseVisualStyleBackColor = true;
@@ -53,43 +54,46 @@ namespace Tugas_AD_Counter_HP
             this.dataGridViewCatalog.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewCatalog.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewCatalog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCatalog.Location = new System.Drawing.Point(3, 30);
+            this.dataGridViewCatalog.Location = new System.Drawing.Point(3, 38);
+            this.dataGridViewCatalog.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewCatalog.Name = "dataGridViewCatalog";
             this.dataGridViewCatalog.RowHeadersVisible = false;
             this.dataGridViewCatalog.RowHeadersWidth = 51;
             this.dataGridViewCatalog.RowTemplate.Height = 24;
-            this.dataGridViewCatalog.Size = new System.Drawing.Size(617, 534);
+            this.dataGridViewCatalog.Size = new System.Drawing.Size(694, 668);
             this.dataGridViewCatalog.TabIndex = 2;
             this.dataGridViewCatalog.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCatalog_CellClick);
             this.dataGridViewCatalog.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCatalog_CellContentClick);
             // 
             // richTextBoxSpesifikasi
             // 
-            this.richTextBoxSpesifikasi.Location = new System.Drawing.Point(626, 30);
+            this.richTextBoxSpesifikasi.Location = new System.Drawing.Point(704, 38);
+            this.richTextBoxSpesifikasi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.richTextBoxSpesifikasi.Name = "richTextBoxSpesifikasi";
-            this.richTextBoxSpesifikasi.Size = new System.Drawing.Size(418, 485);
+            this.richTextBoxSpesifikasi.Size = new System.Drawing.Size(470, 605);
             this.richTextBoxSpesifikasi.TabIndex = 3;
             this.richTextBoxSpesifikasi.Text = "";
             // 
             // labelSpesifikasi
             // 
             this.labelSpesifikasi.AutoSize = true;
-            this.labelSpesifikasi.Location = new System.Drawing.Point(969, 9);
+            this.labelSpesifikasi.Location = new System.Drawing.Point(1090, 11);
             this.labelSpesifikasi.Name = "labelSpesifikasi";
-            this.labelSpesifikasi.Size = new System.Drawing.Size(75, 17);
+            this.labelSpesifikasi.Size = new System.Drawing.Size(85, 20);
             this.labelSpesifikasi.TabIndex = 4;
             this.labelSpesifikasi.Text = "Spesifikasi";
             // 
             // FormCatalog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1056, 575);
+            this.ClientSize = new System.Drawing.Size(1188, 719);
             this.Controls.Add(this.labelSpesifikasi);
             this.Controls.Add(this.richTextBoxSpesifikasi);
             this.Controls.Add(this.dataGridViewCatalog);
             this.Controls.Add(this.buttonMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormCatalog";
             this.Text = "Catalog";
