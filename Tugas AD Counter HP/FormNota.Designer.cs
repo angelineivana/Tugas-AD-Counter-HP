@@ -29,6 +29,8 @@ namespace Tugas_AD_Counter_HP
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNota));
             this.labelStoreName = new System.Windows.Forms.Label();
             this.labelAddress = new System.Windows.Forms.Label();
@@ -51,33 +53,41 @@ namespace Tugas_AD_Counter_HP
             this.labelDisPromo = new System.Windows.Forms.Label();
             this.labelDisSubTotal = new System.Windows.Forms.Label();
             this.labelEmpName = new System.Windows.Forms.Label();
+            this.labelEmpSign = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrintProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // labelStoreName
             // 
             this.labelStoreName.AutoSize = true;
+            this.labelStoreName.BackColor = System.Drawing.Color.Transparent;
+            this.labelStoreName.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStoreName.Location = new System.Drawing.Point(51, 35);
             this.labelStoreName.Name = "labelStoreName";
-            this.labelStoreName.Size = new System.Drawing.Size(90, 20);
+            this.labelStoreName.Size = new System.Drawing.Size(108, 20);
             this.labelStoreName.TabIndex = 0;
             this.labelStoreName.Text = "Nama Toko";
             // 
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
+            this.labelAddress.BackColor = System.Drawing.Color.Transparent;
+            this.labelAddress.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAddress.Location = new System.Drawing.Point(51, 66);
+            this.labelAddress.MaximumSize = new System.Drawing.Size(500, 300);
             this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(59, 20);
+            this.labelAddress.Size = new System.Drawing.Size(75, 20);
             this.labelAddress.TabIndex = 1;
             this.labelAddress.Text = "Alamat";
             // 
             // labelInvoice
             // 
             this.labelInvoice.AutoSize = true;
-            this.labelInvoice.Location = new System.Drawing.Point(497, 95);
+            this.labelInvoice.BackColor = System.Drawing.Color.Transparent;
+            this.labelInvoice.Font = new System.Drawing.Font("Courier New", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInvoice.Location = new System.Drawing.Point(468, 166);
             this.labelInvoice.Name = "labelInvoice";
-            this.labelInvoice.Size = new System.Drawing.Size(75, 20);
+            this.labelInvoice.Size = new System.Drawing.Size(103, 25);
             this.labelInvoice.TabIndex = 2;
             this.labelInvoice.Text = "INVOICE";
             this.labelInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -85,9 +95,11 @@ namespace Tugas_AD_Counter_HP
             // labelInvNo
             // 
             this.labelInvNo.AutoSize = true;
-            this.labelInvNo.Location = new System.Drawing.Point(488, 128);
+            this.labelInvNo.BackColor = System.Drawing.Color.Transparent;
+            this.labelInvNo.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInvNo.Location = new System.Drawing.Point(488, 191);
             this.labelInvNo.Name = "labelInvNo";
-            this.labelInvNo.Size = new System.Drawing.Size(87, 20);
+            this.labelInvNo.Size = new System.Drawing.Size(130, 20);
             this.labelInvNo.TabIndex = 3;
             this.labelInvNo.Text = "No. Invoice";
             this.labelInvNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -95,84 +107,103 @@ namespace Tugas_AD_Counter_HP
             // labelDate
             // 
             this.labelDate.AutoSize = true;
-            this.labelDate.Location = new System.Drawing.Point(497, 160);
+            this.labelDate.BackColor = System.Drawing.Color.Transparent;
+            this.labelDate.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDate.Location = new System.Drawing.Point(408, 211);
             this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(66, 20);
+            this.labelDate.Size = new System.Drawing.Size(86, 20);
             this.labelDate.TabIndex = 4;
             this.labelDate.Text = "Tanggal";
+            this.labelDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(27, 285);
+            this.labelEmail.BackColor = System.Drawing.Color.Transparent;
+            this.labelEmail.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.Location = new System.Drawing.Point(49, 353);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(56, 20);
+            this.labelEmail.Size = new System.Drawing.Size(119, 20);
             this.labelEmail.TabIndex = 5;
-            this.labelEmail.Text = "Email :";
+            this.labelEmail.Text = "EMAIL    :";
             // 
             // labelCustPhone
             // 
             this.labelCustPhone.AutoSize = true;
-            this.labelCustPhone.Location = new System.Drawing.Point(27, 255);
+            this.labelCustPhone.BackColor = System.Drawing.Color.Transparent;
+            this.labelCustPhone.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustPhone.Location = new System.Drawing.Point(49, 323);
             this.labelCustPhone.Name = "labelCustPhone";
-            this.labelCustPhone.Size = new System.Drawing.Size(67, 20);
+            this.labelCustPhone.Size = new System.Drawing.Size(119, 20);
             this.labelCustPhone.TabIndex = 6;
-            this.labelCustPhone.Text = "No. HP :";
+            this.labelCustPhone.Text = "NO. HP   :";
             this.labelCustPhone.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // labelCustName
             // 
             this.labelCustName.AutoSize = true;
-            this.labelCustName.Location = new System.Drawing.Point(27, 223);
+            this.labelCustName.BackColor = System.Drawing.Color.Transparent;
+            this.labelCustName.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustName.Location = new System.Drawing.Point(49, 291);
             this.labelCustName.Name = "labelCustName";
-            this.labelCustName.Size = new System.Drawing.Size(59, 20);
+            this.labelCustName.Size = new System.Drawing.Size(119, 20);
             this.labelCustName.TabIndex = 7;
-            this.labelCustName.Text = "Nama :";
+            this.labelCustName.Text = "NAMA     :";
             // 
             // labelCust
             // 
             this.labelCust.AutoSize = true;
-            this.labelCust.Location = new System.Drawing.Point(27, 192);
+            this.labelCust.BackColor = System.Drawing.Color.Transparent;
+            this.labelCust.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCust.Location = new System.Drawing.Point(49, 260);
             this.labelCust.Name = "labelCust";
-            this.labelCust.Size = new System.Drawing.Size(78, 20);
+            this.labelCust.Size = new System.Drawing.Size(152, 20);
             this.labelCust.TabIndex = 8;
-            this.labelCust.Text = "Customer";
+            this.labelCust.Text = "DATA CUSTOMER";
             // 
             // labelSubTotal
             // 
             this.labelSubTotal.AutoSize = true;
-            this.labelSubTotal.Location = new System.Drawing.Point(720, 562);
+            this.labelSubTotal.BackColor = System.Drawing.Color.Transparent;
+            this.labelSubTotal.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSubTotal.Location = new System.Drawing.Point(643, 628);
             this.labelSubTotal.Name = "labelSubTotal";
-            this.labelSubTotal.Size = new System.Drawing.Size(85, 20);
+            this.labelSubTotal.Size = new System.Drawing.Size(130, 20);
             this.labelSubTotal.TabIndex = 11;
-            this.labelSubTotal.Text = "Sub Total :";
+            this.labelSubTotal.Text = "SUB TOTAL :";
             // 
             // labelPromo
             // 
             this.labelPromo.AutoSize = true;
-            this.labelPromo.Location = new System.Drawing.Point(720, 597);
+            this.labelPromo.BackColor = System.Drawing.Color.Transparent;
+            this.labelPromo.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPromo.Location = new System.Drawing.Point(643, 663);
             this.labelPromo.Name = "labelPromo";
-            this.labelPromo.Size = new System.Drawing.Size(63, 20);
+            this.labelPromo.Size = new System.Drawing.Size(130, 20);
             this.labelPromo.TabIndex = 12;
-            this.labelPromo.Text = "Promo :";
+            this.labelPromo.Text = "PROMO     :";
             // 
             // labelLine
             // 
             this.labelLine.AutoSize = true;
-            this.labelLine.Location = new System.Drawing.Point(798, 763);
+            this.labelLine.BackColor = System.Drawing.Color.Transparent;
+            this.labelLine.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLine.Location = new System.Drawing.Point(718, 829);
             this.labelLine.Name = "labelLine";
-            this.labelLine.Size = new System.Drawing.Size(171, 20);
+            this.labelLine.Size = new System.Drawing.Size(207, 20);
             this.labelLine.TabIndex = 15;
             this.labelLine.Text = "__________________";
             // 
             // labelTotal
             // 
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(720, 634);
+            this.labelTotal.BackColor = System.Drawing.Color.Transparent;
+            this.labelTotal.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotal.Location = new System.Drawing.Point(643, 700);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(52, 20);
+            this.labelTotal.Size = new System.Drawing.Size(130, 20);
             this.labelTotal.TabIndex = 13;
-            this.labelTotal.Text = "Total :";
+            this.labelTotal.Text = "TOTAL     :";
             // 
             // dgvPrintProduct
             // 
@@ -181,29 +212,49 @@ namespace Tugas_AD_Counter_HP
             this.dgvPrintProduct.AllowUserToResizeColumns = false;
             this.dgvPrintProduct.AllowUserToResizeRows = false;
             this.dgvPrintProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrintProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPrintProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrintProduct.Location = new System.Drawing.Point(40, 332);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPrintProduct.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvPrintProduct.Location = new System.Drawing.Point(35, 398);
             this.dgvPrintProduct.Name = "dgvPrintProduct";
             this.dgvPrintProduct.RowHeadersWidth = 62;
             this.dgvPrintProduct.RowTemplate.Height = 28;
-            this.dgvPrintProduct.Size = new System.Drawing.Size(1003, 209);
+            this.dgvPrintProduct.Size = new System.Drawing.Size(935, 209);
             this.dgvPrintProduct.TabIndex = 10;
             // 
             // labelDisCustName
             // 
             this.labelDisCustName.AutoSize = true;
-            this.labelDisCustName.Location = new System.Drawing.Point(120, 223);
+            this.labelDisCustName.BackColor = System.Drawing.Color.Transparent;
+            this.labelDisCustName.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisCustName.Location = new System.Drawing.Point(187, 291);
             this.labelDisCustName.Name = "labelDisCustName";
-            this.labelDisCustName.Size = new System.Drawing.Size(21, 20);
+            this.labelDisCustName.Size = new System.Drawing.Size(42, 20);
             this.labelDisCustName.TabIndex = 18;
             this.labelDisCustName.Text = "...";
             // 
             // labelDisCustPhone
             // 
             this.labelDisCustPhone.AutoSize = true;
-            this.labelDisCustPhone.Location = new System.Drawing.Point(120, 255);
+            this.labelDisCustPhone.BackColor = System.Drawing.Color.Transparent;
+            this.labelDisCustPhone.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisCustPhone.Location = new System.Drawing.Point(187, 323);
             this.labelDisCustPhone.Name = "labelDisCustPhone";
-            this.labelDisCustPhone.Size = new System.Drawing.Size(21, 20);
+            this.labelDisCustPhone.Size = new System.Drawing.Size(42, 20);
             this.labelDisCustPhone.TabIndex = 17;
             this.labelDisCustPhone.Text = "...";
             this.labelDisCustPhone.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -211,56 +262,80 @@ namespace Tugas_AD_Counter_HP
             // labelDisCustEmail
             // 
             this.labelDisCustEmail.AutoSize = true;
-            this.labelDisCustEmail.Location = new System.Drawing.Point(120, 285);
+            this.labelDisCustEmail.BackColor = System.Drawing.Color.Transparent;
+            this.labelDisCustEmail.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisCustEmail.Location = new System.Drawing.Point(187, 353);
             this.labelDisCustEmail.Name = "labelDisCustEmail";
-            this.labelDisCustEmail.Size = new System.Drawing.Size(21, 20);
+            this.labelDisCustEmail.Size = new System.Drawing.Size(42, 20);
             this.labelDisCustEmail.TabIndex = 16;
             this.labelDisCustEmail.Text = "...";
             // 
             // labelDisTotal
             // 
             this.labelDisTotal.AutoSize = true;
-            this.labelDisTotal.Location = new System.Drawing.Point(811, 634);
+            this.labelDisTotal.BackColor = System.Drawing.Color.Transparent;
+            this.labelDisTotal.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisTotal.Location = new System.Drawing.Point(779, 700);
             this.labelDisTotal.Name = "labelDisTotal";
-            this.labelDisTotal.Size = new System.Drawing.Size(21, 20);
+            this.labelDisTotal.Size = new System.Drawing.Size(42, 20);
             this.labelDisTotal.TabIndex = 21;
             this.labelDisTotal.Text = "...";
             // 
             // labelDisPromo
             // 
             this.labelDisPromo.AutoSize = true;
-            this.labelDisPromo.Location = new System.Drawing.Point(811, 597);
+            this.labelDisPromo.BackColor = System.Drawing.Color.Transparent;
+            this.labelDisPromo.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisPromo.Location = new System.Drawing.Point(779, 663);
             this.labelDisPromo.Name = "labelDisPromo";
-            this.labelDisPromo.Size = new System.Drawing.Size(21, 20);
+            this.labelDisPromo.Size = new System.Drawing.Size(42, 20);
             this.labelDisPromo.TabIndex = 20;
             this.labelDisPromo.Text = "...";
             // 
             // labelDisSubTotal
             // 
             this.labelDisSubTotal.AutoSize = true;
-            this.labelDisSubTotal.Location = new System.Drawing.Point(811, 562);
+            this.labelDisSubTotal.BackColor = System.Drawing.Color.Transparent;
+            this.labelDisSubTotal.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisSubTotal.Location = new System.Drawing.Point(779, 628);
             this.labelDisSubTotal.Name = "labelDisSubTotal";
-            this.labelDisSubTotal.Size = new System.Drawing.Size(21, 20);
+            this.labelDisSubTotal.Size = new System.Drawing.Size(42, 20);
             this.labelDisSubTotal.TabIndex = 19;
             this.labelDisSubTotal.Text = "...";
             // 
             // labelEmpName
             // 
             this.labelEmpName.AutoSize = true;
-            this.labelEmpName.Location = new System.Drawing.Point(798, 795);
+            this.labelEmpName.BackColor = System.Drawing.Color.Transparent;
+            this.labelEmpName.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmpName.Location = new System.Drawing.Point(745, 862);
             this.labelEmpName.Name = "labelEmpName";
-            this.labelEmpName.Size = new System.Drawing.Size(39, 20);
+            this.labelEmpName.Size = new System.Drawing.Size(86, 20);
             this.labelEmpName.TabIndex = 22;
             this.labelEmpName.Text = "( ... )";
             this.labelEmpName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelEmpSign
+            // 
+            this.labelEmpSign.AutoSize = true;
+            this.labelEmpSign.BackColor = System.Drawing.Color.Transparent;
+            this.labelEmpSign.Font = new System.Drawing.Font("Vladimir Script", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmpSign.Location = new System.Drawing.Point(733, 790);
+            this.labelEmpSign.Name = "labelEmpSign";
+            this.labelEmpSign.Size = new System.Drawing.Size(71, 39);
+            this.labelEmpSign.TabIndex = 23;
+            this.labelEmpSign.Text = "( ... )";
+            this.labelEmpSign.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormNota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1074, 881);
+            this.ClientSize = new System.Drawing.Size(1014, 973);
+            this.Controls.Add(this.labelEmpSign);
             this.Controls.Add(this.labelEmpName);
             this.Controls.Add(this.labelDisTotal);
             this.Controls.Add(this.labelDisPromo);
@@ -284,6 +359,7 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.labelStoreName);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNota";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form Nota";
             this.Load += new System.EventHandler(this.FormNota_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrintProduct)).EndInit();
@@ -315,5 +391,6 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.Label labelDisPromo;
         private System.Windows.Forms.Label labelDisSubTotal;
         private System.Windows.Forms.Label labelEmpName;
+        private System.Windows.Forms.Label labelEmpSign;
     }
 }

@@ -24,28 +24,29 @@ namespace Tugas_AD_Counter_HP
         public MySqlCommand sqlCommand;
         public MySqlDataAdapter sqlAdapter;
         string sqlQuery;
-        public static CultureInfo culture = new CultureInfo("id-ID");
         DataTable dtDetailProd = new DataTable();
         DataTable dtPromo = new DataTable();
         DataTable dtStoreEmpID = new DataTable();
         DataTable dtNoInv = new DataTable();
         DataTable dtIDCust = new DataTable();
         DataTable dtCheckDatePromo = new DataTable();
-        int price = 0;
-        string sendtextform1 = "";
-        int no = 0;
-        public static DataTable dtShowProd2 = new DataTable();
-        string[] arrayProdID = new string[50];
-        public static int hitungTotal = 0;
-        string currentPrice;
+        DataTable dtListProdID = new DataTable();
         DateTimePicker dtpInvDateClone = new DateTimePicker();
-        public static int total = 0;
-        public static int disc = 0;
-        string currentInvDate;
+        int price = 0;
         int kembalian = 0;
         int itemCount = 0;
         int statusBtnSave = 0;
+        int statusBtnPaid = 0;
         int stock = 0;
+        int no = 0;
+        string sendtextform1 = "";
+        string currentPrice;
+        string currentInvDate;
+        public static CultureInfo culture = new CultureInfo("id-ID");
+        public static DataTable dtShowProd2 = new DataTable();
+        public static int hitungTotal = 0;
+        public static int total = 0;
+        public static int disc = 0;
         public static string idStore = "";
         public static string invNo = "";
         public static string invDate = "";
@@ -121,35 +122,30 @@ namespace Tugas_AD_Counter_HP
                 angkaJalanCust += dtNoInv.Rows.Count + 1;
             }
 
-            dtpInvDate.Format = DateTimePickerFormat.Custom;
-            dtpInvDate.CustomFormat = " ";
+            dtpInvDate.Value = DateTime.Today;
             textBoxCustID.Text = angkaJalanCust;
             comboBoxProdName.Enabled = false;
             nudQuan.Enabled = false;
             textBoxBayar.Enabled = false;
-        }
-        private void dtpInvDate_ValueChanged(object sender, EventArgs e)
-        {
+            buttonPaid.Enabled = false;
+
             dtCheckDatePromo.Clear();
-            dtpInvDate.Format = DateTimePickerFormat.Long;
             dtpInvDateClone.Value = dtpInvDate.Value;
             dtpInvDateClone.Format = DateTimePickerFormat.Custom;
             dtpInvDateClone.CustomFormat = "yyyy-MM-dd";
             currentInvDate = dtpInvDateClone.Value.ToString("yyyy-MM-dd");
 
-            sqlQuery = "SELECT promo_id as 'Promo ID', promo_disc as 'Promo Disc', promo_desc as 'Promo Name' from PROMO where '" + currentInvDate + "' between PROMO_START_DATE and PROMO_END_DATE";
+            sqlQuery = "SELECT promo_id as 'Promo ID', promo_disc as 'Promo Disc', promo_desc as 'Promo Name' FROM PROMO WHERE '" + currentInvDate + "' between PROMO_START_DATE and PROMO_END_DATE";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtCheckDatePromo);
             //check ada promo pada tgl itu
             if (dtCheckDatePromo.Rows.Count == 0)
             {
-                MessageBox.Show("Tidak Ada Promo Yang Berlaku Pada Tanggal Ini");
                 textBoxPromoName.Text = "";
                 textBoxPromoID.Text = "";
                 textBoxDisc.Text = "";
                 disc = 0;
-                
             }
             else if (dtCheckDatePromo.Rows.Count != 0)
             {
@@ -158,17 +154,7 @@ namespace Tugas_AD_Counter_HP
                 disc = Convert.ToInt32(dtCheckDatePromo.Rows[0][1]);
                 textBoxDisc.Text = disc.ToString() + " %";
             }
-            total = hitungTotal - (hitungTotal * disc / 100);
-            labelDisTotal.Text = Decimal.Parse(total.ToString()).ToString("C", culture);
-
-            if (dtpInvDate.Text != " " && textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "")
-            {
-                comboBoxProdName.Enabled = true;
-            }
-            else
-            {
-                comboBoxProdName.Enabled = false;
-            }
+            textBoxCustNama.Select();
         }
         private void textBoxDisc_TextChanged(object sender, EventArgs e)
         {
@@ -179,7 +165,6 @@ namespace Tugas_AD_Counter_HP
             else
             {
                 disc = Convert.ToInt32(textBoxDisc.Text.Substring(0, 2));
-
             }
             total = hitungTotal - (hitungTotal * disc / 100);
             labelDisTotal.Text = Decimal.Parse(total.ToString()).ToString("C", culture);
@@ -188,19 +173,40 @@ namespace Tugas_AD_Counter_HP
         {
             if (dtpInvDate.Text != " " && textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "")
             {
-                comboBoxProdName.Enabled = true;
+                if (textBoxCustHP.Text.Length >= 10)
+                {
+                    comboBoxProdName.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Format No. HP Salah");
+                    comboBoxProdName.Enabled = false;
+                }
             }
             else
             {
                 comboBoxProdName.Enabled = false;
             }
         }
-
+        private void textBoxCustHP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
         private void textBoxCustHP_TextChanged(object sender, EventArgs e)
         {
             if (dtpInvDate.Text != " " && textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "")
             {
-                comboBoxProdName.Enabled = true;
+                if (textBoxCustHP.Text.Length >= 10)
+                {
+                    comboBoxProdName.Enabled = true;
+                }
+                else
+                {
+                    comboBoxProdName.Enabled = false;
+                }
             }
             else
             {
@@ -211,7 +217,15 @@ namespace Tugas_AD_Counter_HP
         {
             if (dtpInvDate.Text != " " && textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "")
             {
-                comboBoxProdName.Enabled = true;
+                if (textBoxCustHP.Text.Length >= 10)
+                {
+                    comboBoxProdName.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Format No. HP Salah");
+                    comboBoxProdName.Enabled = false;
+                }
             }
             else
             {
@@ -331,33 +345,43 @@ namespace Tugas_AD_Counter_HP
             labelDisTotal.Text = Decimal.Parse(total.ToString()).ToString("C", culture);
             no--;
         }
+        private void textBoxBayar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+        }
         private void textBoxBayar_TextChanged(object sender, EventArgs e)
         {
-            if (total == 0)
+            if (textBoxBayar.Text == "")
             {
-                if (Convert.ToInt32(textBoxBayar.Text) <= hitungTotal)
-                {
-                    kembalian = 0;
-                }
-                else if (Convert.ToInt32(textBoxBayar.Text) > hitungTotal)
-                {
-                    kembalian = Convert.ToInt32(textBoxBayar.Text) - hitungTotal;
-                }
+                textBoxBayar.Text = "0";
+            }
+            else if (Convert.ToInt32(textBoxBayar.Text) <= total)
+            {
+                kembalian = 0;
+            }
+            else if (Convert.ToInt32(textBoxBayar.Text) > total)
+            {
+                kembalian = Convert.ToInt32(textBoxBayar.Text) - total;
+            }
+            labelDisKembali.Text = Decimal.Parse(kembalian.ToString()).ToString("C", culture);
+            if (labelDisKembali.Text != "Rp0,00")
+            {
+                buttonPaid.Enabled = true;
             }
             else
             {
-                if (Convert.ToInt32(textBoxBayar.Text) <= total)
-                {
-                    kembalian = 0;
-                }
-                else if (Convert.ToInt32(textBoxBayar.Text) > total)
-                {
-                    kembalian = Convert.ToInt32(textBoxBayar.Text) - total;
-                }
+                buttonPaid.Enabled = false;
             }
-            labelDisKembali.Text = Decimal.Parse(kembalian.ToString()).ToString("C", culture);
         }
-        DataTable dtListProdID = new DataTable();
+        private void buttonPaid_Click(object sender, EventArgs e)
+        {
+            statusBtnPaid = 1;
+            MessageBox.Show("Invoice Telah Lunas");
+            buttonPaid.Enabled = false;
+        }
         private void buttonSave_Click(object sender, EventArgs e)
         {
             itemCount = 0;
@@ -370,10 +394,10 @@ namespace Tugas_AD_Counter_HP
                 sqlAdapter.Fill(dtListProdID);
             }
 
-            if (dtpInvDate.Text != "" && textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "" && dtShowProd2.Rows.Count != 0 && labelDisTotal.Text != "0" && textBoxBayar.Text != "")
+            if (statusBtnPaid == 1 && dtpInvDate.Text != "" && textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "" && dtShowProd2.Rows.Count != 0 && labelDisTotal.Text != "0" && textBoxBayar.Text != "")
             {
                 //customer
-                sqlQuery = "INSERT INTO CUSTOMER VALUES ('" + textBoxCustID.Text + "', '" + textBoxCustNama.Text + "', '" + textBoxCustHP.Text + "', '" + textBoxCustEmail.Text + "', '0')";
+                sqlQuery = "INSERT INTO CUSTOMER VALUES ('" + textBoxCustID.Text + "', '" + textBoxCustNama.Text + "', '" + "0" + textBoxCustHP.Text + "', '" + textBoxCustEmail.Text + "', '0')";
                 sqlConnect.Open();
                 sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
                 sqlCommand.ExecuteNonQuery();
@@ -428,6 +452,10 @@ namespace Tugas_AD_Counter_HP
                 MessageBox.Show("Invoice Telah Disimpan");
                 statusBtnSave++;
             }
+            else if (statusBtnPaid == 0)
+            {
+                MessageBox.Show("Invoice Belum Dibayar");
+            }
             else
             {
                 MessageBox.Show("Data Belum Lengkap!");
@@ -435,11 +463,11 @@ namespace Tugas_AD_Counter_HP
         }
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            if (statusBtnSave == 0)
+            /*if (statusBtnSave == 0)
             {
                 MessageBox.Show("Data Belum Disimpan");
             }
-            else
+            else*/
             {
                 idStore = textBoxDisIDStore.Text;
                 invNo = textBoxInvNo.Text;
@@ -477,22 +505,12 @@ namespace Tugas_AD_Counter_HP
             kembalian = 0;
             itemCount = 0;
             statusBtnSave = 0;
+            statusBtnPaid = 0;
             stock = 0;
             hitungTotal = 0;
             currentPrice = "";
             dgvPrintProduct2.AutoGenerateColumns = false;
             dgvPrintProduct2.RowHeadersVisible = false;
-            /* 
-
-        string[] arrayProdID = new string[100];
-        string currentInvDate;
-        public static string idStore = "";
-        public static string invNo = "";
-        public static string invDate = "";
-        public static string custName = "";
-        public static string custPhone = "";
-        public static string custEmail = "";
-        public static string empID = "";*/
 
             FormMenu formMenu = new FormMenu();
             this.Hide();

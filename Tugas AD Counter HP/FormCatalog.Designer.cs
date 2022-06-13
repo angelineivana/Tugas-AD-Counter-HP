@@ -96,6 +96,7 @@ namespace Tugas_AD_Counter_HP
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormCatalog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Catalog";
             this.Load += new System.EventHandler(this.FormCatalog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCatalog)).EndInit();

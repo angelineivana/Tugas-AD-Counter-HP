@@ -39,17 +39,17 @@ namespace Tugas_AD_Counter_HP
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtStore);
 
-            labelStoreName.Text = dtStore.Rows[0][0].ToString();
-            labelAddress.Text = dtStore.Rows[0][1].ToString();
+            labelStoreName.Text = dtStore.Rows[0][0].ToString().ToUpper();
+            labelAddress.Text = dtStore.Rows[0][1].ToString().ToUpper();
 
             //INVOICE
             labelInvNo.Text = FormCashier.invNo;
-            labelDate.Text = FormCashier.invDate;
+            labelDate.Text = FormCashier.invDate.ToUpper();
 
             //CUSTOMER
-            labelDisCustName.Text = FormCashier.custName;
-            labelDisCustPhone.Text = FormCashier.custPhone;
-            labelDisCustEmail.Text = FormCashier.custEmail;
+            labelDisCustName.Text = FormCashier.custName.ToUpper();
+            labelDisCustPhone.Text = "62" + FormCashier.custPhone;
+            labelDisCustEmail.Text = FormCashier.custEmail.ToUpper();
 
             //DGV PRODUCT
             dgvPrintProduct.DataSource = FormCashier.dtShowProd2;
@@ -68,7 +68,8 @@ namespace Tugas_AD_Counter_HP
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtEmpName);
 
-            labelEmpName.Text = dtEmpName.Rows[0][0].ToString();
+            labelEmpSign.Text = dtEmpName.Rows[0][0].ToString();
+            labelEmpName.Text = dtEmpName.Rows[0][0].ToString().ToUpper();
         }
     }
 }

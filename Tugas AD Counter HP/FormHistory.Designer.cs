@@ -51,6 +51,7 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.buttonMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormHistory";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormHistory";
             this.ResumeLayout(false);
 

@@ -36,7 +36,6 @@ namespace Tugas_AD_Counter_HP
             this.labelNoInv = new System.Windows.Forms.Label();
             this.labelCustName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.labelDataCust = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxCustNama = new System.Windows.Forms.TextBox();
@@ -76,233 +75,239 @@ namespace Tugas_AD_Counter_HP
             this.buttonPrint = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.labelDataInv = new System.Windows.Forms.Label();
-            this.labelInputProduk = new System.Windows.Forms.Label();
             this.labelLine = new System.Windows.Forms.Label();
             this.dtpInvDate = new System.Windows.Forms.DateTimePicker();
             this.labelStock = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.textBoxPromoName = new System.Windows.Forms.TextBox();
+            this.labelProduct = new System.Windows.Forms.Label();
+            this.labelCust = new System.Windows.Forms.Label();
+            this.labelLine2 = new System.Windows.Forms.Label();
+            this.labelLine3 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.buttonPaid = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrintProduct2)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonMenu
             // 
+            this.buttonMenu.BackColor = System.Drawing.Color.Navy;
             this.buttonMenu.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMenu.Location = new System.Drawing.Point(38, 731);
+            this.buttonMenu.ForeColor = System.Drawing.SystemColors.Info;
+            this.buttonMenu.Location = new System.Drawing.Point(1041, 750);
             this.buttonMenu.Name = "buttonMenu";
             this.buttonMenu.Size = new System.Drawing.Size(145, 57);
-            this.buttonMenu.TabIndex = 0;
+            this.buttonMenu.TabIndex = 12;
             this.buttonMenu.Text = "Back To Menu";
-            this.buttonMenu.UseVisualStyleBackColor = true;
+            this.buttonMenu.UseVisualStyleBackColor = false;
             this.buttonMenu.Click += new System.EventHandler(this.buttonMenu_Click);
             // 
             // labelNoInv
             // 
             this.labelNoInv.AutoSize = true;
             this.labelNoInv.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNoInv.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelNoInv.Location = new System.Drawing.Point(35, 149);
+            this.labelNoInv.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelNoInv.Location = new System.Drawing.Point(35, 82);
             this.labelNoInv.Name = "labelNoInv";
-            this.labelNoInv.Size = new System.Drawing.Size(112, 22);
+            this.labelNoInv.Size = new System.Drawing.Size(102, 22);
             this.labelNoInv.TabIndex = 1;
-            this.labelNoInv.Text = "No. Invoice :";
+            this.labelNoInv.Text = "No. Invoice";
             // 
             // labelCustName
             // 
             this.labelCustName.AutoSize = true;
             this.labelCustName.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCustName.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelCustName.Location = new System.Drawing.Point(649, 102);
+            this.labelCustName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelCustName.Location = new System.Drawing.Point(36, 617);
             this.labelCustName.Name = "labelCustName";
-            this.labelCustName.Size = new System.Drawing.Size(68, 22);
+            this.labelCustName.Size = new System.Drawing.Size(58, 22);
             this.labelCustName.TabIndex = 2;
-            this.labelCustName.Text = "Nama :";
+            this.labelCustName.Text = "Nama";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(651, 65);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(37, 550);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 22);
+            this.label2.Size = new System.Drawing.Size(28, 22);
             this.label2.TabIndex = 3;
-            this.label2.Text = "ID :";
-            // 
-            // labelDataCust
-            // 
-            this.labelDataCust.AutoSize = true;
-            this.labelDataCust.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.labelDataCust.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelDataCust.Font = new System.Drawing.Font("Bernard MT Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDataCust.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelDataCust.Location = new System.Drawing.Point(653, 14);
-            this.labelDataCust.Name = "labelDataCust";
-            this.labelDataCust.Size = new System.Drawing.Size(122, 35);
-            this.labelDataCust.TabIndex = 4;
-            this.labelDataCust.Text = "CUSTOMER";
+            this.label2.Text = "ID";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label1.Location = new System.Drawing.Point(649, 144);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(37, 685);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 22);
+            this.label1.Size = new System.Drawing.Size(69, 22);
             this.label1.TabIndex = 5;
-            this.label1.Text = "No. HP :";
+            this.label1.Text = "No. HP";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label3.Location = new System.Drawing.Point(649, 189);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(35, 753);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 22);
+            this.label3.Size = new System.Drawing.Size(54, 22);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Email :";
+            this.label3.Text = "Email";
             // 
             // textBoxCustNama
             // 
             this.textBoxCustNama.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustNama.Location = new System.Drawing.Point(764, 99);
+            this.textBoxCustNama.Location = new System.Drawing.Point(39, 642);
             this.textBoxCustNama.Name = "textBoxCustNama";
-            this.textBoxCustNama.Size = new System.Drawing.Size(243, 29);
-            this.textBoxCustNama.TabIndex = 7;
+            this.textBoxCustNama.Size = new System.Drawing.Size(211, 29);
+            this.textBoxCustNama.TabIndex = 0;
             this.textBoxCustNama.TextChanged += new System.EventHandler(this.textBoxCustNama_TextChanged);
             // 
             // textBoxCustHP
             // 
             this.textBoxCustHP.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustHP.Location = new System.Drawing.Point(764, 141);
+            this.textBoxCustHP.Location = new System.Drawing.Point(83, 712);
+            this.textBoxCustHP.MaxLength = 12;
             this.textBoxCustHP.Name = "textBoxCustHP";
-            this.textBoxCustHP.Size = new System.Drawing.Size(243, 29);
-            this.textBoxCustHP.TabIndex = 8;
+            this.textBoxCustHP.Size = new System.Drawing.Size(185, 29);
+            this.textBoxCustHP.TabIndex = 1;
             this.textBoxCustHP.TextChanged += new System.EventHandler(this.textBoxCustHP_TextChanged);
+            this.textBoxCustHP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCustHP_KeyPress);
             // 
             // textBoxCustEmail
             // 
             this.textBoxCustEmail.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustEmail.Location = new System.Drawing.Point(764, 186);
+            this.textBoxCustEmail.Location = new System.Drawing.Point(39, 778);
             this.textBoxCustEmail.Name = "textBoxCustEmail";
             this.textBoxCustEmail.Size = new System.Drawing.Size(243, 29);
-            this.textBoxCustEmail.TabIndex = 9;
+            this.textBoxCustEmail.TabIndex = 2;
             this.textBoxCustEmail.TextChanged += new System.EventHandler(this.textBoxCustEmail_TextChanged);
             // 
             // textBoxCustID
             // 
+            this.textBoxCustID.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxCustID.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustID.Location = new System.Drawing.Point(764, 62);
+            this.textBoxCustID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBoxCustID.Location = new System.Drawing.Point(40, 575);
             this.textBoxCustID.Name = "textBoxCustID";
             this.textBoxCustID.ReadOnly = true;
-            this.textBoxCustID.Size = new System.Drawing.Size(243, 29);
+            this.textBoxCustID.Size = new System.Drawing.Size(107, 29);
             this.textBoxCustID.TabIndex = 10;
+            this.textBoxCustID.TabStop = false;
             // 
             // textBoxInvNo
             // 
+            this.textBoxInvNo.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxInvNo.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxInvNo.Location = new System.Drawing.Point(192, 141);
+            this.textBoxInvNo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBoxInvNo.Location = new System.Drawing.Point(39, 107);
             this.textBoxInvNo.Name = "textBoxInvNo";
             this.textBoxInvNo.ReadOnly = true;
-            this.textBoxInvNo.Size = new System.Drawing.Size(200, 29);
+            this.textBoxInvNo.Size = new System.Drawing.Size(116, 29);
             this.textBoxInvNo.TabIndex = 11;
+            this.textBoxInvNo.TabStop = false;
             // 
             // labelStoreID
             // 
             this.labelStoreID.AutoSize = true;
             this.labelStoreID.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStoreID.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelStoreID.Location = new System.Drawing.Point(35, 65);
+            this.labelStoreID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelStoreID.Location = new System.Drawing.Point(35, 150);
             this.labelStoreID.Name = "labelStoreID";
-            this.labelStoreID.Size = new System.Drawing.Size(90, 22);
+            this.labelStoreID.Size = new System.Drawing.Size(75, 22);
             this.labelStoreID.TabIndex = 12;
-            this.labelStoreID.Text = "ID Toko : ";
+            this.labelStoreID.Text = "ID Toko";
             // 
             // labelPromoID
             // 
             this.labelPromoID.AutoSize = true;
             this.labelPromoID.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPromoID.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelPromoID.Location = new System.Drawing.Point(35, 643);
+            this.labelPromoID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelPromoID.Location = new System.Drawing.Point(34, 420);
             this.labelPromoID.Name = "labelPromoID";
-            this.labelPromoID.Size = new System.Drawing.Size(99, 22);
+            this.labelPromoID.Size = new System.Drawing.Size(89, 22);
             this.labelPromoID.TabIndex = 14;
-            this.labelPromoID.Text = "ID Promo :";
+            this.labelPromoID.Text = "ID Promo";
             // 
             // labelEmpID
             // 
             this.labelEmpID.AutoSize = true;
             this.labelEmpID.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmpID.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelEmpID.Location = new System.Drawing.Point(35, 108);
+            this.labelEmpID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelEmpID.Location = new System.Drawing.Point(34, 221);
             this.labelEmpID.Name = "labelEmpID";
-            this.labelEmpID.Size = new System.Drawing.Size(126, 22);
+            this.labelEmpID.Size = new System.Drawing.Size(116, 22);
             this.labelEmpID.TabIndex = 16;
-            this.labelEmpID.Text = "ID Karyawan : ";
+            this.labelEmpID.Text = "ID Karyawan ";
             // 
             // labelInvDate
             // 
             this.labelInvDate.AutoSize = true;
             this.labelInvDate.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInvDate.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelInvDate.Location = new System.Drawing.Point(35, 189);
+            this.labelInvDate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelInvDate.Location = new System.Drawing.Point(34, 292);
             this.labelInvDate.Name = "labelInvDate";
-            this.labelInvDate.Size = new System.Drawing.Size(152, 22);
+            this.labelInvDate.Size = new System.Drawing.Size(142, 22);
             this.labelInvDate.TabIndex = 18;
-            this.labelInvDate.Text = "Tanggal Invoice : ";
+            this.labelInvDate.Text = "Tanggal Invoice ";
             // 
             // labelDisc
             // 
             this.labelDisc.AutoSize = true;
             this.labelDisc.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDisc.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelDisc.Location = new System.Drawing.Point(35, 683);
+            this.labelDisc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelDisc.Location = new System.Drawing.Point(33, 450);
             this.labelDisc.Name = "labelDisc";
-            this.labelDisc.Size = new System.Drawing.Size(54, 22);
+            this.labelDisc.Size = new System.Drawing.Size(44, 22);
             this.labelDisc.TabIndex = 20;
-            this.labelDisc.Text = "Disc :";
+            this.labelDisc.Text = "Disc";
             // 
             // labelSubTotal
             // 
             this.labelSubTotal.AutoSize = true;
             this.labelSubTotal.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSubTotal.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelSubTotal.Location = new System.Drawing.Point(651, 346);
+            this.labelSubTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelSubTotal.Location = new System.Drawing.Point(778, 150);
             this.labelSubTotal.Name = "labelSubTotal";
-            this.labelSubTotal.Size = new System.Drawing.Size(103, 22);
+            this.labelSubTotal.Size = new System.Drawing.Size(93, 22);
             this.labelSubTotal.TabIndex = 21;
-            this.labelSubTotal.Text = "Sub Total : ";
+            this.labelSubTotal.Text = "Sub Total ";
             // 
             // labelProdID
             // 
             this.labelProdID.AutoSize = true;
             this.labelProdID.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProdID.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelProdID.Location = new System.Drawing.Point(33, 343);
+            this.labelProdID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelProdID.Location = new System.Drawing.Point(372, 153);
             this.labelProdID.Name = "labelProdID";
-            this.labelProdID.Size = new System.Drawing.Size(43, 22);
+            this.labelProdID.Size = new System.Drawing.Size(28, 22);
             this.labelProdID.TabIndex = 22;
-            this.labelProdID.Text = "ID : ";
+            this.labelProdID.Text = "ID";
             // 
             // textBoxDisc
             // 
+            this.textBoxDisc.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxDisc.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDisc.Location = new System.Drawing.Point(190, 680);
+            this.textBoxDisc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBoxDisc.Location = new System.Drawing.Point(150, 447);
             this.textBoxDisc.Name = "textBoxDisc";
             this.textBoxDisc.ReadOnly = true;
             this.textBoxDisc.Size = new System.Drawing.Size(100, 29);
             this.textBoxDisc.TabIndex = 26;
+            this.textBoxDisc.TabStop = false;
             this.textBoxDisc.TextChanged += new System.EventHandler(this.textBoxDisc_TextChanged);
             // 
             // labelDisSubTotal
             // 
             this.labelDisSubTotal.AutoSize = true;
             this.labelDisSubTotal.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDisSubTotal.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelDisSubTotal.Location = new System.Drawing.Point(760, 346);
+            this.labelDisSubTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelDisSubTotal.Location = new System.Drawing.Point(780, 178);
             this.labelDisSubTotal.Name = "labelDisSubTotal";
             this.labelDisSubTotal.Size = new System.Drawing.Size(72, 22);
             this.labelDisSubTotal.TabIndex = 27;
@@ -324,71 +329,77 @@ namespace Tugas_AD_Counter_HP
             "Oppo Enco W31",
             "Oppo Reno 6 5G",
             "Onyx Studio 6"});
-            this.comboBoxProdName.Location = new System.Drawing.Point(190, 298);
+            this.comboBoxProdName.Location = new System.Drawing.Point(376, 107);
             this.comboBoxProdName.Name = "comboBoxProdName";
             this.comboBoxProdName.Size = new System.Drawing.Size(298, 29);
-            this.comboBoxProdName.TabIndex = 28;
+            this.comboBoxProdName.TabIndex = 3;
             this.comboBoxProdName.SelectedIndexChanged += new System.EventHandler(this.comboBoxProdName_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label4.Location = new System.Drawing.Point(33, 301);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(372, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 22);
+            this.label4.Size = new System.Drawing.Size(58, 22);
             this.label4.TabIndex = 29;
-            this.label4.Text = "Nama : ";
+            this.label4.Text = "Nama";
             // 
             // textBoxProdID
             // 
+            this.textBoxProdID.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxProdID.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxProdID.Location = new System.Drawing.Point(190, 340);
+            this.textBoxProdID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBoxProdID.Location = new System.Drawing.Point(473, 150);
             this.textBoxProdID.Name = "textBoxProdID";
             this.textBoxProdID.ReadOnly = true;
             this.textBoxProdID.Size = new System.Drawing.Size(80, 29);
             this.textBoxProdID.TabIndex = 31;
+            this.textBoxProdID.TabStop = false;
             // 
             // textBoxProdPrice
             // 
+            this.textBoxProdPrice.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxProdPrice.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxProdPrice.Location = new System.Drawing.Point(190, 384);
+            this.textBoxProdPrice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBoxProdPrice.Location = new System.Drawing.Point(473, 182);
             this.textBoxProdPrice.Name = "textBoxProdPrice";
             this.textBoxProdPrice.ReadOnly = true;
             this.textBoxProdPrice.Size = new System.Drawing.Size(167, 29);
             this.textBoxProdPrice.TabIndex = 33;
+            this.textBoxProdPrice.TabStop = false;
             // 
             // labelProdPrice
             // 
             this.labelProdPrice.AutoSize = true;
             this.labelProdPrice.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProdPrice.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelProdPrice.Location = new System.Drawing.Point(33, 387);
+            this.labelProdPrice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelProdPrice.Location = new System.Drawing.Point(372, 185);
             this.labelProdPrice.Name = "labelProdPrice";
-            this.labelProdPrice.Size = new System.Drawing.Size(104, 22);
+            this.labelProdPrice.Size = new System.Drawing.Size(94, 22);
             this.labelProdPrice.TabIndex = 32;
-            this.labelProdPrice.Text = "Harga/Pcs :";
+            this.labelProdPrice.Text = "Harga/Pcs";
             // 
             // labelQuan
             // 
             this.labelQuan.AutoSize = true;
             this.labelQuan.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelQuan.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelQuan.Location = new System.Drawing.Point(651, 303);
+            this.labelQuan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelQuan.Location = new System.Drawing.Point(778, 82);
             this.labelQuan.Name = "labelQuan";
-            this.labelQuan.Size = new System.Drawing.Size(96, 22);
+            this.labelQuan.Size = new System.Drawing.Size(86, 22);
             this.labelQuan.TabIndex = 34;
-            this.labelQuan.Text = "Kuantitas :";
+            this.labelQuan.Text = "Kuantitas";
             // 
             // labelDisTotal
             // 
             this.labelDisTotal.AutoSize = true;
-            this.labelDisTotal.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDisTotal.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelDisTotal.Location = new System.Drawing.Point(776, 597);
+            this.labelDisTotal.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisTotal.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.labelDisTotal.Location = new System.Drawing.Point(376, 592);
             this.labelDisTotal.Name = "labelDisTotal";
-            this.labelDisTotal.Size = new System.Drawing.Size(99, 31);
+            this.labelDisTotal.Size = new System.Drawing.Size(130, 42);
             this.labelDisTotal.TabIndex = 37;
             this.labelDisTotal.Text = "Rp0,00";
             // 
@@ -396,50 +407,53 @@ namespace Tugas_AD_Counter_HP
             // 
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelTotal.Location = new System.Drawing.Point(654, 597);
+            this.labelTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelTotal.Location = new System.Drawing.Point(377, 550);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(90, 31);
+            this.labelTotal.Size = new System.Drawing.Size(76, 31);
             this.labelTotal.TabIndex = 36;
-            this.labelTotal.Text = "Total :";
+            this.labelTotal.Text = "Total";
             // 
             // labelBayar
             // 
             this.labelBayar.AutoSize = true;
             this.labelBayar.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBayar.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelBayar.Location = new System.Drawing.Point(658, 663);
+            this.labelBayar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelBayar.Location = new System.Drawing.Point(379, 659);
             this.labelBayar.Name = "labelBayar";
-            this.labelBayar.Size = new System.Drawing.Size(157, 22);
+            this.labelBayar.Size = new System.Drawing.Size(55, 22);
             this.labelBayar.TabIndex = 38;
-            this.labelBayar.Text = "Bayar :              Rp";
+            this.labelBayar.Text = "Bayar";
             // 
             // labelKembali
             // 
             this.labelKembali.AutoSize = true;
             this.labelKembali.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelKembali.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelKembali.Location = new System.Drawing.Point(658, 703);
+            this.labelKembali.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelKembali.Location = new System.Drawing.Point(564, 659);
             this.labelKembali.Name = "labelKembali";
-            this.labelKembali.Size = new System.Drawing.Size(86, 22);
+            this.labelKembali.Size = new System.Drawing.Size(76, 22);
             this.labelKembali.TabIndex = 39;
-            this.labelKembali.Text = "Kembali :";
+            this.labelKembali.Text = "Kembali";
             // 
             // textBoxBayar
             // 
             this.textBoxBayar.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBayar.Location = new System.Drawing.Point(816, 660);
+            this.textBoxBayar.Location = new System.Drawing.Point(420, 684);
+            this.textBoxBayar.MaxLength = 9;
             this.textBoxBayar.Name = "textBoxBayar";
             this.textBoxBayar.Size = new System.Drawing.Size(100, 29);
-            this.textBoxBayar.TabIndex = 40;
+            this.textBoxBayar.TabIndex = 8;
+            this.textBoxBayar.Text = "0";
             this.textBoxBayar.TextChanged += new System.EventHandler(this.textBoxBayar_TextChanged);
+            this.textBoxBayar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCustHP_KeyPress);
             // 
             // labelDisKembali
             // 
             this.labelDisKembali.AutoSize = true;
             this.labelDisKembali.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDisKembali.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelDisKembali.Location = new System.Drawing.Point(780, 703);
+            this.labelDisKembali.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelDisKembali.Location = new System.Drawing.Point(564, 687);
             this.labelDisKembali.Name = "labelDisKembali";
             this.labelDisKembali.Size = new System.Drawing.Size(67, 22);
             this.labelDisKembali.TabIndex = 41;
@@ -447,43 +461,48 @@ namespace Tugas_AD_Counter_HP
             // 
             // buttonAddProd
             // 
+            this.buttonAddProd.BackColor = System.Drawing.Color.Firebrick;
             this.buttonAddProd.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddProd.Location = new System.Drawing.Point(655, 379);
+            this.buttonAddProd.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonAddProd.Location = new System.Drawing.Point(1022, 185);
             this.buttonAddProd.Name = "buttonAddProd";
             this.buttonAddProd.Size = new System.Drawing.Size(78, 42);
-            this.buttonAddProd.TabIndex = 42;
+            this.buttonAddProd.TabIndex = 5;
             this.buttonAddProd.Text = "Add";
-            this.buttonAddProd.UseVisualStyleBackColor = true;
+            this.buttonAddProd.UseVisualStyleBackColor = false;
             this.buttonAddProd.Click += new System.EventHandler(this.buttonAddProd_Click);
             // 
             // nudQuan
             // 
             this.nudQuan.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQuan.Location = new System.Drawing.Point(764, 301);
+            this.nudQuan.Location = new System.Drawing.Point(782, 108);
             this.nudQuan.Name = "nudQuan";
             this.nudQuan.Size = new System.Drawing.Size(120, 29);
-            this.nudQuan.TabIndex = 43;
+            this.nudQuan.TabIndex = 4;
             this.nudQuan.ValueChanged += new System.EventHandler(this.nudQuan_ValueChanged);
             // 
             // labelPromoName
             // 
             this.labelPromoName.AutoSize = true;
             this.labelPromoName.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPromoName.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelPromoName.Location = new System.Drawing.Point(33, 606);
+            this.labelPromoName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelPromoName.Location = new System.Drawing.Point(33, 357);
             this.labelPromoName.Name = "labelPromoName";
-            this.labelPromoName.Size = new System.Drawing.Size(76, 22);
+            this.labelPromoName.Size = new System.Drawing.Size(66, 22);
             this.labelPromoName.TabIndex = 45;
-            this.labelPromoName.Text = "Promo :";
+            this.labelPromoName.Text = "Promo";
             // 
             // textBoxPromoID
             // 
+            this.textBoxPromoID.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxPromoID.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPromoID.Location = new System.Drawing.Point(190, 640);
+            this.textBoxPromoID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBoxPromoID.Location = new System.Drawing.Point(150, 417);
             this.textBoxPromoID.Name = "textBoxPromoID";
             this.textBoxPromoID.ReadOnly = true;
             this.textBoxPromoID.Size = new System.Drawing.Size(100, 29);
             this.textBoxPromoID.TabIndex = 46;
+            this.textBoxPromoID.TabStop = false;
             // 
             // dgvPrintProduct2
             // 
@@ -511,119 +530,117 @@ namespace Tugas_AD_Counter_HP
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPrintProduct2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPrintProduct2.Location = new System.Drawing.Point(37, 433);
+            this.dgvPrintProduct2.Location = new System.Drawing.Point(375, 240);
             this.dgvPrintProduct2.Name = "dgvPrintProduct2";
             this.dgvPrintProduct2.ReadOnly = true;
             this.dgvPrintProduct2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvPrintProduct2.RowHeadersVisible = false;
             this.dgvPrintProduct2.RowHeadersWidth = 62;
             this.dgvPrintProduct2.RowTemplate.Height = 28;
-            this.dgvPrintProduct2.Size = new System.Drawing.Size(983, 149);
-            this.dgvPrintProduct2.TabIndex = 48;
+            this.dgvPrintProduct2.Size = new System.Drawing.Size(811, 292);
+            this.dgvPrintProduct2.TabIndex = 6;
             // 
             // textBoxIDEmp
             // 
+            this.textBoxIDEmp.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxIDEmp.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIDEmp.Location = new System.Drawing.Point(192, 99);
+            this.textBoxIDEmp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBoxIDEmp.Location = new System.Drawing.Point(37, 246);
             this.textBoxIDEmp.Name = "textBoxIDEmp";
             this.textBoxIDEmp.ReadOnly = true;
-            this.textBoxIDEmp.Size = new System.Drawing.Size(200, 29);
+            this.textBoxIDEmp.Size = new System.Drawing.Size(113, 29);
             this.textBoxIDEmp.TabIndex = 49;
+            this.textBoxIDEmp.TabStop = false;
             // 
             // textBoxDisIDStore
             // 
+            this.textBoxDisIDStore.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxDisIDStore.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDisIDStore.Location = new System.Drawing.Point(192, 62);
+            this.textBoxDisIDStore.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBoxDisIDStore.Location = new System.Drawing.Point(37, 175);
             this.textBoxDisIDStore.Name = "textBoxDisIDStore";
             this.textBoxDisIDStore.ReadOnly = true;
-            this.textBoxDisIDStore.Size = new System.Drawing.Size(200, 29);
+            this.textBoxDisIDStore.Size = new System.Drawing.Size(113, 29);
             this.textBoxDisIDStore.TabIndex = 50;
+            this.textBoxDisIDStore.TabStop = false;
             // 
             // buttonSave
             // 
+            this.buttonSave.BackColor = System.Drawing.Color.Firebrick;
             this.buttonSave.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.Location = new System.Drawing.Point(200, 731);
+            this.buttonSave.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonSave.Location = new System.Drawing.Point(377, 750);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(95, 57);
-            this.buttonSave.TabIndex = 51;
+            this.buttonSave.TabIndex = 9;
             this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.UseVisualStyleBackColor = false;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonPrint
             // 
+            this.buttonPrint.BackColor = System.Drawing.Color.Firebrick;
             this.buttonPrint.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrint.Location = new System.Drawing.Point(309, 731);
+            this.buttonPrint.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonPrint.Location = new System.Drawing.Point(478, 750);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(95, 57);
-            this.buttonPrint.TabIndex = 52;
+            this.buttonPrint.TabIndex = 10;
             this.buttonPrint.Text = "Print";
-            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.UseVisualStyleBackColor = false;
             this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
             // buttonClose
             // 
+            this.buttonClose.BackColor = System.Drawing.Color.Firebrick;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(420, 731);
+            this.buttonClose.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonClose.Location = new System.Drawing.Point(579, 750);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(95, 57);
-            this.buttonClose.TabIndex = 53;
+            this.buttonClose.TabIndex = 11;
             this.buttonClose.Text = "Close";
-            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // labelDataInv
             // 
             this.labelDataInv.AutoSize = true;
-            this.labelDataInv.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.labelDataInv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelDataInv.Font = new System.Drawing.Font("Bernard MT Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDataInv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelDataInv.Location = new System.Drawing.Point(39, 11);
+            this.labelDataInv.BackColor = System.Drawing.Color.Transparent;
+            this.labelDataInv.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDataInv.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelDataInv.Location = new System.Drawing.Point(32, 33);
             this.labelDataInv.Name = "labelDataInv";
-            this.labelDataInv.Size = new System.Drawing.Size(97, 35);
+            this.labelDataInv.Size = new System.Drawing.Size(151, 39);
             this.labelDataInv.TabIndex = 54;
             this.labelDataInv.Text = "INVOICE";
-            // 
-            // labelInputProduk
-            // 
-            this.labelInputProduk.AutoSize = true;
-            this.labelInputProduk.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.labelInputProduk.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelInputProduk.Font = new System.Drawing.Font("Bernard MT Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInputProduk.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelInputProduk.Location = new System.Drawing.Point(37, 251);
-            this.labelInputProduk.Name = "labelInputProduk";
-            this.labelInputProduk.Size = new System.Drawing.Size(172, 35);
-            this.labelInputProduk.TabIndex = 55;
-            this.labelInputProduk.Text = "INPUT PRODUK";
             // 
             // labelLine
             // 
             this.labelLine.AutoSize = true;
-            this.labelLine.Location = new System.Drawing.Point(28, 218);
+            this.labelLine.Location = new System.Drawing.Point(185, 36);
             this.labelLine.Name = "labelLine";
-            this.labelLine.Size = new System.Drawing.Size(981, 20);
+            this.labelLine.Size = new System.Drawing.Size(144, 20);
             this.labelLine.TabIndex = 56;
-            this.labelLine.Text = "_________________________________________________________________________________" +
-    "___________________________";
+            this.labelLine.Text = "_______________\r\n";
             // 
             // dtpInvDate
             // 
+            this.dtpInvDate.Enabled = false;
             this.dtpInvDate.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpInvDate.Location = new System.Drawing.Point(190, 185);
+            this.dtpInvDate.Location = new System.Drawing.Point(36, 317);
             this.dtpInvDate.Name = "dtpInvDate";
-            this.dtpInvDate.Size = new System.Drawing.Size(298, 29);
+            this.dtpInvDate.Size = new System.Drawing.Size(280, 29);
             this.dtpInvDate.TabIndex = 57;
-            this.dtpInvDate.ValueChanged += new System.EventHandler(this.dtpInvDate_ValueChanged);
+            this.dtpInvDate.TabStop = false;
             // 
             // labelStock
             // 
             this.labelStock.AutoSize = true;
             this.labelStock.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelStock.Font = new System.Drawing.Font("Yu Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStock.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelStock.Location = new System.Drawing.Point(276, 344);
+            this.labelStock.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelStock.Location = new System.Drawing.Point(559, 152);
             this.labelStock.Name = "labelStock";
             this.labelStock.Size = new System.Drawing.Size(57, 23);
             this.labelStock.TabIndex = 58;
@@ -631,37 +648,125 @@ namespace Tugas_AD_Counter_HP
             // 
             // buttonDelete
             // 
+            this.buttonDelete.BackColor = System.Drawing.Color.Firebrick;
             this.buttonDelete.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(764, 379);
+            this.buttonDelete.ForeColor = System.Drawing.SystemColors.Window;
+            this.buttonDelete.Location = new System.Drawing.Point(1108, 185);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(78, 42);
-            this.buttonDelete.TabIndex = 59;
+            this.buttonDelete.TabIndex = 7;
             this.buttonDelete.Text = "Delete";
-            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.UseVisualStyleBackColor = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // textBoxPromoName
             // 
+            this.textBoxPromoName.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxPromoName.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPromoName.Location = new System.Drawing.Point(190, 606);
+            this.textBoxPromoName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBoxPromoName.Location = new System.Drawing.Point(37, 382);
             this.textBoxPromoName.Name = "textBoxPromoName";
             this.textBoxPromoName.ReadOnly = true;
             this.textBoxPromoName.Size = new System.Drawing.Size(298, 29);
             this.textBoxPromoName.TabIndex = 60;
+            this.textBoxPromoName.TabStop = false;
+            // 
+            // labelProduct
+            // 
+            this.labelProduct.AutoSize = true;
+            this.labelProduct.BackColor = System.Drawing.Color.Transparent;
+            this.labelProduct.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProduct.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelProduct.Location = new System.Drawing.Point(369, 33);
+            this.labelProduct.Name = "labelProduct";
+            this.labelProduct.Size = new System.Drawing.Size(147, 39);
+            this.labelProduct.TabIndex = 61;
+            this.labelProduct.Text = "PRODUK";
+            // 
+            // labelCust
+            // 
+            this.labelCust.AutoSize = true;
+            this.labelCust.BackColor = System.Drawing.Color.Transparent;
+            this.labelCust.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCust.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.labelCust.Location = new System.Drawing.Point(32, 502);
+            this.labelCust.Name = "labelCust";
+            this.labelCust.Size = new System.Drawing.Size(186, 39);
+            this.labelCust.TabIndex = 62;
+            this.labelCust.Text = "CUSTOMER";
+            // 
+            // labelLine2
+            // 
+            this.labelLine2.AutoSize = true;
+            this.labelLine2.Location = new System.Drawing.Point(223, 506);
+            this.labelLine2.Name = "labelLine2";
+            this.labelLine2.Size = new System.Drawing.Size(108, 20);
+            this.labelLine2.TabIndex = 63;
+            this.labelLine2.Text = "___________\r\n";
+            // 
+            // labelLine3
+            // 
+            this.labelLine3.AutoSize = true;
+            this.labelLine3.Location = new System.Drawing.Point(518, 36);
+            this.labelLine3.Name = "labelLine3";
+            this.labelLine3.Size = new System.Drawing.Size(648, 20);
+            this.labelLine3.TabIndex = 64;
+            this.labelLine3.Text = "_______________________________________________________________________";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label62.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label62.Location = new System.Drawing.Point(35, 719);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(42, 22);
+            this.label62.TabIndex = 65;
+            this.label62.Text = "+62";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(379, 687);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 22);
+            this.label5.TabIndex = 66;
+            this.label5.Text = "Rp";
+            // 
+            // buttonPaid
+            // 
+            this.buttonPaid.BackColor = System.Drawing.Color.Black;
+            this.buttonPaid.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPaid.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.buttonPaid.Location = new System.Drawing.Point(692, 659);
+            this.buttonPaid.Name = "buttonPaid";
+            this.buttonPaid.Size = new System.Drawing.Size(99, 54);
+            this.buttonPaid.TabIndex = 67;
+            this.buttonPaid.Text = "Paid";
+            this.buttonPaid.UseVisualStyleBackColor = false;
+            this.buttonPaid.Click += new System.EventHandler(this.buttonPaid_Click);
             // 
             // FormCashier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1062, 811);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1215, 832);
+            this.Controls.Add(this.buttonPaid);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label62);
+            this.Controls.Add(this.labelLine3);
+            this.Controls.Add(this.labelLine2);
+            this.Controls.Add(this.labelCust);
+            this.Controls.Add(this.labelProduct);
             this.Controls.Add(this.textBoxPromoName);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.labelStock);
             this.Controls.Add(this.dtpInvDate);
             this.Controls.Add(this.labelLine);
-            this.Controls.Add(this.labelInputProduk);
             this.Controls.Add(this.labelDataInv);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonPrint);
@@ -701,7 +806,6 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.textBoxCustNama);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelDataCust);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelCustName);
             this.Controls.Add(this.labelNoInv);
@@ -710,6 +814,7 @@ namespace Tugas_AD_Counter_HP
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCashier";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cashier";
             this.Load += new System.EventHandler(this.FormInput_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudQuan)).EndInit();
@@ -725,7 +830,6 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.Label labelNoInv;
         private System.Windows.Forms.Label labelCustName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelDataCust;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxCustNama;
@@ -765,11 +869,17 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.Button buttonPrint;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Label labelDataInv;
-        private System.Windows.Forms.Label labelInputProduk;
         private System.Windows.Forms.Label labelLine;
         private System.Windows.Forms.DateTimePicker dtpInvDate;
         private System.Windows.Forms.Label labelStock;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.TextBox textBoxPromoName;
+        private System.Windows.Forms.Label labelProduct;
+        private System.Windows.Forms.Label labelCust;
+        private System.Windows.Forms.Label labelLine2;
+        private System.Windows.Forms.Label labelLine3;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonPaid;
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Tugas_AD_Counter_HP
 {
@@ -16,7 +17,24 @@ namespace Tugas_AD_Counter_HP
         {
             InitializeComponent();
         }
+        public static string sqlconnection = "server=139.255.11.84;uid=student;pwd=isbmantap;database=DBD_02_PHONESTORE";
+        public MySqlConnection sqlConnect = new MySqlConnection(sqlconnection);
+        public MySqlCommand sqlCommand;
+        public MySqlDataAdapter sqlAdapter;
+        string sqlQuery;
+        string sendTextFromLogin;
+        DataTable dtEmpNameID = new DataTable();
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+            sendTextFromLogin = FormLogin.sendtext;
+            sqlQuery = "SELECT emp_name, emp_id FROM EMPLOYEE WHERE emp_username = '" + sendTextFromLogin + "'";
+            sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
+            sqlAdapter = new MySqlDataAdapter(sqlCommand);
+            sqlAdapter.Fill(dtEmpNameID);
 
+            labelDisEmpName.Text = dtEmpNameID.Rows[0][0].ToString();
+            labelDisEmpID.Text = dtEmpNameID.Rows[0][1].ToString();
+        }
         private void buttonCashier_Click(object sender, EventArgs e)
         {
             FormCashier formInput = new FormCashier();
