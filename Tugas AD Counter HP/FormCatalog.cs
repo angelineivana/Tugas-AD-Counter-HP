@@ -23,12 +23,9 @@ namespace Tugas_AD_Counter_HP
         public MySqlDataAdapter sqlAdapter;
         public string sqlQuery;
         DataTable produk = new DataTable();
-        private void buttonMenu_Click(object sender, EventArgs e)
-        {
-            FormMenu formMenu = new FormMenu();
-            this.Hide();
-            formMenu.Show();
-        }
+        DataTable kategori = new DataTable();
+        DataTable katBrand = new DataTable();
+        DataTable brand = new DataTable();
 
         private void FormCatalog_Load(object sender, EventArgs e)
         {
@@ -37,19 +34,119 @@ namespace Tugas_AD_Counter_HP
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(produk);
             dataGridViewCatalog.DataSource = produk;
-        }
 
-        private void dataGridViewCatalog_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+            comboBoxCat.Enabled = false;
+            comboBoxBrand.Enabled = false;
+            checkBoxCat.Checked = false;
+            checkBoxBrand.Checked = false;
         }
 
         private void dataGridViewCatalog_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex != -1 )
+            if (e.RowIndex != -1)
             {
                 DataGridViewRow baris = dataGridViewCatalog.Rows[e.RowIndex];
                 richTextBoxSpesifikasi.Text = baris.Cells[4].Value.ToString();
             }
+        }
+        private void dataSource()
+        {
+            if (checkBoxBrand.Checked == false && checkBoxCat.Checked == false)
+            {
+                dataGridViewCatalog.DataSource = produk;
+            }
+            else if (checkBoxBrand.Checked == false && checkBoxCat.Checked == true)
+            {
+                dataGridViewCatalog.DataSource = kategori;
+            }
+            else if (checkBoxBrand.Checked == true && checkBoxCat.Checked == false)
+            {
+                dataGridViewCatalog.DataSource = brand;
+            }
+            else if (checkBoxBrand.Checked == true && checkBoxCat.Checked == true)
+            {
+                dataGridViewCatalog.DataSource = katBrand;
+            }
+        }
+        private void fillKategori()
+        {
+            kategori.Clear();
+            sqlQuery = "select P.PRODUCT_BRAND as 'Brand', P.PRODUCT_NAME as 'Nama Produk', P.PRODUCT_PRICE as 'Harga', P.PRODUCT_STOCK as 'Stok', P.PRODUCT_DESC as 'Spesifikasi' from PRODUCT P, CATEGORY C where P.CAT_ID = C.CAT_ID and C.CAT_NAME = '" + comboBoxCat.SelectedItem.ToString() + "'";
+            sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
+            sqlAdapter = new MySqlDataAdapter(sqlCommand);
+            sqlAdapter.Fill(kategori);
+        }
+
+        private void fillBrand()
+        {
+            brand.Clear();
+            sqlQuery = "select PRODUCT_BRAND as 'Brand', PRODUCT_NAME as 'Nama Produk', PRODUCT_PRICE as 'Harga', PRODUCT_STOCK as 'Stok', PRODUCT_DESC as 'Spesifikasi' from PRODUCT where PRODUCT_BRAND = '" + comboBoxBrand.SelectedItem.ToString() + "'";
+            sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
+            sqlAdapter = new MySqlDataAdapter(sqlCommand);
+            sqlAdapter.Fill(brand);
+        }
+        private void fillKatBrand()
+        {
+            katBrand.Clear();
+            sqlQuery = "select P.PRODUCT_BRAND as 'Brand', P.PRODUCT_NAME as 'Nama Produk', P.PRODUCT_PRICE as 'Harga', P.PRODUCT_STOCK as 'Stok', P.PRODUCT_DESC as 'Spesifikasi' from PRODUCT P, CATEGORY C where P.CAT_ID = C.CAT_ID and C.CAT_NAME = '" + comboBoxCat.SelectedItem.ToString() + "' and P.PRODUCT_BRAND = '" + comboBoxBrand.SelectedItem.ToString() + "'";
+            sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
+            sqlAdapter = new MySqlDataAdapter(sqlCommand);
+            sqlAdapter.Fill(katBrand);
+        }
+        private void checkBoxCat_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxCat.Checked == true)
+            {
+                comboBoxCat.Enabled = true;
+            }
+            else
+            {
+                comboBoxCat.Enabled = false;
+                comboBoxCat.ResetText();
+                comboBoxCat.SelectedIndex = -1;
+            }
+            dataSource();
+        }
+        private void comboBoxCat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            fillKategori();
+            if (checkBoxBrand.Checked == true && checkBoxCat.Checked == true)
+            {
+                fillKatBrand();
+            }
+            dataSource();
+        }
+
+        private void checkBoxBrand_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxBrand.Checked == true)
+            {
+                comboBoxBrand.Enabled = true;
+            }
+            else
+            {
+                comboBoxBrand.Enabled = false;
+                comboBoxBrand.ResetText();
+                comboBoxBrand.SelectedIndex = -1;
+            }
+            dataSource();
+        }
+        private void comboBoxBrand_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            fillBrand();
+
+            if (checkBoxBrand.Checked == true && checkBoxCat.Checked == true)
+            {
+                fillKatBrand();
+            }
+
+            dataSource();
+        }
+        private void buttonMenu_Click(object sender, EventArgs e)
+        {
+            FormMenu formMenu = new FormMenu();
+            this.Hide();
+            formMenu.Show();
         }
     }
 }

@@ -35,30 +35,31 @@ namespace Tugas_AD_Counter_HP
             labelDisEmpName.Text = dtEmpNameID.Rows[0][0].ToString();
             labelDisEmpID.Text = dtEmpNameID.Rows[0][1].ToString();
         }
-        private void buttonCashier_Click(object sender, EventArgs e)
+
+        private void pictureBoxCashier_Click(object sender, EventArgs e)
         {
             FormCashier formInput = new FormCashier();
             this.Hide();
             formInput.Show();
         }
 
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
-        }
-
-        private void buttonCatalog_Click(object sender, EventArgs e)
+        private void pictureBoxCatalog_Click(object sender, EventArgs e)
         {
             FormCatalog formCatalog = new FormCatalog();
             this.Hide();
             formCatalog.Show();
         }
 
-        private void buttonHistory_Click(object sender, EventArgs e)
+        private void pictureBoxSalesHistory_Click(object sender, EventArgs e)
         {
             FormHistory formHistory = new FormHistory();
             this.Hide();
             formHistory.Show();
+        }
+
+        private void pictureBoxExit_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

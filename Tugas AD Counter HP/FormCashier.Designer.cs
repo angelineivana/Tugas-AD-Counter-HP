@@ -35,9 +35,9 @@ namespace Tugas_AD_Counter_HP
             this.buttonMenu = new System.Windows.Forms.Button();
             this.labelNoInv = new System.Windows.Forms.Label();
             this.labelCustName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelCustID = new System.Windows.Forms.Label();
+            this.labelCustHP = new System.Windows.Forms.Label();
+            this.labelCustEmail = new System.Windows.Forms.Label();
             this.textBoxCustNama = new System.Windows.Forms.TextBox();
             this.textBoxCustHP = new System.Windows.Forms.TextBox();
             this.textBoxCustEmail = new System.Windows.Forms.TextBox();
@@ -53,7 +53,7 @@ namespace Tugas_AD_Counter_HP
             this.textBoxDisc = new System.Windows.Forms.TextBox();
             this.labelDisSubTotal = new System.Windows.Forms.Label();
             this.comboBoxProdName = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelProdName = new System.Windows.Forms.Label();
             this.textBoxProdID = new System.Windows.Forms.TextBox();
             this.textBoxProdPrice = new System.Windows.Forms.TextBox();
             this.labelProdPrice = new System.Windows.Forms.Label();
@@ -85,7 +85,7 @@ namespace Tugas_AD_Counter_HP
             this.labelLine2 = new System.Windows.Forms.Label();
             this.labelLine3 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelRp = new System.Windows.Forms.Label();
             this.buttonPaid = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrintProduct2)).BeginInit();
@@ -96,7 +96,7 @@ namespace Tugas_AD_Counter_HP
             this.buttonMenu.BackColor = System.Drawing.Color.Navy;
             this.buttonMenu.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMenu.ForeColor = System.Drawing.SystemColors.Info;
-            this.buttonMenu.Location = new System.Drawing.Point(1041, 750);
+            this.buttonMenu.Location = new System.Drawing.Point(1082, 763);
             this.buttonMenu.Name = "buttonMenu";
             this.buttonMenu.Size = new System.Drawing.Size(145, 57);
             this.buttonMenu.TabIndex = 12;
@@ -120,49 +120,49 @@ namespace Tugas_AD_Counter_HP
             this.labelCustName.AutoSize = true;
             this.labelCustName.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCustName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelCustName.Location = new System.Drawing.Point(36, 617);
+            this.labelCustName.Location = new System.Drawing.Point(34, 626);
             this.labelCustName.Name = "labelCustName";
             this.labelCustName.Size = new System.Drawing.Size(58, 22);
             this.labelCustName.TabIndex = 2;
             this.labelCustName.Text = "Nama";
             // 
-            // label2
+            // labelCustID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(37, 550);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 22);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "ID";
+            this.labelCustID.AutoSize = true;
+            this.labelCustID.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelCustID.Location = new System.Drawing.Point(35, 559);
+            this.labelCustID.Name = "labelCustID";
+            this.labelCustID.Size = new System.Drawing.Size(28, 22);
+            this.labelCustID.TabIndex = 3;
+            this.labelCustID.Text = "ID";
             // 
-            // label1
+            // labelCustHP
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(37, 685);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 22);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "No. HP";
+            this.labelCustHP.AutoSize = true;
+            this.labelCustHP.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustHP.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelCustHP.Location = new System.Drawing.Point(35, 694);
+            this.labelCustHP.Name = "labelCustHP";
+            this.labelCustHP.Size = new System.Drawing.Size(69, 22);
+            this.labelCustHP.TabIndex = 5;
+            this.labelCustHP.Text = "No. HP";
             // 
-            // label3
+            // labelCustEmail
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(35, 753);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 22);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Email";
+            this.labelCustEmail.AutoSize = true;
+            this.labelCustEmail.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCustEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelCustEmail.Location = new System.Drawing.Point(33, 762);
+            this.labelCustEmail.Name = "labelCustEmail";
+            this.labelCustEmail.Size = new System.Drawing.Size(54, 22);
+            this.labelCustEmail.TabIndex = 6;
+            this.labelCustEmail.Text = "Email";
             // 
             // textBoxCustNama
             // 
             this.textBoxCustNama.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustNama.Location = new System.Drawing.Point(39, 642);
+            this.textBoxCustNama.Location = new System.Drawing.Point(37, 651);
             this.textBoxCustNama.Name = "textBoxCustNama";
             this.textBoxCustNama.Size = new System.Drawing.Size(211, 29);
             this.textBoxCustNama.TabIndex = 0;
@@ -171,7 +171,7 @@ namespace Tugas_AD_Counter_HP
             // textBoxCustHP
             // 
             this.textBoxCustHP.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustHP.Location = new System.Drawing.Point(83, 712);
+            this.textBoxCustHP.Location = new System.Drawing.Point(81, 721);
             this.textBoxCustHP.MaxLength = 12;
             this.textBoxCustHP.Name = "textBoxCustHP";
             this.textBoxCustHP.Size = new System.Drawing.Size(185, 29);
@@ -182,7 +182,7 @@ namespace Tugas_AD_Counter_HP
             // textBoxCustEmail
             // 
             this.textBoxCustEmail.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCustEmail.Location = new System.Drawing.Point(39, 778);
+            this.textBoxCustEmail.Location = new System.Drawing.Point(37, 787);
             this.textBoxCustEmail.Name = "textBoxCustEmail";
             this.textBoxCustEmail.Size = new System.Drawing.Size(243, 29);
             this.textBoxCustEmail.TabIndex = 2;
@@ -193,7 +193,7 @@ namespace Tugas_AD_Counter_HP
             this.textBoxCustID.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxCustID.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCustID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBoxCustID.Location = new System.Drawing.Point(40, 575);
+            this.textBoxCustID.Location = new System.Drawing.Point(38, 584);
             this.textBoxCustID.Name = "textBoxCustID";
             this.textBoxCustID.ReadOnly = true;
             this.textBoxCustID.Size = new System.Drawing.Size(107, 29);
@@ -272,7 +272,7 @@ namespace Tugas_AD_Counter_HP
             this.labelSubTotal.AutoSize = true;
             this.labelSubTotal.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSubTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelSubTotal.Location = new System.Drawing.Point(778, 150);
+            this.labelSubTotal.Location = new System.Drawing.Point(819, 150);
             this.labelSubTotal.Name = "labelSubTotal";
             this.labelSubTotal.Size = new System.Drawing.Size(93, 22);
             this.labelSubTotal.TabIndex = 21;
@@ -283,7 +283,7 @@ namespace Tugas_AD_Counter_HP
             this.labelProdID.AutoSize = true;
             this.labelProdID.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProdID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelProdID.Location = new System.Drawing.Point(372, 153);
+            this.labelProdID.Location = new System.Drawing.Point(413, 153);
             this.labelProdID.Name = "labelProdID";
             this.labelProdID.Size = new System.Drawing.Size(28, 22);
             this.labelProdID.TabIndex = 22;
@@ -307,7 +307,7 @@ namespace Tugas_AD_Counter_HP
             this.labelDisSubTotal.AutoSize = true;
             this.labelDisSubTotal.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDisSubTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelDisSubTotal.Location = new System.Drawing.Point(780, 178);
+            this.labelDisSubTotal.Location = new System.Drawing.Point(821, 178);
             this.labelDisSubTotal.Name = "labelDisSubTotal";
             this.labelDisSubTotal.Size = new System.Drawing.Size(72, 22);
             this.labelDisSubTotal.TabIndex = 27;
@@ -329,29 +329,29 @@ namespace Tugas_AD_Counter_HP
             "Oppo Enco W31",
             "Oppo Reno 6 5G",
             "Onyx Studio 6"});
-            this.comboBoxProdName.Location = new System.Drawing.Point(376, 107);
+            this.comboBoxProdName.Location = new System.Drawing.Point(417, 107);
             this.comboBoxProdName.Name = "comboBoxProdName";
             this.comboBoxProdName.Size = new System.Drawing.Size(298, 29);
             this.comboBoxProdName.TabIndex = 3;
             this.comboBoxProdName.SelectedIndexChanged += new System.EventHandler(this.comboBoxProdName_SelectedIndexChanged);
             // 
-            // label4
+            // labelProdName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(372, 82);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 22);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Nama";
+            this.labelProdName.AutoSize = true;
+            this.labelProdName.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProdName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelProdName.Location = new System.Drawing.Point(413, 82);
+            this.labelProdName.Name = "labelProdName";
+            this.labelProdName.Size = new System.Drawing.Size(58, 22);
+            this.labelProdName.TabIndex = 29;
+            this.labelProdName.Text = "Nama";
             // 
             // textBoxProdID
             // 
             this.textBoxProdID.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxProdID.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxProdID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBoxProdID.Location = new System.Drawing.Point(473, 150);
+            this.textBoxProdID.Location = new System.Drawing.Point(514, 150);
             this.textBoxProdID.Name = "textBoxProdID";
             this.textBoxProdID.ReadOnly = true;
             this.textBoxProdID.Size = new System.Drawing.Size(80, 29);
@@ -363,7 +363,7 @@ namespace Tugas_AD_Counter_HP
             this.textBoxProdPrice.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBoxProdPrice.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxProdPrice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBoxProdPrice.Location = new System.Drawing.Point(473, 182);
+            this.textBoxProdPrice.Location = new System.Drawing.Point(514, 182);
             this.textBoxProdPrice.Name = "textBoxProdPrice";
             this.textBoxProdPrice.ReadOnly = true;
             this.textBoxProdPrice.Size = new System.Drawing.Size(167, 29);
@@ -375,7 +375,7 @@ namespace Tugas_AD_Counter_HP
             this.labelProdPrice.AutoSize = true;
             this.labelProdPrice.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProdPrice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelProdPrice.Location = new System.Drawing.Point(372, 185);
+            this.labelProdPrice.Location = new System.Drawing.Point(413, 185);
             this.labelProdPrice.Name = "labelProdPrice";
             this.labelProdPrice.Size = new System.Drawing.Size(94, 22);
             this.labelProdPrice.TabIndex = 32;
@@ -386,7 +386,7 @@ namespace Tugas_AD_Counter_HP
             this.labelQuan.AutoSize = true;
             this.labelQuan.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelQuan.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelQuan.Location = new System.Drawing.Point(778, 82);
+            this.labelQuan.Location = new System.Drawing.Point(819, 82);
             this.labelQuan.Name = "labelQuan";
             this.labelQuan.Size = new System.Drawing.Size(86, 22);
             this.labelQuan.TabIndex = 34;
@@ -397,7 +397,7 @@ namespace Tugas_AD_Counter_HP
             this.labelDisTotal.AutoSize = true;
             this.labelDisTotal.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDisTotal.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.labelDisTotal.Location = new System.Drawing.Point(376, 592);
+            this.labelDisTotal.Location = new System.Drawing.Point(417, 605);
             this.labelDisTotal.Name = "labelDisTotal";
             this.labelDisTotal.Size = new System.Drawing.Size(130, 42);
             this.labelDisTotal.TabIndex = 37;
@@ -408,7 +408,7 @@ namespace Tugas_AD_Counter_HP
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelTotal.Location = new System.Drawing.Point(377, 550);
+            this.labelTotal.Location = new System.Drawing.Point(418, 563);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(76, 31);
             this.labelTotal.TabIndex = 36;
@@ -419,7 +419,7 @@ namespace Tugas_AD_Counter_HP
             this.labelBayar.AutoSize = true;
             this.labelBayar.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBayar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelBayar.Location = new System.Drawing.Point(379, 659);
+            this.labelBayar.Location = new System.Drawing.Point(420, 672);
             this.labelBayar.Name = "labelBayar";
             this.labelBayar.Size = new System.Drawing.Size(55, 22);
             this.labelBayar.TabIndex = 38;
@@ -430,7 +430,7 @@ namespace Tugas_AD_Counter_HP
             this.labelKembali.AutoSize = true;
             this.labelKembali.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKembali.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelKembali.Location = new System.Drawing.Point(564, 659);
+            this.labelKembali.Location = new System.Drawing.Point(605, 672);
             this.labelKembali.Name = "labelKembali";
             this.labelKembali.Size = new System.Drawing.Size(76, 22);
             this.labelKembali.TabIndex = 39;
@@ -439,7 +439,7 @@ namespace Tugas_AD_Counter_HP
             // textBoxBayar
             // 
             this.textBoxBayar.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBayar.Location = new System.Drawing.Point(420, 684);
+            this.textBoxBayar.Location = new System.Drawing.Point(461, 697);
             this.textBoxBayar.MaxLength = 9;
             this.textBoxBayar.Name = "textBoxBayar";
             this.textBoxBayar.Size = new System.Drawing.Size(100, 29);
@@ -453,7 +453,7 @@ namespace Tugas_AD_Counter_HP
             this.labelDisKembali.AutoSize = true;
             this.labelDisKembali.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDisKembali.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelDisKembali.Location = new System.Drawing.Point(564, 687);
+            this.labelDisKembali.Location = new System.Drawing.Point(605, 700);
             this.labelDisKembali.Name = "labelDisKembali";
             this.labelDisKembali.Size = new System.Drawing.Size(67, 22);
             this.labelDisKembali.TabIndex = 41;
@@ -464,7 +464,7 @@ namespace Tugas_AD_Counter_HP
             this.buttonAddProd.BackColor = System.Drawing.Color.Firebrick;
             this.buttonAddProd.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAddProd.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonAddProd.Location = new System.Drawing.Point(1022, 185);
+            this.buttonAddProd.Location = new System.Drawing.Point(1065, 201);
             this.buttonAddProd.Name = "buttonAddProd";
             this.buttonAddProd.Size = new System.Drawing.Size(78, 42);
             this.buttonAddProd.TabIndex = 5;
@@ -475,7 +475,7 @@ namespace Tugas_AD_Counter_HP
             // nudQuan
             // 
             this.nudQuan.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQuan.Location = new System.Drawing.Point(782, 108);
+            this.nudQuan.Location = new System.Drawing.Point(823, 108);
             this.nudQuan.Name = "nudQuan";
             this.nudQuan.Size = new System.Drawing.Size(120, 29);
             this.nudQuan.TabIndex = 4;
@@ -507,6 +507,8 @@ namespace Tugas_AD_Counter_HP
             // dgvPrintProduct2
             // 
             this.dgvPrintProduct2.AllowUserToAddRows = false;
+            this.dgvPrintProduct2.AllowUserToDeleteRows = false;
+            this.dgvPrintProduct2.AllowUserToOrderColumns = true;
             this.dgvPrintProduct2.AllowUserToResizeColumns = false;
             this.dgvPrintProduct2.AllowUserToResizeRows = false;
             this.dgvPrintProduct2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -530,7 +532,7 @@ namespace Tugas_AD_Counter_HP
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPrintProduct2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPrintProduct2.Location = new System.Drawing.Point(375, 240);
+            this.dgvPrintProduct2.Location = new System.Drawing.Point(418, 258);
             this.dgvPrintProduct2.Name = "dgvPrintProduct2";
             this.dgvPrintProduct2.ReadOnly = true;
             this.dgvPrintProduct2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -569,7 +571,7 @@ namespace Tugas_AD_Counter_HP
             this.buttonSave.BackColor = System.Drawing.Color.Firebrick;
             this.buttonSave.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSave.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonSave.Location = new System.Drawing.Point(377, 750);
+            this.buttonSave.Location = new System.Drawing.Point(418, 763);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(95, 57);
             this.buttonSave.TabIndex = 9;
@@ -582,7 +584,7 @@ namespace Tugas_AD_Counter_HP
             this.buttonPrint.BackColor = System.Drawing.Color.Firebrick;
             this.buttonPrint.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrint.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonPrint.Location = new System.Drawing.Point(478, 750);
+            this.buttonPrint.Location = new System.Drawing.Point(530, 763);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(95, 57);
             this.buttonPrint.TabIndex = 10;
@@ -595,7 +597,7 @@ namespace Tugas_AD_Counter_HP
             this.buttonClose.BackColor = System.Drawing.Color.Firebrick;
             this.buttonClose.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonClose.Location = new System.Drawing.Point(579, 750);
+            this.buttonClose.Location = new System.Drawing.Point(641, 763);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(95, 57);
             this.buttonClose.TabIndex = 11;
@@ -640,7 +642,7 @@ namespace Tugas_AD_Counter_HP
             this.labelStock.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelStock.Font = new System.Drawing.Font("Yu Gothic", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStock.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelStock.Location = new System.Drawing.Point(559, 152);
+            this.labelStock.Location = new System.Drawing.Point(600, 152);
             this.labelStock.Name = "labelStock";
             this.labelStock.Size = new System.Drawing.Size(57, 23);
             this.labelStock.TabIndex = 58;
@@ -651,7 +653,7 @@ namespace Tugas_AD_Counter_HP
             this.buttonDelete.BackColor = System.Drawing.Color.Firebrick;
             this.buttonDelete.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDelete.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonDelete.Location = new System.Drawing.Point(1108, 185);
+            this.buttonDelete.Location = new System.Drawing.Point(1149, 201);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(78, 42);
             this.buttonDelete.TabIndex = 7;
@@ -677,7 +679,7 @@ namespace Tugas_AD_Counter_HP
             this.labelProduct.BackColor = System.Drawing.Color.Transparent;
             this.labelProduct.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProduct.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.labelProduct.Location = new System.Drawing.Point(369, 33);
+            this.labelProduct.Location = new System.Drawing.Point(410, 33);
             this.labelProduct.Name = "labelProduct";
             this.labelProduct.Size = new System.Drawing.Size(147, 39);
             this.labelProduct.TabIndex = 61;
@@ -689,7 +691,7 @@ namespace Tugas_AD_Counter_HP
             this.labelCust.BackColor = System.Drawing.Color.Transparent;
             this.labelCust.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCust.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.labelCust.Location = new System.Drawing.Point(32, 502);
+            this.labelCust.Location = new System.Drawing.Point(30, 511);
             this.labelCust.Name = "labelCust";
             this.labelCust.Size = new System.Drawing.Size(186, 39);
             this.labelCust.TabIndex = 62;
@@ -698,7 +700,7 @@ namespace Tugas_AD_Counter_HP
             // labelLine2
             // 
             this.labelLine2.AutoSize = true;
-            this.labelLine2.Location = new System.Drawing.Point(223, 506);
+            this.labelLine2.Location = new System.Drawing.Point(221, 515);
             this.labelLine2.Name = "labelLine2";
             this.labelLine2.Size = new System.Drawing.Size(108, 20);
             this.labelLine2.TabIndex = 63;
@@ -707,7 +709,7 @@ namespace Tugas_AD_Counter_HP
             // labelLine3
             // 
             this.labelLine3.AutoSize = true;
-            this.labelLine3.Location = new System.Drawing.Point(518, 36);
+            this.labelLine3.Location = new System.Drawing.Point(559, 36);
             this.labelLine3.Name = "labelLine3";
             this.labelLine3.Size = new System.Drawing.Size(648, 20);
             this.labelLine3.TabIndex = 64;
@@ -718,33 +720,33 @@ namespace Tugas_AD_Counter_HP
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label62.Location = new System.Drawing.Point(35, 719);
+            this.label62.Location = new System.Drawing.Point(33, 728);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(42, 22);
             this.label62.TabIndex = 65;
             this.label62.Text = "+62";
             // 
-            // label5
+            // labelRp
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(379, 687);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 22);
-            this.label5.TabIndex = 66;
-            this.label5.Text = "Rp";
+            this.labelRp.AutoSize = true;
+            this.labelRp.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labelRp.Location = new System.Drawing.Point(420, 700);
+            this.labelRp.Name = "labelRp";
+            this.labelRp.Size = new System.Drawing.Size(32, 22);
+            this.labelRp.TabIndex = 66;
+            this.labelRp.Text = "Rp";
             // 
             // buttonPaid
             // 
             this.buttonPaid.BackColor = System.Drawing.Color.Black;
             this.buttonPaid.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPaid.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.buttonPaid.Location = new System.Drawing.Point(692, 659);
+            this.buttonPaid.Location = new System.Drawing.Point(777, 672);
             this.buttonPaid.Name = "buttonPaid";
             this.buttonPaid.Size = new System.Drawing.Size(99, 54);
             this.buttonPaid.TabIndex = 67;
-            this.buttonPaid.Text = "Paid";
+            this.buttonPaid.Text = "Pay";
             this.buttonPaid.UseVisualStyleBackColor = false;
             this.buttonPaid.Click += new System.EventHandler(this.buttonPaid_Click);
             // 
@@ -754,9 +756,9 @@ namespace Tugas_AD_Counter_HP
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1215, 832);
+            this.ClientSize = new System.Drawing.Size(1267, 862);
             this.Controls.Add(this.buttonPaid);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelRp);
             this.Controls.Add(this.label62);
             this.Controls.Add(this.labelLine3);
             this.Controls.Add(this.labelLine2);
@@ -788,7 +790,7 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.textBoxProdPrice);
             this.Controls.Add(this.labelProdPrice);
             this.Controls.Add(this.textBoxProdID);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelProdName);
             this.Controls.Add(this.comboBoxProdName);
             this.Controls.Add(this.labelDisSubTotal);
             this.Controls.Add(this.textBoxDisc);
@@ -804,9 +806,9 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.textBoxCustEmail);
             this.Controls.Add(this.textBoxCustHP);
             this.Controls.Add(this.textBoxCustNama);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelCustEmail);
+            this.Controls.Add(this.labelCustHP);
+            this.Controls.Add(this.labelCustID);
             this.Controls.Add(this.labelCustName);
             this.Controls.Add(this.labelNoInv);
             this.Controls.Add(this.buttonMenu);
@@ -829,9 +831,9 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.Button buttonMenu;
         private System.Windows.Forms.Label labelNoInv;
         private System.Windows.Forms.Label labelCustName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelCustID;
+        private System.Windows.Forms.Label labelCustHP;
+        private System.Windows.Forms.Label labelCustEmail;
         private System.Windows.Forms.TextBox textBoxCustNama;
         private System.Windows.Forms.TextBox textBoxCustHP;
         private System.Windows.Forms.TextBox textBoxCustEmail;
@@ -847,7 +849,7 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.TextBox textBoxDisc;
         private System.Windows.Forms.Label labelDisSubTotal;
         private System.Windows.Forms.ComboBox comboBoxProdName;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelProdName;
         private System.Windows.Forms.TextBox textBoxProdID;
         private System.Windows.Forms.TextBox textBoxProdPrice;
         private System.Windows.Forms.Label labelProdPrice;
@@ -879,7 +881,7 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.Label labelLine2;
         private System.Windows.Forms.Label labelLine3;
         private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelRp;
         private System.Windows.Forms.Button buttonPaid;
     }
 }

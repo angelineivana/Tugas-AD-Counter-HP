@@ -30,64 +30,20 @@ namespace Tugas_AD_Counter_HP
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
-            this.buttonCashier = new System.Windows.Forms.Button();
-            this.buttonCatalog = new System.Windows.Forms.Button();
-            this.buttonExit = new System.Windows.Forms.Button();
-            this.buttonHistory = new System.Windows.Forms.Button();
             this.labelEmpID = new System.Windows.Forms.Label();
             this.labelDisEmpID = new System.Windows.Forms.Label();
             this.labelDisEmpName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.pictureBoxPerson = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCashier = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCatalog = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSalesHistory = new System.Windows.Forms.PictureBox();
+            this.pictureBoxExit = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPerson)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCashier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCatalog)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSalesHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonCashier
-            // 
-            this.buttonCashier.Location = new System.Drawing.Point(86, 203);
-            this.buttonCashier.Name = "buttonCashier";
-            this.buttonCashier.Size = new System.Drawing.Size(286, 58);
-            this.buttonCashier.TabIndex = 1;
-            this.buttonCashier.Text = "Cashier";
-            this.buttonCashier.UseVisualStyleBackColor = true;
-            this.buttonCashier.Click += new System.EventHandler(this.buttonCashier_Click);
-            // 
-            // buttonCatalog
-            // 
-            this.buttonCatalog.Location = new System.Drawing.Point(86, 277);
-            this.buttonCatalog.Name = "buttonCatalog";
-            this.buttonCatalog.Size = new System.Drawing.Size(286, 70);
-            this.buttonCatalog.TabIndex = 2;
-            this.buttonCatalog.Text = "Catalog";
-            this.buttonCatalog.UseVisualStyleBackColor = true;
-            this.buttonCatalog.Click += new System.EventHandler(this.buttonCatalog_Click);
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.Location = new System.Drawing.Point(86, 435);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(286, 77);
-            this.buttonExit.TabIndex = 3;
-            this.buttonExit.Text = "Exit";
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
-            // buttonHistory
-            // 
-            this.buttonHistory.Location = new System.Drawing.Point(86, 362);
-            this.buttonHistory.Name = "buttonHistory";
-            this.buttonHistory.Size = new System.Drawing.Size(286, 67);
-            this.buttonHistory.TabIndex = 4;
-            this.buttonHistory.Text = "Sales History";
-            this.buttonHistory.UseVisualStyleBackColor = true;
-            this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
             // 
             // labelEmpID
             // 
@@ -119,59 +75,59 @@ namespace Tugas_AD_Counter_HP
             this.labelDisEmpName.TabIndex = 7;
             this.labelDisEmpName.Text = "...";
             // 
-            // pictureBox1
+            // pictureBoxPerson
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 151);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxPerson.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPerson.Image")));
+            this.pictureBoxPerson.Location = new System.Drawing.Point(36, 25);
+            this.pictureBoxPerson.Name = "pictureBoxPerson";
+            this.pictureBoxPerson.Size = new System.Drawing.Size(135, 151);
+            this.pictureBoxPerson.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxPerson.TabIndex = 9;
+            this.pictureBoxPerson.TabStop = false;
             // 
-            // pictureBox2
+            // pictureBoxCashier
             // 
-            this.pictureBox2.Enabled = false;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(86, 182);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(286, 98);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxCashier.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCashier.Image")));
+            this.pictureBoxCashier.Location = new System.Drawing.Point(70, 195);
+            this.pictureBoxCashier.Name = "pictureBoxCashier";
+            this.pictureBoxCashier.Size = new System.Drawing.Size(286, 98);
+            this.pictureBoxCashier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCashier.TabIndex = 10;
+            this.pictureBoxCashier.TabStop = false;
+            this.pictureBoxCashier.Click += new System.EventHandler(this.pictureBoxCashier_Click);
             // 
-            // pictureBox3
+            // pictureBoxCatalog
             // 
-            this.pictureBox3.Enabled = false;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(86, 265);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(286, 98);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
+            this.pictureBoxCatalog.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCatalog.Image")));
+            this.pictureBoxCatalog.Location = new System.Drawing.Point(70, 278);
+            this.pictureBoxCatalog.Name = "pictureBoxCatalog";
+            this.pictureBoxCatalog.Size = new System.Drawing.Size(286, 98);
+            this.pictureBoxCatalog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCatalog.TabIndex = 11;
+            this.pictureBoxCatalog.TabStop = false;
+            this.pictureBoxCatalog.Click += new System.EventHandler(this.pictureBoxCatalog_Click);
             // 
-            // pictureBox4
+            // pictureBoxSalesHistory
             // 
-            this.pictureBox4.Enabled = false;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(86, 345);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(286, 98);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
+            this.pictureBoxSalesHistory.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSalesHistory.Image")));
+            this.pictureBoxSalesHistory.Location = new System.Drawing.Point(70, 361);
+            this.pictureBoxSalesHistory.Name = "pictureBoxSalesHistory";
+            this.pictureBoxSalesHistory.Size = new System.Drawing.Size(286, 98);
+            this.pictureBoxSalesHistory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxSalesHistory.TabIndex = 12;
+            this.pictureBoxSalesHistory.TabStop = false;
+            this.pictureBoxSalesHistory.Click += new System.EventHandler(this.pictureBoxSalesHistory_Click);
             // 
-            // pictureBox5
+            // pictureBoxExit
             // 
-            this.pictureBox5.Enabled = false;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(86, 426);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(286, 98);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
+            this.pictureBoxExit.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxExit.Image")));
+            this.pictureBoxExit.Location = new System.Drawing.Point(70, 445);
+            this.pictureBoxExit.Name = "pictureBoxExit";
+            this.pictureBoxExit.Size = new System.Drawing.Size(286, 98);
+            this.pictureBoxExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxExit.TabIndex = 13;
+            this.pictureBoxExit.TabStop = false;
+            this.pictureBoxExit.Click += new System.EventHandler(this.pictureBoxExit_Click);
             // 
             // FormMenu
             // 
@@ -179,46 +135,38 @@ namespace Tugas_AD_Counter_HP
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(462, 539);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(431, 575);
+            this.Controls.Add(this.pictureBoxExit);
+            this.Controls.Add(this.pictureBoxSalesHistory);
+            this.Controls.Add(this.pictureBoxCatalog);
+            this.Controls.Add(this.pictureBoxPerson);
             this.Controls.Add(this.labelDisEmpID);
             this.Controls.Add(this.labelDisEmpName);
             this.Controls.Add(this.labelEmpID);
-            this.Controls.Add(this.buttonHistory);
-            this.Controls.Add(this.buttonExit);
-            this.Controls.Add(this.buttonCatalog);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.buttonCashier);
+            this.Controls.Add(this.pictureBoxCashier);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form Menu";
             this.Load += new System.EventHandler(this.FormMenu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPerson)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCashier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCatalog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSalesHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonCashier;
-        private System.Windows.Forms.Button buttonCatalog;
-        private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.Button buttonHistory;
         private System.Windows.Forms.Label labelEmpID;
         private System.Windows.Forms.Label labelDisEmpID;
         private System.Windows.Forms.Label labelDisEmpName;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBoxPerson;
+        private System.Windows.Forms.PictureBox pictureBoxCashier;
+        private System.Windows.Forms.PictureBox pictureBoxCatalog;
+        private System.Windows.Forms.PictureBox pictureBoxSalesHistory;
+        private System.Windows.Forms.PictureBox pictureBoxExit;
     }
 }

@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using System.Collections;
 
 namespace Tugas_AD_Counter_HP
 {
@@ -32,6 +31,7 @@ namespace Tugas_AD_Counter_HP
         DataTable dtCheckDatePromo = new DataTable();
         DataTable dtListProdID = new DataTable();
         DateTimePicker dtpInvDateClone = new DateTimePicker();
+        int[] sub = new int[50];
         int price = 0;
         int kembalian = 0;
         int itemCount = 0;
@@ -39,6 +39,7 @@ namespace Tugas_AD_Counter_HP
         int statusBtnPaid = 0;
         int stock = 0;
         int no = 0;
+        int indexRow = 0;
         string sendtextform1 = "";
         string currentPrice;
         string currentInvDate;
@@ -54,10 +55,13 @@ namespace Tugas_AD_Counter_HP
         public static string custPhone = "";
         public static string custEmail = "";
         public static string empID = "";
+       
         private void FormInput_Load(object sender, EventArgs e)
         {
+            dgvPrintProduct2.DataSource = dtShowProd2;
+
             sendtextform1 = FormLogin.sendtext;
-            sqlQuery = "SELECT emp_id, store_id FROM EMPLOYEE WHERE emp_username = '"+ sendtextform1 +"'";
+            sqlQuery = "SELECT emp_id, store_id FROM EMPLOYEE WHERE emp_username = '" + sendtextform1 + "'";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtStoreEmpID);
@@ -67,18 +71,17 @@ namespace Tugas_AD_Counter_HP
 
             //buat 5 kolom dtShowProd2 (dtshowprod2 buat source data dgvPrintProduct2)
             dtShowProd2.Columns.Add("No");
-            dtShowProd2.Columns.Add("NamaProduk");
+            dtShowProd2.Columns.Add("Nama Produk");
             dtShowProd2.Columns.Add("Kuantitas");
             dtShowProd2.Columns.Add("Harga");
             dtShowProd2.Columns.Add("Jumlah");
-            dgvPrintProduct2.DataSource = dtShowProd2;
 
             sqlQuery = "SELECT inv_no FROM INVOICE";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtNoInv);
             string angkaJalan = "";
-            
+
             if (dtNoInv.Rows.Count + 1 < 100)
             {
                 angkaJalan = "000";
@@ -255,7 +258,6 @@ namespace Tugas_AD_Counter_HP
             labelDisSubTotal.Text = "Rp0,00";
             nudQuan.Value = 0;
         }
-        int[] sub = new int[50];
         private void nudQuan_ValueChanged(object sender, EventArgs e)
         {
             nudQuan.Maximum = stock;
@@ -270,6 +272,7 @@ namespace Tugas_AD_Counter_HP
                 labelDisSubTotal.Text = Decimal.Parse(sub[no].ToString()).ToString("C", culture);
             }
         }
+
         private void buttonAddProd_Click(object sender, EventArgs e)
         {
             if (comboBoxProdName.Text == "")
@@ -285,7 +288,6 @@ namespace Tugas_AD_Counter_HP
                 textBoxBayar.Enabled = true;
                 this.dgvPrintProduct2.Columns["Harga"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 this.dgvPrintProduct2.Columns["Jumlah"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
                 dtShowProd2.Rows.Add((no + 1).ToString(), comboBoxProdName.SelectedItem.ToString(), nudQuan.Value.ToString(), textBoxProdPrice.Text.Substring(2), labelDisSubTotal.Text.Substring(2));
                 for (int i = 0; i < dtShowProd2.Rows.Count; i++)
                 {
@@ -315,7 +317,9 @@ namespace Tugas_AD_Counter_HP
                 labelStock.Text = "Stok :";
             }
         }
-        int indexRow = 0;
+/*        private void dgvMyGrid_RowHeaderMouseClick(null, null)
+        {
+        }*/
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
@@ -452,13 +456,13 @@ namespace Tugas_AD_Counter_HP
                 MessageBox.Show("Invoice Telah Disimpan");
                 statusBtnSave++;
             }
+            else if (dtpInvDate.Text == "" || textBoxCustNama.Text == "" || textBoxCustHP.Text == "" || textBoxCustEmail.Text == "" || dtShowProd2.Rows.Count == 0 || labelDisTotal.Text == "0" || textBoxBayar.Text == "")
+            {
+                MessageBox.Show("Data Belum Lengkap!");
+            }
             else if (statusBtnPaid == 0)
             {
                 MessageBox.Show("Invoice Belum Dibayar");
-            }
-            else
-            {
-                MessageBox.Show("Data Belum Lengkap!");
             }
         }
         private void buttonPrint_Click(object sender, EventArgs e)
@@ -509,8 +513,6 @@ namespace Tugas_AD_Counter_HP
             stock = 0;
             hitungTotal = 0;
             currentPrice = "";
-            dgvPrintProduct2.AutoGenerateColumns = false;
-            dgvPrintProduct2.RowHeadersVisible = false;
 
             FormMenu formMenu = new FormMenu();
             this.Hide();

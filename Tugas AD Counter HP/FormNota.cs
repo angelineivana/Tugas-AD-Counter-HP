@@ -26,7 +26,6 @@ namespace Tugas_AD_Counter_HP
         public static string idStore2;
         public static string invDate2;
 
-
         DataTable dtStore = new DataTable();
         DataTable dtEmpName = new DataTable();
         private void FormNota_Load(object sender, EventArgs e)
@@ -34,13 +33,14 @@ namespace Tugas_AD_Counter_HP
             //STORE
             idStore2 = FormCashier.idStore;
 
-            sqlQuery = "SELECT store_name, store_address from RETAIL_STORE where '"+ idStore2 +"' = store_id";
+            sqlQuery = "SELECT store_name, store_address, store_phone from RETAIL_STORE where '"+ idStore2 +"' = store_id";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtStore);
 
             labelStoreName.Text = dtStore.Rows[0][0].ToString().ToUpper();
             labelAddress.Text = dtStore.Rows[0][1].ToString().ToUpper();
+            labelStoreNo.Text = dtStore.Rows[0][2].ToString().ToUpper();
 
             //INVOICE
             labelInvNo.Text = FormCashier.invNo;
@@ -53,8 +53,8 @@ namespace Tugas_AD_Counter_HP
 
             //DGV PRODUCT
             dgvPrintProduct.DataSource = FormCashier.dtShowProd2;
-
-
+            this.dgvPrintProduct.Columns["Harga"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            this.dgvPrintProduct.Columns["Jumlah"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             //SUBTOTAL, PROMO, TOTAL
             labelDisSubTotal.Text = Decimal.Parse(FormCashier.hitungTotal.ToString()).ToString("C", FormCashier.culture);

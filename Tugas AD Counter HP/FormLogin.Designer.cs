@@ -30,28 +30,28 @@ namespace Tugas_AD_Counter_HP
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
-            this.labelLogin = new System.Windows.Forms.Label();
+            this.labelWelcome = new System.Windows.Forms.Label();
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.labelLine = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelLogin
+            // labelWelcome
             // 
-            this.labelLogin.AutoSize = true;
-            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelLogin.Location = new System.Drawing.Point(176, 205);
-            this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(185, 40);
-            this.labelLogin.TabIndex = 0;
-            this.labelLogin.Text = "Welcome!";
-            this.labelLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelWelcome.AutoSize = true;
+            this.labelWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWelcome.ForeColor = System.Drawing.SystemColors.Window;
+            this.labelWelcome.Location = new System.Drawing.Point(176, 215);
+            this.labelWelcome.Name = "labelWelcome";
+            this.labelWelcome.Size = new System.Drawing.Size(185, 40);
+            this.labelWelcome.TabIndex = 0;
+            this.labelWelcome.Text = "Welcome!";
+            this.labelWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelUsername
             // 
@@ -98,7 +98,7 @@ namespace Tugas_AD_Counter_HP
             // buttonLogin
             // 
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(211, 471);
+            this.buttonLogin.Location = new System.Drawing.Point(212, 482);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(106, 43);
             this.buttonLogin.TabIndex = 5;
@@ -116,17 +116,17 @@ namespace Tugas_AD_Counter_HP
             this.labelLine.TabIndex = 57;
             this.labelLine.Text = "____________________________________";
             // 
-            // pictureBox1
+            // pictureBoxLogo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(183, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(178, 175);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 58;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
+            this.pictureBoxLogo.InitialImage = null;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(183, 27);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(178, 175);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 58;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // FormLogin
             // 
@@ -134,21 +134,21 @@ namespace Tugas_AD_Counter_HP
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(533, 570);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(533, 561);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.labelLine);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUsername);
-            this.Controls.Add(this.labelLogin);
+            this.Controls.Add(this.labelWelcome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log In";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,14 +156,14 @@ namespace Tugas_AD_Counter_HP
 
         #endregion
 
-        private System.Windows.Forms.Label labelLogin;
+        private System.Windows.Forms.Label labelWelcome;
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Label labelLine;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }
 

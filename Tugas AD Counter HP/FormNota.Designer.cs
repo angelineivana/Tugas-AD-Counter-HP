@@ -54,7 +54,10 @@ namespace Tugas_AD_Counter_HP
             this.labelDisSubTotal = new System.Windows.Forms.Label();
             this.labelEmpName = new System.Windows.Forms.Label();
             this.labelEmpSign = new System.Windows.Forms.Label();
+            this.pictureBoxLunas = new System.Windows.Forms.PictureBox();
+            this.labelStoreNo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrintProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLunas)).BeginInit();
             this.SuspendLayout();
             // 
             // labelStoreName
@@ -62,7 +65,7 @@ namespace Tugas_AD_Counter_HP
             this.labelStoreName.AutoSize = true;
             this.labelStoreName.BackColor = System.Drawing.Color.Transparent;
             this.labelStoreName.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStoreName.Location = new System.Drawing.Point(51, 35);
+            this.labelStoreName.Location = new System.Drawing.Point(51, 37);
             this.labelStoreName.Name = "labelStoreName";
             this.labelStoreName.Size = new System.Drawing.Size(108, 20);
             this.labelStoreName.TabIndex = 0;
@@ -73,7 +76,7 @@ namespace Tugas_AD_Counter_HP
             this.labelAddress.AutoSize = true;
             this.labelAddress.BackColor = System.Drawing.Color.Transparent;
             this.labelAddress.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddress.Location = new System.Drawing.Point(51, 66);
+            this.labelAddress.Location = new System.Drawing.Point(51, 88);
             this.labelAddress.MaximumSize = new System.Drawing.Size(500, 300);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(75, 20);
@@ -97,7 +100,7 @@ namespace Tugas_AD_Counter_HP
             this.labelInvNo.AutoSize = true;
             this.labelInvNo.BackColor = System.Drawing.Color.Transparent;
             this.labelInvNo.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInvNo.Location = new System.Drawing.Point(488, 191);
+            this.labelInvNo.Location = new System.Drawing.Point(488, 193);
             this.labelInvNo.Name = "labelInvNo";
             this.labelInvNo.Size = new System.Drawing.Size(130, 20);
             this.labelInvNo.TabIndex = 3;
@@ -109,7 +112,7 @@ namespace Tugas_AD_Counter_HP
             this.labelDate.AutoSize = true;
             this.labelDate.BackColor = System.Drawing.Color.Transparent;
             this.labelDate.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDate.Location = new System.Drawing.Point(408, 211);
+            this.labelDate.Location = new System.Drawing.Point(408, 214);
             this.labelDate.Name = "labelDate";
             this.labelDate.Size = new System.Drawing.Size(86, 20);
             this.labelDate.TabIndex = 4;
@@ -188,7 +191,7 @@ namespace Tugas_AD_Counter_HP
             this.labelLine.AutoSize = true;
             this.labelLine.BackColor = System.Drawing.Color.Transparent;
             this.labelLine.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLine.Location = new System.Drawing.Point(718, 829);
+            this.labelLine.Location = new System.Drawing.Point(718, 849);
             this.labelLine.Name = "labelLine";
             this.labelLine.Size = new System.Drawing.Size(207, 20);
             this.labelLine.TabIndex = 15;
@@ -211,6 +214,7 @@ namespace Tugas_AD_Counter_HP
             this.dgvPrintProduct.AllowUserToDeleteRows = false;
             this.dgvPrintProduct.AllowUserToResizeColumns = false;
             this.dgvPrintProduct.AllowUserToResizeRows = false;
+            this.dgvPrintProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPrintProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -229,11 +233,12 @@ namespace Tugas_AD_Counter_HP
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPrintProduct.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPrintProduct.Location = new System.Drawing.Point(35, 398);
+            this.dgvPrintProduct.Location = new System.Drawing.Point(53, 398);
             this.dgvPrintProduct.Name = "dgvPrintProduct";
             this.dgvPrintProduct.RowHeadersWidth = 62;
+            this.dgvPrintProduct.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvPrintProduct.RowTemplate.Height = 28;
-            this.dgvPrintProduct.Size = new System.Drawing.Size(935, 209);
+            this.dgvPrintProduct.Size = new System.Drawing.Size(904, 209);
             this.dgvPrintProduct.TabIndex = 10;
             // 
             // labelDisCustName
@@ -308,7 +313,7 @@ namespace Tugas_AD_Counter_HP
             this.labelEmpName.AutoSize = true;
             this.labelEmpName.BackColor = System.Drawing.Color.Transparent;
             this.labelEmpName.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmpName.Location = new System.Drawing.Point(745, 862);
+            this.labelEmpName.Location = new System.Drawing.Point(745, 882);
             this.labelEmpName.Name = "labelEmpName";
             this.labelEmpName.Size = new System.Drawing.Size(86, 20);
             this.labelEmpName.TabIndex = 22;
@@ -320,12 +325,35 @@ namespace Tugas_AD_Counter_HP
             this.labelEmpSign.AutoSize = true;
             this.labelEmpSign.BackColor = System.Drawing.Color.Transparent;
             this.labelEmpSign.Font = new System.Drawing.Font("Vladimir Script", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmpSign.Location = new System.Drawing.Point(733, 790);
+            this.labelEmpSign.Location = new System.Drawing.Point(760, 819);
             this.labelEmpSign.Name = "labelEmpSign";
             this.labelEmpSign.Size = new System.Drawing.Size(71, 39);
             this.labelEmpSign.TabIndex = 23;
             this.labelEmpSign.Text = "( ... )";
             this.labelEmpSign.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBoxLunas
+            // 
+            this.pictureBoxLunas.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxLunas.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLunas.Image")));
+            this.pictureBoxLunas.InitialImage = null;
+            this.pictureBoxLunas.Location = new System.Drawing.Point(666, 738);
+            this.pictureBoxLunas.Name = "pictureBoxLunas";
+            this.pictureBoxLunas.Size = new System.Drawing.Size(192, 90);
+            this.pictureBoxLunas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLunas.TabIndex = 59;
+            this.pictureBoxLunas.TabStop = false;
+            // 
+            // labelStoreNo
+            // 
+            this.labelStoreNo.AutoSize = true;
+            this.labelStoreNo.BackColor = System.Drawing.Color.Transparent;
+            this.labelStoreNo.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStoreNo.Location = new System.Drawing.Point(51, 63);
+            this.labelStoreNo.Name = "labelStoreNo";
+            this.labelStoreNo.Size = new System.Drawing.Size(97, 20);
+            this.labelStoreNo.TabIndex = 60;
+            this.labelStoreNo.Text = "No. Toko";
             // 
             // FormNota
             // 
@@ -335,6 +363,7 @@ namespace Tugas_AD_Counter_HP
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1014, 973);
+            this.Controls.Add(this.labelStoreNo);
             this.Controls.Add(this.labelEmpSign);
             this.Controls.Add(this.labelEmpName);
             this.Controls.Add(this.labelDisTotal);
@@ -357,12 +386,14 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.labelInvoice);
             this.Controls.Add(this.labelAddress);
             this.Controls.Add(this.labelStoreName);
+            this.Controls.Add(this.pictureBoxLunas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNota";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form Nota";
             this.Load += new System.EventHandler(this.FormNota_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrintProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLunas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,5 +423,7 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.Label labelDisSubTotal;
         private System.Windows.Forms.Label labelEmpName;
         private System.Windows.Forms.Label labelEmpSign;
+        private System.Windows.Forms.PictureBox pictureBoxLunas;
+        private System.Windows.Forms.Label labelStoreNo;
     }
 }
