@@ -300,7 +300,6 @@ namespace Tugas_AD_Counter_HP
             this.textBoxDisc.Size = new System.Drawing.Size(100, 29);
             this.textBoxDisc.TabIndex = 26;
             this.textBoxDisc.TabStop = false;
-            this.textBoxDisc.TextChanged += new System.EventHandler(this.textBoxDisc_TextChanged);
             // 
             // labelDisSubTotal
             // 

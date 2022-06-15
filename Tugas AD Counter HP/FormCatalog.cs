@@ -26,7 +26,7 @@ namespace Tugas_AD_Counter_HP
         DataTable kategori = new DataTable();
         DataTable katBrand = new DataTable();
         DataTable brand = new DataTable();
-
+        DataTable fotoProduk = new DataTable();
         private void FormCatalog_Load(object sender, EventArgs e)
         {
             sqlQuery = "select PRODUCT_BRAND as 'Brand',PRODUCT_NAME as 'Nama Produk',PRODUCT_PRICE as 'Harga',PRODUCT_STOCK as 'Stok',PRODUCT_DESC as 'Spesifikasi' from PRODUCT;";
@@ -43,10 +43,20 @@ namespace Tugas_AD_Counter_HP
 
         private void dataGridViewCatalog_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            fotoProduk.Clear();
             if (e.RowIndex != -1)
             {
                 DataGridViewRow baris = dataGridViewCatalog.Rows[e.RowIndex];
                 richTextBoxSpesifikasi.Text = baris.Cells[4].Value.ToString();
+                MessageBox.Show(baris.Index.ToString());
+
+                /*                sqlQuery = "SELECT * FROM (SELECT ROW_NUMBER() OVER (ORDER BY PRODUCT_ID) row_num, PRODUCT_IMAGE_URL FROM PRODUCT) t WHERE row_num - 1 = '"+ baris.Index +"'";
+                */
+                sqlQuery = "select PRODUCT_IMAGE_URL from PRODUCT where '" + baris.Cells[1].Value.ToString() +"' = PRODUCT_NAME";
+                sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
+                sqlAdapter = new MySqlDataAdapter(sqlCommand);
+                sqlAdapter.Fill(fotoProduk);
+                pictureBoxProduct.ImageLocation = fotoProduk.Rows[0][0].ToString();
             }
         }
         private void dataSource()

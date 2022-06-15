@@ -58,7 +58,6 @@ namespace Tugas_AD_Counter_HP
        
         private void FormInput_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("yes");
             dgvPrintProduct2.DataSource = dtShowProd2;
 
             sendtextform1 = FormLogin.sendtext;
@@ -125,9 +124,9 @@ namespace Tugas_AD_Counter_HP
                 angkaJalanCust = "c_";
                 angkaJalanCust += dtNoInv.Rows.Count + 1;
             }
+            textBoxCustID.Text = angkaJalanCust;
 
             dtpInvDate.Value = DateTime.Today;
-            textBoxCustID.Text = angkaJalanCust;
             comboBoxProdName.Enabled = false;
             nudQuan.Enabled = false;
             textBoxBayar.Enabled = false;
@@ -162,22 +161,10 @@ namespace Tugas_AD_Counter_HP
             }
             textBoxCustNama.Select();
         }
-        private void textBoxDisc_TextChanged(object sender, EventArgs e)
-        {
-            if (textBoxDisc.Text == "")
-            {
-                disc = 0;
-            }
-            else
-            {
-                disc = Convert.ToInt32(textBoxDisc.Text.Substring(0, 2));
-            }
-            total = hitungTotal - (hitungTotal * disc / 100);
-            labelDisTotal.Text = Decimal.Parse(total.ToString()).ToString("C", culture);
-        }
+
         private void textBoxCustNama_TextChanged(object sender, EventArgs e)
         {
-            if (dtpInvDate.Text != " " && textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "")
+            if (textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "")
             {
                 if (textBoxCustHP.Text.Length >= 10)
                 {
@@ -203,7 +190,7 @@ namespace Tugas_AD_Counter_HP
         }
         private void textBoxCustHP_TextChanged(object sender, EventArgs e)
         {
-            if (dtpInvDate.Text != " " && textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "")
+            if (textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "")
             {
                 if (textBoxCustHP.Text.Length >= 10)
                 {
@@ -221,7 +208,7 @@ namespace Tugas_AD_Counter_HP
         }
         private void textBoxCustEmail_TextChanged(object sender, EventArgs e)
         {
-            if (dtpInvDate.Text != " " && textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "")
+            if (textBoxCustNama.Text != "" && textBoxCustHP.Text != "" && textBoxCustEmail.Text != "")
             {
                 if (textBoxCustHP.Text.Length >= 10)
                 {
@@ -293,7 +280,9 @@ namespace Tugas_AD_Counter_HP
                 textBoxBayar.Enabled = true;
                 this.dgvPrintProduct2.Columns["Harga"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 this.dgvPrintProduct2.Columns["Jumlah"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
                 dtShowProd2.Rows.Add((no + 1).ToString(), comboBoxProdName.SelectedItem.ToString(), nudQuan.Value.ToString(), textBoxProdPrice.Text.Substring(2), labelDisSubTotal.Text.Substring(2));
+                
                 for (int i = 0; i < dtShowProd2.Rows.Count; i++)
                 {
                     dtShowProd2.Rows[i][0] = i + 1;
@@ -308,13 +297,13 @@ namespace Tugas_AD_Counter_HP
                 else
                 {
                     disc = Convert.ToInt32(textBoxDisc.Text.Substring(0, 2));
-
                 }
                 total = hitungTotal - (hitungTotal * disc / 100);
                 labelDisTotal.Text = Decimal.Parse(total.ToString()).ToString("C", culture);
                 no++;
 
                 comboBoxProdName.Items.Remove(comboBoxProdName.SelectedItem);
+
                 comboBoxProdName.Text = "";
                 textBoxProdID.Text = "";
                 textBoxProdPrice.Text = "";
@@ -323,10 +312,13 @@ namespace Tugas_AD_Counter_HP
                 labelStock.Text = "Stok :";
             }
         }
-/*        private void dgvMyGrid_RowHeaderMouseClick(null, null)
+        private void dgvPrintProduct2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-        }*/
-
+            if (dtShowProd2.Rows.Count > 0)
+            {
+                buttonDelete.Enabled = true;
+            }
+        }
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             indexRow = dgvPrintProduct2.CurrentCell.RowIndex;
@@ -377,7 +369,8 @@ namespace Tugas_AD_Counter_HP
                 kembalian = Convert.ToInt32(textBoxBayar.Text) - total;
             }
             labelDisKembali.Text = Decimal.Parse(kembalian.ToString()).ToString("C", culture);
-            if (labelDisKembali.Text != "Rp0,00")
+
+            if (Convert.ToInt32(textBoxBayar.Text) >= total)
             {
                 buttonPaid.Enabled = true;
             }
@@ -399,6 +392,7 @@ namespace Tugas_AD_Counter_HP
             buttonAddProd.Enabled = false;
             buttonDelete.Enabled = false;
             textBoxBayar.Enabled = false;
+            dgvPrintProduct2.Enabled = false;
         }
         private void buttonSave_Click(object sender, EventArgs e)
         {
@@ -444,11 +438,6 @@ namespace Tugas_AD_Counter_HP
                     itemCount += Convert.ToInt32(dtShowProd2.Rows[a][2]);
                 }
 
-                dtpInvDateClone.Value = dtpInvDate.Value;
-                dtpInvDateClone.Format = DateTimePickerFormat.Custom;
-                dtpInvDateClone.CustomFormat = "yyyy-MM-dd";
-                currentInvDate = dtpInvDateClone.Value.ToString("yyyy-MM-dd");
-
                 //invoice
                 if (textBoxPromoName.Text != "")
                 {
@@ -481,11 +470,11 @@ namespace Tugas_AD_Counter_HP
         }
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            /*if (statusBtnSave == 0)
+            if (statusBtnSave == 0)
             {
                 MessageBox.Show("Data Belum Disimpan");
             }
-            else*/
+            else
             {
                 idStore = textBoxDisIDStore.Text;
                 invNo = textBoxInvNo.Text;
@@ -531,11 +520,6 @@ namespace Tugas_AD_Counter_HP
             FormMenu formMenu = new FormMenu();
             this.Hide();
             formMenu.Show();
-        }
-
-        private void dgvPrintProduct2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            buttonDelete.Enabled = true;
         }
     }
 }

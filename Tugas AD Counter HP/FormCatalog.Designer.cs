@@ -39,7 +39,9 @@ namespace Tugas_AD_Counter_HP
             this.checkBoxCat = new System.Windows.Forms.CheckBox();
             this.checkBoxBrand = new System.Windows.Forms.CheckBox();
             this.labelFilter = new System.Windows.Forms.Label();
+            this.pictureBoxProduct = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCatalog)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewCatalog
@@ -51,31 +53,31 @@ namespace Tugas_AD_Counter_HP
             this.dataGridViewCatalog.AllowUserToResizeRows = false;
             this.dataGridViewCatalog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCatalog.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewCatalog.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridViewCatalog.BackgroundColor = System.Drawing.SystemColors.HotTrack;
             this.dataGridViewCatalog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCatalog.Location = new System.Drawing.Point(12, 160);
+            this.dataGridViewCatalog.Location = new System.Drawing.Point(267, 33);
             this.dataGridViewCatalog.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewCatalog.Name = "dataGridViewCatalog";
             this.dataGridViewCatalog.RowHeadersVisible = false;
             this.dataGridViewCatalog.RowHeadersWidth = 51;
             this.dataGridViewCatalog.RowTemplate.Height = 24;
-            this.dataGridViewCatalog.Size = new System.Drawing.Size(694, 394);
+            this.dataGridViewCatalog.Size = new System.Drawing.Size(995, 177);
             this.dataGridViewCatalog.TabIndex = 2;
             this.dataGridViewCatalog.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCatalog_CellClick);
             // 
             // richTextBoxSpesifikasi
             // 
-            this.richTextBoxSpesifikasi.Location = new System.Drawing.Point(712, 160);
+            this.richTextBoxSpesifikasi.Location = new System.Drawing.Point(502, 256);
             this.richTextBoxSpesifikasi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.richTextBoxSpesifikasi.Name = "richTextBoxSpesifikasi";
-            this.richTextBoxSpesifikasi.Size = new System.Drawing.Size(470, 268);
+            this.richTextBoxSpesifikasi.Size = new System.Drawing.Size(760, 420);
             this.richTextBoxSpesifikasi.TabIndex = 3;
             this.richTextBoxSpesifikasi.Text = "";
             // 
             // labelSpesifikasi
             // 
             this.labelSpesifikasi.AutoSize = true;
-            this.labelSpesifikasi.Location = new System.Drawing.Point(1081, 125);
+            this.labelSpesifikasi.Location = new System.Drawing.Point(498, 232);
             this.labelSpesifikasi.Name = "labelSpesifikasi";
             this.labelSpesifikasi.Size = new System.Drawing.Size(85, 20);
             this.labelSpesifikasi.TabIndex = 4;
@@ -86,7 +88,7 @@ namespace Tugas_AD_Counter_HP
             this.buttonMenu.BackColor = System.Drawing.Color.Navy;
             this.buttonMenu.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMenu.ForeColor = System.Drawing.SystemColors.Info;
-            this.buttonMenu.Location = new System.Drawing.Point(1038, 497);
+            this.buttonMenu.Location = new System.Drawing.Point(28, 701);
             this.buttonMenu.Name = "buttonMenu";
             this.buttonMenu.Size = new System.Drawing.Size(145, 57);
             this.buttonMenu.TabIndex = 13;
@@ -119,7 +121,7 @@ namespace Tugas_AD_Counter_HP
             "Baseus",
             "Oppo",
             "Harman-Kardon"});
-            this.comboBoxBrand.Location = new System.Drawing.Point(303, 100);
+            this.comboBoxBrand.Location = new System.Drawing.Point(28, 174);
             this.comboBoxBrand.Name = "comboBoxBrand";
             this.comboBoxBrand.Size = new System.Drawing.Size(213, 28);
             this.comboBoxBrand.TabIndex = 31;
@@ -141,7 +143,7 @@ namespace Tugas_AD_Counter_HP
             // 
             this.checkBoxBrand.AutoSize = true;
             this.checkBoxBrand.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxBrand.Location = new System.Drawing.Point(303, 68);
+            this.checkBoxBrand.Location = new System.Drawing.Point(28, 142);
             this.checkBoxBrand.Name = "checkBoxBrand";
             this.checkBoxBrand.Size = new System.Drawing.Size(84, 26);
             this.checkBoxBrand.TabIndex = 34;
@@ -159,12 +161,25 @@ namespace Tugas_AD_Counter_HP
             this.labelFilter.TabIndex = 35;
             this.labelFilter.Text = "Filter By";
             // 
+            // pictureBoxProduct
+            // 
+            this.pictureBoxProduct.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxProduct.InitialImage = null;
+            this.pictureBoxProduct.Location = new System.Drawing.Point(28, 256);
+            this.pictureBoxProduct.Name = "pictureBoxProduct";
+            this.pictureBoxProduct.Size = new System.Drawing.Size(447, 420);
+            this.pictureBoxProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProduct.TabIndex = 59;
+            this.pictureBoxProduct.TabStop = false;
+            // 
             // FormCatalog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1228, 684);
+            this.ClientSize = new System.Drawing.Size(1323, 804);
+            this.Controls.Add(this.pictureBoxProduct);
             this.Controls.Add(this.labelFilter);
             this.Controls.Add(this.checkBoxBrand);
             this.Controls.Add(this.checkBoxCat);
@@ -182,6 +197,7 @@ namespace Tugas_AD_Counter_HP
             this.Text = "Catalog";
             this.Load += new System.EventHandler(this.FormCatalog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCatalog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,5 +213,6 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.CheckBox checkBoxCat;
         private System.Windows.Forms.CheckBox checkBoxBrand;
         private System.Windows.Forms.Label labelFilter;
+        private System.Windows.Forms.PictureBox pictureBoxProduct;
     }
 }
