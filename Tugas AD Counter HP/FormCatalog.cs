@@ -52,7 +52,7 @@ namespace Tugas_AD_Counter_HP
         private void dataSource()
         {
             if (checkBoxBrand.Checked == false && checkBoxCat.Checked == false)
-            {
+            { 
                 dataGridViewCatalog.DataSource = produk;
             }
             else if (checkBoxBrand.Checked == false && checkBoxCat.Checked == true)
@@ -70,31 +70,43 @@ namespace Tugas_AD_Counter_HP
         }
         private void fillKategori()
         {
-            kategori.Clear();
-            sqlQuery = "select P.PRODUCT_BRAND as 'Brand', P.PRODUCT_NAME as 'Nama Produk', P.PRODUCT_PRICE as 'Harga', P.PRODUCT_STOCK as 'Stok', P.PRODUCT_DESC as 'Spesifikasi' from PRODUCT P, CATEGORY C where P.CAT_ID = C.CAT_ID and C.CAT_NAME = '" + comboBoxCat.SelectedItem.ToString() + "'";
-            sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
-            sqlAdapter = new MySqlDataAdapter(sqlCommand);
-            sqlAdapter.Fill(kategori);
+            if (comboBoxCat.SelectedIndex != -1)
+            {
+                kategori.Clear();
+                sqlQuery = "select P.PRODUCT_BRAND as 'Brand', P.PRODUCT_NAME as 'Nama Produk', P.PRODUCT_PRICE as 'Harga', P.PRODUCT_STOCK as 'Stok', P.PRODUCT_DESC as 'Spesifikasi' from PRODUCT P, CATEGORY C where P.CAT_ID = C.CAT_ID and C.CAT_NAME = '" + comboBoxCat.SelectedItem.ToString() + "'";
+                sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
+                sqlAdapter = new MySqlDataAdapter(sqlCommand);
+                sqlAdapter.Fill(kategori);
+            }
         }
 
         private void fillBrand()
         {
-            brand.Clear();
-            sqlQuery = "select PRODUCT_BRAND as 'Brand', PRODUCT_NAME as 'Nama Produk', PRODUCT_PRICE as 'Harga', PRODUCT_STOCK as 'Stok', PRODUCT_DESC as 'Spesifikasi' from PRODUCT where PRODUCT_BRAND = '" + comboBoxBrand.SelectedItem.ToString() + "'";
-            sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
-            sqlAdapter = new MySqlDataAdapter(sqlCommand);
-            sqlAdapter.Fill(brand);
+            if (comboBoxBrand.SelectedIndex != -1)
+            {
+                brand.Clear();
+                sqlQuery = "select PRODUCT_BRAND as 'Brand', PRODUCT_NAME as 'Nama Produk', PRODUCT_PRICE as 'Harga', PRODUCT_STOCK as 'Stok', PRODUCT_DESC as 'Spesifikasi' from PRODUCT where PRODUCT_BRAND = '" + comboBoxBrand.SelectedItem.ToString() + "'";
+                sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
+                sqlAdapter = new MySqlDataAdapter(sqlCommand);
+                sqlAdapter.Fill(brand);
+            }
         }
         private void fillKatBrand()
         {
-            katBrand.Clear();
-            sqlQuery = "select P.PRODUCT_BRAND as 'Brand', P.PRODUCT_NAME as 'Nama Produk', P.PRODUCT_PRICE as 'Harga', P.PRODUCT_STOCK as 'Stok', P.PRODUCT_DESC as 'Spesifikasi' from PRODUCT P, CATEGORY C where P.CAT_ID = C.CAT_ID and C.CAT_NAME = '" + comboBoxCat.SelectedItem.ToString() + "' and P.PRODUCT_BRAND = '" + comboBoxBrand.SelectedItem.ToString() + "'";
-            sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
-            sqlAdapter = new MySqlDataAdapter(sqlCommand);
-            sqlAdapter.Fill(katBrand);
+            if (comboBoxBrand.SelectedIndex != -1 && comboBoxCat.SelectedIndex != -1)
+            {
+                katBrand.Clear();
+                sqlQuery = "select P.PRODUCT_BRAND as 'Brand', P.PRODUCT_NAME as 'Nama Produk', P.PRODUCT_PRICE as 'Harga', P.PRODUCT_STOCK as 'Stok', P.PRODUCT_DESC as 'Spesifikasi' from PRODUCT P, CATEGORY C where P.CAT_ID = C.CAT_ID and C.CAT_NAME = '" + comboBoxCat.SelectedItem.ToString() + "' and P.PRODUCT_BRAND = '" + comboBoxBrand.SelectedItem.ToString() + "'";
+                sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
+                sqlAdapter = new MySqlDataAdapter(sqlCommand);
+                sqlAdapter.Fill(katBrand);
+            }
         }
+        //Kategori checked, comboboxcat dipilih, brand checked, combobrand pilih, combocat diubah
         private void checkBoxCat_CheckedChanged(object sender, EventArgs e)
         {
+            comboBoxCat.Text = null;
+            comboBoxCat.SelectedIndex = -1;
             if (checkBoxCat.Checked == true)
             {
                 comboBoxCat.Enabled = true;
@@ -102,10 +114,7 @@ namespace Tugas_AD_Counter_HP
             else
             {
                 comboBoxCat.Enabled = false;
-                comboBoxCat.ResetText();
-                comboBoxCat.SelectedIndex = -1;
             }
-            dataSource();
         }
         private void comboBoxCat_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -119,6 +128,8 @@ namespace Tugas_AD_Counter_HP
 
         private void checkBoxBrand_CheckedChanged(object sender, EventArgs e)
         {
+            comboBoxBrand.SelectedItem = null;
+            comboBoxBrand.SelectedIndex = -1;
             if (checkBoxBrand.Checked == true)
             {
                 comboBoxBrand.Enabled = true;
@@ -126,10 +137,7 @@ namespace Tugas_AD_Counter_HP
             else
             {
                 comboBoxBrand.Enabled = false;
-                comboBoxBrand.ResetText();
-                comboBoxBrand.SelectedIndex = -1;
             }
-            dataSource();
         }
         private void comboBoxBrand_SelectedIndexChanged(object sender, EventArgs e)
         {

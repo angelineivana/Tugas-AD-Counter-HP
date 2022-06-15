@@ -38,6 +38,7 @@ namespace Tugas_AD_Counter_HP
             this.comboBoxBrand = new System.Windows.Forms.ComboBox();
             this.checkBoxCat = new System.Windows.Forms.CheckBox();
             this.checkBoxBrand = new System.Windows.Forms.CheckBox();
+            this.labelFilter = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCatalog)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@ namespace Tugas_AD_Counter_HP
             this.dataGridViewCatalog.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewCatalog.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewCatalog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCatalog.Location = new System.Drawing.Point(14, 246);
+            this.dataGridViewCatalog.Location = new System.Drawing.Point(12, 160);
             this.dataGridViewCatalog.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewCatalog.Name = "dataGridViewCatalog";
             this.dataGridViewCatalog.RowHeadersVisible = false;
@@ -64,7 +65,7 @@ namespace Tugas_AD_Counter_HP
             // 
             // richTextBoxSpesifikasi
             // 
-            this.richTextBoxSpesifikasi.Location = new System.Drawing.Point(714, 246);
+            this.richTextBoxSpesifikasi.Location = new System.Drawing.Point(712, 160);
             this.richTextBoxSpesifikasi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.richTextBoxSpesifikasi.Name = "richTextBoxSpesifikasi";
             this.richTextBoxSpesifikasi.Size = new System.Drawing.Size(470, 268);
@@ -74,7 +75,7 @@ namespace Tugas_AD_Counter_HP
             // labelSpesifikasi
             // 
             this.labelSpesifikasi.AutoSize = true;
-            this.labelSpesifikasi.Location = new System.Drawing.Point(1083, 211);
+            this.labelSpesifikasi.Location = new System.Drawing.Point(1081, 125);
             this.labelSpesifikasi.Name = "labelSpesifikasi";
             this.labelSpesifikasi.Size = new System.Drawing.Size(85, 20);
             this.labelSpesifikasi.TabIndex = 4;
@@ -85,7 +86,7 @@ namespace Tugas_AD_Counter_HP
             this.buttonMenu.BackColor = System.Drawing.Color.Navy;
             this.buttonMenu.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMenu.ForeColor = System.Drawing.SystemColors.Info;
-            this.buttonMenu.Location = new System.Drawing.Point(1040, 583);
+            this.buttonMenu.Location = new System.Drawing.Point(1038, 497);
             this.buttonMenu.Name = "buttonMenu";
             this.buttonMenu.Size = new System.Drawing.Size(145, 57);
             this.buttonMenu.TabIndex = 13;
@@ -102,7 +103,7 @@ namespace Tugas_AD_Counter_HP
             "Powerbank",
             "Earphone",
             "Speaker"});
-            this.comboBoxCat.Location = new System.Drawing.Point(36, 79);
+            this.comboBoxCat.Location = new System.Drawing.Point(28, 100);
             this.comboBoxCat.Name = "comboBoxCat";
             this.comboBoxCat.Size = new System.Drawing.Size(213, 28);
             this.comboBoxCat.TabIndex = 14;
@@ -118,7 +119,7 @@ namespace Tugas_AD_Counter_HP
             "Baseus",
             "Oppo",
             "Harman-Kardon"});
-            this.comboBoxBrand.Location = new System.Drawing.Point(36, 183);
+            this.comboBoxBrand.Location = new System.Drawing.Point(303, 100);
             this.comboBoxBrand.Name = "comboBoxBrand";
             this.comboBoxBrand.Size = new System.Drawing.Size(213, 28);
             this.comboBoxBrand.TabIndex = 31;
@@ -128,7 +129,7 @@ namespace Tugas_AD_Counter_HP
             // 
             this.checkBoxCat.AutoSize = true;
             this.checkBoxCat.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxCat.Location = new System.Drawing.Point(36, 35);
+            this.checkBoxCat.Location = new System.Drawing.Point(28, 68);
             this.checkBoxCat.Name = "checkBoxCat";
             this.checkBoxCat.Size = new System.Drawing.Size(106, 26);
             this.checkBoxCat.TabIndex = 33;
@@ -140,7 +141,7 @@ namespace Tugas_AD_Counter_HP
             // 
             this.checkBoxBrand.AutoSize = true;
             this.checkBoxBrand.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxBrand.Location = new System.Drawing.Point(36, 142);
+            this.checkBoxBrand.Location = new System.Drawing.Point(303, 68);
             this.checkBoxBrand.Name = "checkBoxBrand";
             this.checkBoxBrand.Size = new System.Drawing.Size(84, 26);
             this.checkBoxBrand.TabIndex = 34;
@@ -148,12 +149,23 @@ namespace Tugas_AD_Counter_HP
             this.checkBoxBrand.UseVisualStyleBackColor = true;
             this.checkBoxBrand.CheckedChanged += new System.EventHandler(this.checkBoxBrand_CheckedChanged);
             // 
+            // labelFilter
+            // 
+            this.labelFilter.AutoSize = true;
+            this.labelFilter.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFilter.Location = new System.Drawing.Point(23, 33);
+            this.labelFilter.Name = "labelFilter";
+            this.labelFilter.Size = new System.Drawing.Size(84, 25);
+            this.labelFilter.TabIndex = 35;
+            this.labelFilter.Text = "Filter By";
+            // 
             // FormCatalog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1228, 684);
+            this.Controls.Add(this.labelFilter);
             this.Controls.Add(this.checkBoxBrand);
             this.Controls.Add(this.checkBoxCat);
             this.Controls.Add(this.comboBoxBrand);
@@ -184,5 +196,6 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.ComboBox comboBoxBrand;
         private System.Windows.Forms.CheckBox checkBoxCat;
         private System.Windows.Forms.CheckBox checkBoxBrand;
+        private System.Windows.Forms.Label labelFilter;
     }
 }
