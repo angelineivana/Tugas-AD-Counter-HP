@@ -242,7 +242,7 @@ namespace Tugas_AD_Counter_HP
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormForgot";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form Data Verification";
+            this.Text = "Data Verification";
             this.ResumeLayout(false);
             this.PerformLayout();
 
