@@ -136,9 +136,9 @@ namespace Tugas_AD_Counter_HP
             this.labelForgot.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelForgot.Location = new System.Drawing.Point(91, 442);
             this.labelForgot.Name = "labelForgot";
-            this.labelForgot.Size = new System.Drawing.Size(270, 21);
+            this.labelForgot.Size = new System.Drawing.Size(266, 21);
             this.labelForgot.TabIndex = 59;
-            this.labelForgot.Text = "Forgot Your Username? Click Here!\r\n";
+            this.labelForgot.Text = "Forgot Your Password? Click Here!\r\n";
             this.labelForgot.Click += new System.EventHandler(this.labelForgot_Click);
             // 
             // FormLogin
