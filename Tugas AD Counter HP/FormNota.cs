@@ -61,6 +61,8 @@ namespace Tugas_AD_Counter_HP
             labelDisPromo.Text = FormCashier.disc.ToString() + " %";
             int total = FormCashier.hitungTotal - (FormCashier.hitungTotal * FormCashier.disc / 100);
             labelDisTotal.Text = Decimal.Parse(total.ToString()).ToString("C", FormCashier.culture);
+            labelDisBayar.Text = Decimal.Parse(FormCashier.bayar.ToString()).ToString("C", FormCashier.culture);
+            labelDisKembali.Text = FormCashier.kembali;
 
             //EMPLOYEE NAME
             sqlQuery = "SELECT emp_name FROM EMPLOYEE WHERE '"+ FormCashier.empID +"' = emp_id";

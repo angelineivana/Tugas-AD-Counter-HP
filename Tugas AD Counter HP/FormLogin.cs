@@ -42,5 +42,10 @@ namespace Tugas_AD_Counter_HP
                 MessageBox.Show("Username / Password Salah!");
             }
         }
+
+        private void labelForgot_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

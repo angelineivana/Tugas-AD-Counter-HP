@@ -38,6 +38,7 @@ namespace Tugas_AD_Counter_HP
             this.buttonLogin = new System.Windows.Forms.Button();
             this.labelLine = new System.Windows.Forms.Label();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.labelForgot = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,7 +99,7 @@ namespace Tugas_AD_Counter_HP
             // buttonLogin
             // 
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(212, 482);
+            this.buttonLogin.Location = new System.Drawing.Point(211, 488);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(106, 43);
             this.buttonLogin.TabIndex = 5;
@@ -128,6 +129,18 @@ namespace Tugas_AD_Counter_HP
             this.pictureBoxLogo.TabIndex = 58;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // labelForgot
+            // 
+            this.labelForgot.AutoSize = true;
+            this.labelForgot.Font = new System.Drawing.Font("Microsoft YaHei Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelForgot.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelForgot.Location = new System.Drawing.Point(91, 433);
+            this.labelForgot.Name = "labelForgot";
+            this.labelForgot.Size = new System.Drawing.Size(270, 21);
+            this.labelForgot.TabIndex = 59;
+            this.labelForgot.Text = "Forgot Your Username? Click Here!\r\n";
+            this.labelForgot.Click += new System.EventHandler(this.labelForgot_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -135,6 +148,7 @@ namespace Tugas_AD_Counter_HP
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(533, 561);
+            this.Controls.Add(this.labelForgot);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.labelLine);
             this.Controls.Add(this.buttonLogin);
@@ -164,6 +178,7 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Label labelLine;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.Label labelForgot;
     }
 }
 

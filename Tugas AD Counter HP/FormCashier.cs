@@ -55,7 +55,9 @@ namespace Tugas_AD_Counter_HP
         public static string custPhone = "";
         public static string custEmail = "";
         public static string empID = "";
-       
+        public static string bayar = "";
+        public static string kembali = "";
+
         private void FormInput_Load(object sender, EventArgs e)
         {
             dgvPrintProduct2.DataSource = dtShowProd2;
@@ -473,12 +475,14 @@ namespace Tugas_AD_Counter_HP
         }
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-            if (statusBtnSave == 0)
+           /* if (statusBtnSave == 0)
             {
                 MessageBox.Show("Data Belum Disimpan");
             }
-            else
+            else*/
             {
+                bayar = textBoxBayar.Text;
+                kembali = labelDisKembali.Text;
                 idStore = textBoxDisIDStore.Text;
                 invNo = textBoxInvNo.Text;
                 invDate = dtpInvDate.Text;

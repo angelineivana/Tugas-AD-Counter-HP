@@ -56,6 +56,10 @@ namespace Tugas_AD_Counter_HP
             this.labelEmpSign = new System.Windows.Forms.Label();
             this.pictureBoxLunas = new System.Windows.Forms.PictureBox();
             this.labelStoreNo = new System.Windows.Forms.Label();
+            this.labelDisBayar = new System.Windows.Forms.Label();
+            this.labelBayar = new System.Windows.Forms.Label();
+            this.labelDisKembali = new System.Windows.Forms.Label();
+            this.labelKembali = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrintProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLunas)).BeginInit();
             this.SuspendLayout();
@@ -191,7 +195,7 @@ namespace Tugas_AD_Counter_HP
             this.labelLine.AutoSize = true;
             this.labelLine.BackColor = System.Drawing.Color.Transparent;
             this.labelLine.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLine.Location = new System.Drawing.Point(718, 849);
+            this.labelLine.Location = new System.Drawing.Point(718, 959);
             this.labelLine.Name = "labelLine";
             this.labelLine.Size = new System.Drawing.Size(207, 20);
             this.labelLine.TabIndex = 15;
@@ -313,7 +317,7 @@ namespace Tugas_AD_Counter_HP
             this.labelEmpName.AutoSize = true;
             this.labelEmpName.BackColor = System.Drawing.Color.Transparent;
             this.labelEmpName.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmpName.Location = new System.Drawing.Point(745, 882);
+            this.labelEmpName.Location = new System.Drawing.Point(745, 992);
             this.labelEmpName.Name = "labelEmpName";
             this.labelEmpName.Size = new System.Drawing.Size(86, 20);
             this.labelEmpName.TabIndex = 22;
@@ -325,7 +329,7 @@ namespace Tugas_AD_Counter_HP
             this.labelEmpSign.AutoSize = true;
             this.labelEmpSign.BackColor = System.Drawing.Color.Transparent;
             this.labelEmpSign.Font = new System.Drawing.Font("Vladimir Script", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmpSign.Location = new System.Drawing.Point(760, 819);
+            this.labelEmpSign.Location = new System.Drawing.Point(760, 929);
             this.labelEmpSign.Name = "labelEmpSign";
             this.labelEmpSign.Size = new System.Drawing.Size(71, 39);
             this.labelEmpSign.TabIndex = 23;
@@ -337,7 +341,7 @@ namespace Tugas_AD_Counter_HP
             this.pictureBoxLunas.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLunas.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLunas.Image")));
             this.pictureBoxLunas.InitialImage = null;
-            this.pictureBoxLunas.Location = new System.Drawing.Point(666, 738);
+            this.pictureBoxLunas.Location = new System.Drawing.Point(666, 848);
             this.pictureBoxLunas.Name = "pictureBoxLunas";
             this.pictureBoxLunas.Size = new System.Drawing.Size(192, 90);
             this.pictureBoxLunas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -355,6 +359,50 @@ namespace Tugas_AD_Counter_HP
             this.labelStoreNo.TabIndex = 60;
             this.labelStoreNo.Text = "No. Toko";
             // 
+            // labelDisBayar
+            // 
+            this.labelDisBayar.AutoSize = true;
+            this.labelDisBayar.BackColor = System.Drawing.Color.Transparent;
+            this.labelDisBayar.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisBayar.Location = new System.Drawing.Point(779, 734);
+            this.labelDisBayar.Name = "labelDisBayar";
+            this.labelDisBayar.Size = new System.Drawing.Size(42, 20);
+            this.labelDisBayar.TabIndex = 62;
+            this.labelDisBayar.Text = "...";
+            // 
+            // labelBayar
+            // 
+            this.labelBayar.AutoSize = true;
+            this.labelBayar.BackColor = System.Drawing.Color.Transparent;
+            this.labelBayar.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBayar.Location = new System.Drawing.Point(643, 734);
+            this.labelBayar.Name = "labelBayar";
+            this.labelBayar.Size = new System.Drawing.Size(130, 20);
+            this.labelBayar.TabIndex = 61;
+            this.labelBayar.Text = "BAYAR     :";
+            // 
+            // labelDisKembali
+            // 
+            this.labelDisKembali.AutoSize = true;
+            this.labelDisKembali.BackColor = System.Drawing.Color.Transparent;
+            this.labelDisKembali.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDisKembali.Location = new System.Drawing.Point(779, 766);
+            this.labelDisKembali.Name = "labelDisKembali";
+            this.labelDisKembali.Size = new System.Drawing.Size(42, 20);
+            this.labelDisKembali.TabIndex = 64;
+            this.labelDisKembali.Text = "...";
+            // 
+            // labelKembali
+            // 
+            this.labelKembali.AutoSize = true;
+            this.labelKembali.BackColor = System.Drawing.Color.Transparent;
+            this.labelKembali.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKembali.Location = new System.Drawing.Point(643, 766);
+            this.labelKembali.Name = "labelKembali";
+            this.labelKembali.Size = new System.Drawing.Size(130, 20);
+            this.labelKembali.TabIndex = 63;
+            this.labelKembali.Text = "KEMBALI   :";
+            // 
             // FormNota
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -362,7 +410,11 @@ namespace Tugas_AD_Counter_HP
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1014, 973);
+            this.ClientSize = new System.Drawing.Size(1014, 1050);
+            this.Controls.Add(this.labelDisKembali);
+            this.Controls.Add(this.labelKembali);
+            this.Controls.Add(this.labelDisBayar);
+            this.Controls.Add(this.labelBayar);
             this.Controls.Add(this.labelStoreNo);
             this.Controls.Add(this.labelEmpSign);
             this.Controls.Add(this.labelEmpName);
@@ -425,5 +477,9 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.Label labelEmpSign;
         private System.Windows.Forms.PictureBox pictureBoxLunas;
         private System.Windows.Forms.Label labelStoreNo;
+        private System.Windows.Forms.Label labelDisBayar;
+        private System.Windows.Forms.Label labelBayar;
+        private System.Windows.Forms.Label labelDisKembali;
+        private System.Windows.Forms.Label labelKembali;
     }
 }
