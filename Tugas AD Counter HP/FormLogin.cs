@@ -23,6 +23,7 @@ namespace Tugas_AD_Counter_HP
         public MySqlDataAdapter sqlAdapter;
         string sqlQuery;
         public static string sendtext;
+        int statusSalah = 0;
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             sqlQuery = "SELECT * FROM EMPLOYEE WHERE EMP_USERNAME =  '" + textBoxUsername.Text.Trim() + "' and EMP_PASS = '" + textBoxPassword.Text.Trim() + "'";
@@ -40,12 +41,20 @@ namespace Tugas_AD_Counter_HP
             else
             {
                 MessageBox.Show("Username / Password Salah!");
+                statusSalah++;
+            }
+
+            if (statusSalah > 3)
+            {
+                MessageBox.Show("Lupa Password? Click Label 'Forgot Your Password? Click Here!'");
             }
         }
 
         private void labelForgot_Click(object sender, EventArgs e)
         {
-
+            FormForgot formForgot = new FormForgot();
+            this.Hide();
+            formForgot.Show();
         }
     }
 }

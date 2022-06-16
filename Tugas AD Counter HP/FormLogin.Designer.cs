@@ -134,7 +134,7 @@ namespace Tugas_AD_Counter_HP
             this.labelForgot.AutoSize = true;
             this.labelForgot.Font = new System.Drawing.Font("Microsoft YaHei Light", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelForgot.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelForgot.Location = new System.Drawing.Point(91, 433);
+            this.labelForgot.Location = new System.Drawing.Point(91, 442);
             this.labelForgot.Name = "labelForgot";
             this.labelForgot.Size = new System.Drawing.Size(270, 21);
             this.labelForgot.TabIndex = 59;
