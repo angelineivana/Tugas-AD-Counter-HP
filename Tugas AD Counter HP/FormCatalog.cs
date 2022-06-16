@@ -26,10 +26,9 @@ namespace Tugas_AD_Counter_HP
         DataTable kategori = new DataTable();
         DataTable katBrand = new DataTable();
         DataTable brand = new DataTable();
-        DataTable fotoProduk = new DataTable();
         private void FormCatalog_Load(object sender, EventArgs e)
         {
-            sqlQuery = "select PRODUCT_BRAND as 'Brand',PRODUCT_NAME as 'Nama Produk',PRODUCT_PRICE as 'Harga',PRODUCT_STOCK as 'Stok',PRODUCT_DESC as 'Spesifikasi' from PRODUCT;";
+            sqlQuery = "select PRODUCT_BRAND as 'Brand',PRODUCT_NAME as 'Nama Produk',PRODUCT_PRICE as 'Harga',PRODUCT_STOCK as 'Stok',PRODUCT_DESC as 'Spesifikasi', PRODUCT_IMAGE_URL as 'URL' from PRODUCT;";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(produk);
@@ -45,22 +44,11 @@ namespace Tugas_AD_Counter_HP
 
         private void dataGridViewCatalog_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //setiap cell diclick, dt foto produk diclear
-            fotoProduk.Clear();
-
+            //Biar ga Muncul kalo pencet nama tabel
             if (e.RowIndex != -1)
             {
-                DataGridViewRow baris = dataGridViewCatalog.Rows[e.RowIndex];
-                richTextBoxSpesifikasi.Text = baris.Cells[4].Value.ToString();
-
-                //query buat ambil image url dr tabel PRODUCT selama nama produk di PRODUCT sama dengan yg dipilih
-                sqlQuery = "select PRODUCT_IMAGE_URL from PRODUCT where '" + baris.Cells[1].Value.ToString() +"' = PRODUCT_NAME";
-                sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
-                sqlAdapter = new MySqlDataAdapter(sqlCommand);
-                sqlAdapter.Fill(fotoProduk);
-
-                //buat sumber pictureBoxProduct
-                pictureBoxProduct.ImageLocation = fotoProduk.Rows[0][0].ToString();
+                richTextBoxSpesifikasi.Text = dataGridViewCatalog.CurrentRow.Cells[4].Value.ToString();
+                pictureBoxProduct.ImageLocation = dataGridViewCatalog.CurrentRow.Cells[5].Value.ToString();
             }
         }
 
@@ -95,7 +83,7 @@ namespace Tugas_AD_Counter_HP
                 kategori.Clear();
 
                 //query buat isi dt kategori
-                sqlQuery = "select P.PRODUCT_BRAND as 'Brand', P.PRODUCT_NAME as 'Nama Produk', P.PRODUCT_PRICE as 'Harga', P.PRODUCT_STOCK as 'Stok', P.PRODUCT_DESC as 'Spesifikasi' from PRODUCT P, CATEGORY C where P.CAT_ID = C.CAT_ID and C.CAT_NAME = '" + comboBoxCat.SelectedItem.ToString() + "'";
+                sqlQuery = "select P.PRODUCT_BRAND as 'Brand', P.PRODUCT_NAME as 'Nama Produk', P.PRODUCT_PRICE as 'Harga', P.PRODUCT_STOCK as 'Stok', P.PRODUCT_DESC as 'Spesifikasi', P. PRODUCT_IMAGE_URL as 'URL'  from PRODUCT P, CATEGORY C where P.CAT_ID = C.CAT_ID and C.CAT_NAME = '" + comboBoxCat.SelectedItem.ToString() + "'"; ;
                 sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
                 sqlAdapter = new MySqlDataAdapter(sqlCommand);
                 sqlAdapter.Fill(kategori);
@@ -107,7 +95,7 @@ namespace Tugas_AD_Counter_HP
             if (comboBoxBrand.SelectedIndex != -1)
             {
                 brand.Clear();
-                sqlQuery = "select PRODUCT_BRAND as 'Brand', PRODUCT_NAME as 'Nama Produk', PRODUCT_PRICE as 'Harga', PRODUCT_STOCK as 'Stok', PRODUCT_DESC as 'Spesifikasi' from PRODUCT where PRODUCT_BRAND = '" + comboBoxBrand.SelectedItem.ToString() + "'";
+                sqlQuery = "select PRODUCT_BRAND as 'Brand', PRODUCT_NAME as 'Nama Produk', PRODUCT_PRICE as 'Harga', PRODUCT_STOCK as 'Stok', PRODUCT_DESC as 'Spesifikasi', PRODUCT_IMAGE_URL as 'URL'  from PRODUCT where PRODUCT_BRAND = '" + comboBoxBrand.SelectedItem.ToString() + "'";
                 sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
                 sqlAdapter = new MySqlDataAdapter(sqlCommand);
                 sqlAdapter.Fill(brand);
@@ -118,7 +106,7 @@ namespace Tugas_AD_Counter_HP
             if (comboBoxBrand.SelectedIndex != -1 && comboBoxCat.SelectedIndex != -1)
             {
                 katBrand.Clear();
-                sqlQuery = "select P.PRODUCT_BRAND as 'Brand', P.PRODUCT_NAME as 'Nama Produk', P.PRODUCT_PRICE as 'Harga', P.PRODUCT_STOCK as 'Stok', P.PRODUCT_DESC as 'Spesifikasi' from PRODUCT P, CATEGORY C where P.CAT_ID = C.CAT_ID and C.CAT_NAME = '" + comboBoxCat.SelectedItem.ToString() + "' and P.PRODUCT_BRAND = '" + comboBoxBrand.SelectedItem.ToString() + "'";
+                sqlQuery = "select P.PRODUCT_BRAND as 'Brand', P.PRODUCT_NAME as 'Nama Produk', P.PRODUCT_PRICE as 'Harga', P.PRODUCT_STOCK as 'Stok', P.PRODUCT_DESC as 'Spesifikasi', P. PRODUCT_IMAGE_URL as 'URL' from PRODUCT P, CATEGORY C where P.CAT_ID = C.CAT_ID and C.CAT_NAME = '" + comboBoxCat.SelectedItem.ToString() + "' and P.PRODUCT_BRAND = '" + comboBoxBrand.SelectedItem.ToString() + "'";
                 sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
                 sqlAdapter = new MySqlDataAdapter(sqlCommand);
                 sqlAdapter.Fill(katBrand);
