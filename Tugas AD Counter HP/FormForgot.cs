@@ -46,7 +46,6 @@ namespace Tugas_AD_Counter_HP
         }
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
-            buttonSubmit.Enabled = true;
             dtpEmpDOBClone.Value = dtpDOB.Value;
             dtpEmpDOBClone.Format = DateTimePickerFormat.Custom;
             dtpEmpDOBClone.CustomFormat = "yyyy-MM-dd";

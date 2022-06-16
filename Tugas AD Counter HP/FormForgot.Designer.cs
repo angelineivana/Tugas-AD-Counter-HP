@@ -241,6 +241,7 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.labelUsername);
             this.Name = "FormForgot";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormForgot";
             this.ResumeLayout(false);
             this.PerformLayout();

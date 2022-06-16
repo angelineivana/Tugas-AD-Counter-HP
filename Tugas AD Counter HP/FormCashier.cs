@@ -132,6 +132,7 @@ namespace Tugas_AD_Counter_HP
             //--
 
             dtpInvDate.Value = DateTime.Today;
+
             comboBoxProdName.Enabled = false;
             nudQuan.Enabled = false;
             textBoxBayar.Enabled = false;
@@ -252,6 +253,7 @@ namespace Tugas_AD_Counter_HP
             labelStock.Text = "Stok : " + stock.ToString();
 
             nudQuan.Enabled = true;
+
             labelDisSubTotal.Text = "Rp0,00";
             nudQuan.Value = 0;
         }
@@ -327,7 +329,9 @@ namespace Tugas_AD_Counter_HP
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             indexRow = dgvPrintProduct2.CurrentCell.RowIndex;
+
             comboBoxProdName.Items.Add(dtShowProd2.Rows[indexRow][1].ToString());
+
             dtShowProd2.Rows.RemoveAt(indexRow);
 
             for (int i = 0; i < dtShowProd2.Rows.Count; i++)
@@ -475,11 +479,11 @@ namespace Tugas_AD_Counter_HP
         }
         private void buttonPrint_Click(object sender, EventArgs e)
         {
-           /* if (statusBtnSave == 0)
+            if (statusBtnSave == 0)
             {
                 MessageBox.Show("Data Belum Disimpan");
             }
-            else*/
+            else
             {
                 bayar = textBoxBayar.Text;
                 kembali = labelDisKembali.Text;

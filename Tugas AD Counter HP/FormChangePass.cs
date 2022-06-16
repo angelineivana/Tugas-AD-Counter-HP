@@ -22,7 +22,6 @@ namespace Tugas_AD_Counter_HP
         {
             InitializeComponent();
         }
-
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             if (textBoxNewPass.Text.Length > 5)

@@ -35,6 +35,7 @@ namespace Tugas_AD_Counter_HP
             sqlAdapter.Fill(produk);
             dataGridViewCatalog.DataSource = produk;
 
+            //filter by
             //awalnya di disable semua
             comboBoxCat.Enabled = false;
             comboBoxBrand.Enabled = false;
@@ -62,6 +63,8 @@ namespace Tugas_AD_Counter_HP
                 pictureBoxProduct.ImageLocation = fotoProduk.Rows[0][0].ToString();
             }
         }
+
+        //filter by
         //buat nentuin datasource dr datagridviewcatalog
         private void dataSource()
         {

@@ -116,6 +116,7 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.labelNewPass);
             this.Controls.Add(this.label1);
             this.Name = "FormChangePass";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormChangePass";
             this.ResumeLayout(false);
             this.PerformLayout();
