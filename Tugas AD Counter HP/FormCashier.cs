@@ -76,6 +76,8 @@ namespace Tugas_AD_Counter_HP
             dtShowProd2.Columns.Add("Harga");
             dtShowProd2.Columns.Add("Jumlah");
 
+
+            //AUTO INCREMENT
             sqlQuery = "SELECT inv_no FROM INVOICE";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
@@ -125,6 +127,7 @@ namespace Tugas_AD_Counter_HP
                 angkaJalanCust += dtNoInv.Rows.Count + 1;
             }
             textBoxCustID.Text = angkaJalanCust;
+            //--
 
             dtpInvDate.Value = DateTime.Today;
             comboBoxProdName.Enabled = false;
