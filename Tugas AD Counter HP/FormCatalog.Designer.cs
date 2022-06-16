@@ -66,6 +66,7 @@ namespace Tugas_AD_Counter_HP
             this.dataGridViewCatalog.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewCatalog.Location = new System.Drawing.Point(267, 33);
             this.dataGridViewCatalog.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridViewCatalog.MultiSelect = false;
             this.dataGridViewCatalog.Name = "dataGridViewCatalog";
             this.dataGridViewCatalog.RowHeadersVisible = false;
             this.dataGridViewCatalog.RowHeadersWidth = 51;

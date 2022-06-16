@@ -135,7 +135,7 @@ namespace Tugas_AD_Counter_HP
             this.MaximizeBox = false;
             this.Name = "FormHistory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormHistory";
+            this.Text = "Sales History";
             this.Load += new System.EventHandler(this.FormHistory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGVHistory)).EndInit();
             this.ResumeLayout(false);

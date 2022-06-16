@@ -532,6 +532,7 @@ namespace Tugas_AD_Counter_HP
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPrintProduct2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPrintProduct2.Location = new System.Drawing.Point(418, 258);
+            this.dgvPrintProduct2.MultiSelect = false;
             this.dgvPrintProduct2.Name = "dgvPrintProduct2";
             this.dgvPrintProduct2.ReadOnly = true;
             this.dgvPrintProduct2.RightToLeft = System.Windows.Forms.RightToLeft.No;

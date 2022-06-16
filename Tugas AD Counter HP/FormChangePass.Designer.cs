@@ -119,7 +119,7 @@ namespace Tugas_AD_Counter_HP
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormChangePass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormChangePass";
+            this.Text = "Change Password";
             this.ResumeLayout(false);
             this.PerformLayout();
 

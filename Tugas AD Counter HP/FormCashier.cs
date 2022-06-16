@@ -285,6 +285,7 @@ namespace Tugas_AD_Counter_HP
             else
             {
                 textBoxBayar.Enabled = true;
+
                 this.dgvPrintProduct2.Columns["Harga"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 this.dgvPrintProduct2.Columns["Jumlah"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
@@ -395,6 +396,7 @@ namespace Tugas_AD_Counter_HP
         {
             statusBtnPaid = 1;
             MessageBox.Show("Invoice Telah Lunas");
+
             buttonPaid.Enabled = false;
             textBoxCustNama.Enabled = false;
             textBoxCustHP.Enabled = false;

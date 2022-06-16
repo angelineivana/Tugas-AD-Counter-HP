@@ -147,7 +147,7 @@ namespace Tugas_AD_Counter_HP
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form Menu";
+            this.Text = "Menu";
             this.Load += new System.EventHandler(this.FormMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPerson)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCashier)).EndInit();

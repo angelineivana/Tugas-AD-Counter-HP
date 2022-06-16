@@ -442,7 +442,7 @@ namespace Tugas_AD_Counter_HP
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormNota";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form Nota";
+            this.Text = "Nota";
             this.Load += new System.EventHandler(this.FormNota_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrintProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLunas)).EndInit();
