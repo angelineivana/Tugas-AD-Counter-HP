@@ -56,7 +56,7 @@ namespace Tugas_AD_Counter_HP
             this.textBoxUsername.Location = new System.Drawing.Point(30, 114);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(149, 29);
-            this.textBoxUsername.TabIndex = 7;
+            this.textBoxUsername.TabIndex = 0;
             // 
             // labelUsername
             // 
@@ -108,7 +108,7 @@ namespace Tugas_AD_Counter_HP
             this.dtpDOB.Location = new System.Drawing.Point(30, 246);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(283, 29);
-            this.dtpDOB.TabIndex = 13;
+            this.dtpDOB.TabIndex = 2;
             // 
             // textBoxName
             // 
@@ -118,7 +118,7 @@ namespace Tugas_AD_Counter_HP
             this.textBoxName.Location = new System.Drawing.Point(30, 179);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(149, 29);
-            this.textBoxName.TabIndex = 15;
+            this.textBoxName.TabIndex = 1;
             // 
             // labelName
             // 
@@ -149,7 +149,7 @@ namespace Tugas_AD_Counter_HP
             this.textBoxHP.MaxLength = 12;
             this.textBoxHP.Name = "textBoxHP";
             this.textBoxHP.Size = new System.Drawing.Size(185, 29);
-            this.textBoxHP.TabIndex = 66;
+            this.textBoxHP.TabIndex = 3;
             // 
             // labelHP
             // 
@@ -170,7 +170,7 @@ namespace Tugas_AD_Counter_HP
             this.textBoxEmpID.Location = new System.Drawing.Point(30, 384);
             this.textBoxEmpID.Name = "textBoxEmpID";
             this.textBoxEmpID.Size = new System.Drawing.Size(159, 29);
-            this.textBoxEmpID.TabIndex = 70;
+            this.textBoxEmpID.TabIndex = 4;
             // 
             // labelEmpID
             // 
@@ -191,7 +191,7 @@ namespace Tugas_AD_Counter_HP
             this.textBoxStoreID.Location = new System.Drawing.Point(31, 445);
             this.textBoxStoreID.Name = "textBoxStoreID";
             this.textBoxStoreID.Size = new System.Drawing.Size(158, 29);
-            this.textBoxStoreID.TabIndex = 72;
+            this.textBoxStoreID.TabIndex = 5;
             // 
             // labelStoreID
             // 
@@ -212,7 +212,7 @@ namespace Tugas_AD_Counter_HP
             this.buttonSubmit.Location = new System.Drawing.Point(376, 486);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(90, 47);
-            this.buttonSubmit.TabIndex = 73;
+            this.buttonSubmit.TabIndex = 6;
             this.buttonSubmit.Text = "Submit";
             this.buttonSubmit.UseVisualStyleBackColor = false;
             this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);

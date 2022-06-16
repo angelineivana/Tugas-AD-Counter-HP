@@ -195,7 +195,7 @@ namespace Tugas_AD_Counter_HP
             this.labelLine.AutoSize = true;
             this.labelLine.BackColor = System.Drawing.Color.Transparent;
             this.labelLine.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLine.Location = new System.Drawing.Point(718, 959);
+            this.labelLine.Location = new System.Drawing.Point(734, 912);
             this.labelLine.Name = "labelLine";
             this.labelLine.Size = new System.Drawing.Size(207, 20);
             this.labelLine.TabIndex = 15;
@@ -317,7 +317,7 @@ namespace Tugas_AD_Counter_HP
             this.labelEmpName.AutoSize = true;
             this.labelEmpName.BackColor = System.Drawing.Color.Transparent;
             this.labelEmpName.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmpName.Location = new System.Drawing.Point(745, 992);
+            this.labelEmpName.Location = new System.Drawing.Point(761, 945);
             this.labelEmpName.Name = "labelEmpName";
             this.labelEmpName.Size = new System.Drawing.Size(86, 20);
             this.labelEmpName.TabIndex = 22;
@@ -329,7 +329,7 @@ namespace Tugas_AD_Counter_HP
             this.labelEmpSign.AutoSize = true;
             this.labelEmpSign.BackColor = System.Drawing.Color.Transparent;
             this.labelEmpSign.Font = new System.Drawing.Font("Vladimir Script", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmpSign.Location = new System.Drawing.Point(760, 929);
+            this.labelEmpSign.Location = new System.Drawing.Point(776, 882);
             this.labelEmpSign.Name = "labelEmpSign";
             this.labelEmpSign.Size = new System.Drawing.Size(71, 39);
             this.labelEmpSign.TabIndex = 23;
@@ -341,7 +341,7 @@ namespace Tugas_AD_Counter_HP
             this.pictureBoxLunas.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLunas.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLunas.Image")));
             this.pictureBoxLunas.InitialImage = null;
-            this.pictureBoxLunas.Location = new System.Drawing.Point(666, 848);
+            this.pictureBoxLunas.Location = new System.Drawing.Point(682, 801);
             this.pictureBoxLunas.Name = "pictureBoxLunas";
             this.pictureBoxLunas.Size = new System.Drawing.Size(192, 90);
             this.pictureBoxLunas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

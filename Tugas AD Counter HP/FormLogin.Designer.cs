@@ -99,7 +99,7 @@ namespace Tugas_AD_Counter_HP
             // buttonLogin
             // 
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(211, 488);
+            this.buttonLogin.Location = new System.Drawing.Point(209, 519);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(106, 43);
             this.buttonLogin.TabIndex = 5;
@@ -147,7 +147,7 @@ namespace Tugas_AD_Counter_HP
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(533, 561);
+            this.ClientSize = new System.Drawing.Size(522, 602);
             this.Controls.Add(this.labelForgot);
             this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.labelLine);
