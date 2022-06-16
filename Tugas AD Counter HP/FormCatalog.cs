@@ -48,10 +48,7 @@ namespace Tugas_AD_Counter_HP
             {
                 DataGridViewRow baris = dataGridViewCatalog.Rows[e.RowIndex];
                 richTextBoxSpesifikasi.Text = baris.Cells[4].Value.ToString();
-                MessageBox.Show(baris.Index.ToString());
 
-                /*                sqlQuery = "SELECT * FROM (SELECT ROW_NUMBER() OVER (ORDER BY PRODUCT_ID) row_num, PRODUCT_IMAGE_URL FROM PRODUCT) t WHERE row_num - 1 = '"+ baris.Index +"'";
-                */
                 sqlQuery = "select PRODUCT_IMAGE_URL from PRODUCT where '" + baris.Cells[1].Value.ToString() +"' = PRODUCT_NAME";
                 sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
                 sqlAdapter = new MySqlDataAdapter(sqlCommand);
@@ -112,7 +109,6 @@ namespace Tugas_AD_Counter_HP
                 sqlAdapter.Fill(katBrand);
             }
         }
-        //Kategori checked, comboboxcat dipilih, brand checked, combobrand pilih, combocat diubah
         private void checkBoxCat_CheckedChanged(object sender, EventArgs e)
         {
             comboBoxCat.Text = null;

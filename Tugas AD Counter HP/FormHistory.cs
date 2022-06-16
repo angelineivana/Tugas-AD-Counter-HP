@@ -44,12 +44,13 @@ namespace Tugas_AD_Counter_HP
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            sqlQuery = "select date_format(i.INV_DATE, '%d-%m-%y') as 'Tanggal', c.CUST_NAME, c.CUST_PHONE, p.INV_NO, p.PRODUCT_ID, i.PROMO_ID, concat('Rp. ', p.INV_PRICE) as Total, e.EMP_NAME from PRODUCT_INVOICE p, INVOICE i, CUSTOMER c, EMPLOYEE e WHERE i.CUST_ID = c.CUST_ID and i.INV_NO = p.INV_NO and e.EMP_ID = i.EMP_ID and c.CUST_NAME like '%" + textBoxCustomer.Text + "%' or c.CUST_PHONE = '%" + textBoxCustomer.Text + "%' group by c.CUST_NAME ;";
+            dtCusName.Clear();
+            sqlQuery = "select date_format(i.INV_DATE, '%d-%m-%y') as 'Tanggal', c.CUST_NAME, c.CUST_PHONE, p.INV_NO, p.PRODUCT_ID, i.PROMO_ID, concat('Rp. ', p.INV_PRICE) as Total, e.EMP_NAME from PRODUCT_INVOICE p, INVOICE i, CUSTOMER c, EMPLOYEE e WHERE i.CUST_ID = c.CUST_ID and i.INV_NO = p.INV_NO and e.EMP_ID = i.EMP_ID and c.CUST_NAME like '%" + textBoxCustomer.Text + "%' or c.CUST_PHONE like '%" + textBoxCustomer.Text + "%' group by c.CUST_NAME ;";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtCusName);
             dGVHistory.DataSource = dtCusName;
-            if (dGVHistory.Rows.Count > 0)
+            if (dtCusName.Rows.Count > 0)
             {
                 custName = dtCusName.Rows[0][0].ToString();
             }

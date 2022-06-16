@@ -29,6 +29,7 @@ namespace Tugas_AD_Counter_HP
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCatalog));
             this.dataGridViewCatalog = new System.Windows.Forms.DataGridView();
             this.richTextBoxSpesifikasi = new System.Windows.Forms.RichTextBox();
@@ -53,8 +54,16 @@ namespace Tugas_AD_Counter_HP
             this.dataGridViewCatalog.AllowUserToResizeRows = false;
             this.dataGridViewCatalog.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCatalog.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewCatalog.BackgroundColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridViewCatalog.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridViewCatalog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCatalog.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewCatalog.Location = new System.Drawing.Point(267, 33);
             this.dataGridViewCatalog.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewCatalog.Name = "dataGridViewCatalog";
@@ -67,6 +76,9 @@ namespace Tugas_AD_Counter_HP
             // 
             // richTextBoxSpesifikasi
             // 
+            this.richTextBoxSpesifikasi.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.richTextBoxSpesifikasi.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxSpesifikasi.ForeColor = System.Drawing.SystemColors.Window;
             this.richTextBoxSpesifikasi.Location = new System.Drawing.Point(502, 256);
             this.richTextBoxSpesifikasi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.richTextBoxSpesifikasi.Name = "richTextBoxSpesifikasi";
@@ -77,9 +89,10 @@ namespace Tugas_AD_Counter_HP
             // labelSpesifikasi
             // 
             this.labelSpesifikasi.AutoSize = true;
-            this.labelSpesifikasi.Location = new System.Drawing.Point(498, 232);
+            this.labelSpesifikasi.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSpesifikasi.Location = new System.Drawing.Point(498, 230);
             this.labelSpesifikasi.Name = "labelSpesifikasi";
-            this.labelSpesifikasi.Size = new System.Drawing.Size(85, 20);
+            this.labelSpesifikasi.Size = new System.Drawing.Size(96, 22);
             this.labelSpesifikasi.TabIndex = 4;
             this.labelSpesifikasi.Text = "Spesifikasi";
             // 
@@ -164,7 +177,8 @@ namespace Tugas_AD_Counter_HP
             // pictureBoxProduct
             // 
             this.pictureBoxProduct.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBoxProduct.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProduct.Image")));
             this.pictureBoxProduct.InitialImage = null;
             this.pictureBoxProduct.Location = new System.Drawing.Point(28, 256);
             this.pictureBoxProduct.Name = "pictureBoxProduct";
@@ -178,6 +192,7 @@ namespace Tugas_AD_Counter_HP
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1323, 804);
             this.Controls.Add(this.pictureBoxProduct);
             this.Controls.Add(this.labelFilter);
