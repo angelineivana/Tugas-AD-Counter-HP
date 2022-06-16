@@ -29,6 +29,7 @@ namespace Tugas_AD_Counter_HP
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormForgot));
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.labelUsername = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -191,7 +192,6 @@ namespace Tugas_AD_Counter_HP
             this.textBoxStoreID.Name = "textBoxStoreID";
             this.textBoxStoreID.Size = new System.Drawing.Size(158, 29);
             this.textBoxStoreID.TabIndex = 72;
-            this.textBoxStoreID.TextChanged += new System.EventHandler(this.textBoxStoreID_TextChanged);
             // 
             // labelStoreID
             // 
@@ -207,7 +207,6 @@ namespace Tugas_AD_Counter_HP
             // buttonSubmit
             // 
             this.buttonSubmit.BackColor = System.Drawing.Color.Firebrick;
-            this.buttonSubmit.Enabled = false;
             this.buttonSubmit.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSubmit.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.buttonSubmit.Location = new System.Drawing.Point(376, 486);
@@ -240,6 +239,7 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.labelUsername);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormForgot";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormForgot";

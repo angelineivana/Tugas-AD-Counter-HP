@@ -29,6 +29,7 @@ namespace Tugas_AD_Counter_HP
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChangePass));
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNewPass = new System.Windows.Forms.TextBox();
             this.labelNewPass = new System.Windows.Forms.Label();
@@ -115,6 +116,7 @@ namespace Tugas_AD_Counter_HP
             this.Controls.Add(this.textBoxNewPass);
             this.Controls.Add(this.labelNewPass);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormChangePass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormChangePass";

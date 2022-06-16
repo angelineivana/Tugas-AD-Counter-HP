@@ -337,8 +337,10 @@ namespace Tugas_AD_Counter_HP
             for (int i = 0; i < dtShowProd2.Rows.Count; i++)
             {
                 dtShowProd2.Rows[i][0] = i + 1;
-            }           
+            }      
+            
             hitungTotal -= sub[indexRow];
+
             for (int i = indexRow; i <= dtShowProd2.Rows.Count; i++)
             {
                 sub[i] = sub[i + 1];
@@ -354,6 +356,7 @@ namespace Tugas_AD_Counter_HP
             }
             total = hitungTotal - (hitungTotal * disc / 100);
             labelDisTotal.Text = Decimal.Parse(total.ToString()).ToString("C", culture);
+
             no--;
         }
         private void textBoxBayar_KeyPress(object sender, KeyPressEventArgs e)
