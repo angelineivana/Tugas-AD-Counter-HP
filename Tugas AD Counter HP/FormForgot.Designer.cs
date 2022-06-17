@@ -46,6 +46,7 @@ namespace Tugas_AD_Counter_HP
             this.textBoxStoreID = new System.Windows.Forms.TextBox();
             this.labelStoreID = new System.Windows.Forms.Label();
             this.buttonSubmit = new System.Windows.Forms.Button();
+            this.buttonLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxUsername
@@ -217,12 +218,26 @@ namespace Tugas_AD_Counter_HP
             this.buttonSubmit.UseVisualStyleBackColor = false;
             this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
+            // buttonLogin
+            // 
+            this.buttonLogin.BackColor = System.Drawing.Color.Navy;
+            this.buttonLogin.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogin.ForeColor = System.Drawing.SystemColors.Info;
+            this.buttonLogin.Location = new System.Drawing.Point(278, 486);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(92, 47);
+            this.buttonLogin.TabIndex = 72;
+            this.buttonLogin.Text = "Back";
+            this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
+            // 
             // FormForgot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(488, 556);
+            this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.buttonSubmit);
             this.Controls.Add(this.textBoxStoreID);
             this.Controls.Add(this.labelStoreID);
@@ -265,5 +280,6 @@ namespace Tugas_AD_Counter_HP
         private System.Windows.Forms.TextBox textBoxStoreID;
         private System.Windows.Forms.Label labelStoreID;
         private System.Windows.Forms.Button buttonSubmit;
+        private System.Windows.Forms.Button buttonLogin;
     }
 }

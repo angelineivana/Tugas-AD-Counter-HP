@@ -64,5 +64,12 @@ namespace Tugas_AD_Counter_HP
                 }
             } 
         }
+
+        private void buttonLogin_Click(object sender, EventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            this.Hide();
+            formLogin.Show();
+        }
     }
 }
