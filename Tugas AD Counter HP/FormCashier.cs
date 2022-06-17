@@ -508,9 +508,9 @@ namespace Tugas_AD_Counter_HP
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            System.Windows.Forms.Application.Exit();
         }
-    
+
         private void buttonMenu_Click(object sender, EventArgs e)
         {
             dtDetailProd.Reset();
